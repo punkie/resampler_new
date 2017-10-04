@@ -48,6 +48,9 @@
       <height>91</height>
      </size>
     </property>
+    <property name="toolTip">
+     <string>Only csv datasets are acceptable!</string>
+    </property>
     <property name="text">
      <string>Dataset:</string>
     </property>
@@ -73,7 +76,7 @@
    </widget>
    <widget class="QComboBox" name="resamplingAlgorithms">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -114,7 +117,7 @@
    </widget>
    <widget class="QPushButton" name="outputDirectoryButton">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -131,14 +134,14 @@
    <widget class="QLabel" name="datasetPickedLabel">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>440</x>
       <y>10</y>
       <width>331</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Empty</string>
+     <string>Test</string>
     </property>
    </widget>
    <widget class="QLabel" name="outputDirectoryPickedLabel">
@@ -151,12 +154,12 @@
      </rect>
     </property>
     <property name="text">
-     <string>Empty</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="startButton">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -168,6 +171,19 @@
     </property>
     <property name="text">
      <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="datasetProgressBar">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>12</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
     </property>
    </widget>
   </widget>
