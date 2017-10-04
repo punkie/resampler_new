@@ -1,4 +1,4 @@
-from PySide.QtGui import QComboBox, QFileDialog, QLabel, QPushButton
+from PyQt4.QtGui import QFileDialog, QLabel, QComboBox, QPushButton
 
 
 def choose_dataset(main_window):

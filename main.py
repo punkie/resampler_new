@@ -1,12 +1,13 @@
 import sys
-from PySide.QtCore import *
-from PySide.QtGui import *
+
+from PyQt4.QtGui import QMainWindow, QApplication, QPushButton
+
 from sample import Ui_MainWindow
-from functions import choose_dataset, choose_outputdir
+from ui_functions import choose_dataset, choose_outputdir
 
 class ControlMainWindow(QMainWindow):
 
-    def __init__(self, parent=None):
+    def __init__(self):
         super(ControlMainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)

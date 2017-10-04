@@ -102,7 +102,7 @@
    <widget class="QPushButton" name="datasetButton">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>200</x>
       <y>10</y>
       <width>121</width>
       <height>34</height>
@@ -118,7 +118,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>200</x>
       <y>110</y>
       <width>121</width>
       <height>34</height>
@@ -131,7 +131,7 @@
    <widget class="QLabel" name="datasetPickedLabel">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>420</x>
       <y>10</y>
       <width>331</width>
       <height>31</height>
@@ -144,7 +144,7 @@
    <widget class="QLabel" name="outputDirectoryPickedLabel">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>420</x>
       <y>110</y>
       <width>331</width>
       <height>31</height>
@@ -177,7 +177,7 @@
      <x>0</x>
      <y>0</y>
      <width>988</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAsd">
