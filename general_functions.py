@@ -12,6 +12,7 @@ def write_dataset_to_csv(path, dataset=None, x_values_param=None, y_values_param
         for row_idx, dv in enumerate(x_values_param):
             dataset_writer.writerow(np.append(dv, y_values_param[row_idx]))
 
+
 def load_dataset(path):
     with open(path, newline="") as csv_input_file:
         reader = csv.reader(csv_input_file, delimiter=",")
@@ -27,6 +28,7 @@ def load_dataset(path):
                 dataset['x_values'] = np.vstack((dataset['x_values'], np.array(row[:-1])))
             dataset['y_values'] = np.append(dataset['y_values'], row[-1])
         return dataset
+
 
 def extract_binarized_imbalanced_datasets():
     for dataset_name, dataset_values in fetch_datasets().items():
