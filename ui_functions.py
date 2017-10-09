@@ -1,7 +1,10 @@
 from PyQt5.QtWidgets import QFileDialog, QLabel, QComboBox, QPushButton, QProgressBar
-from resampling_functions import do_sampling
-from dataset_loader import DatasetLoader
+
+
+from dataset_loader_thread import DatasetLoader
+from general_functions import draw_comparision_picture
 from resampling_methods import ResamplingAlgorithms
+from resampling_thread import Resampling
 
 
 def choose_dataset(main_window):
@@ -32,4 +35,9 @@ def choose_sampling_algorithm(main_window):
 
 
 def perform_resampling(main_window):
-    do_sampling(main_window.state)
+    main_window.resampler = Resampling(main_window)
+    main_window.resampler.start()
+
+def show_img_diffs(main_window):
+    draw_comparision_picture(main_window.state.dataset, main_window.state.resampled_dataset,
+                             main_window.state.sampling_algorithm.value[0])
