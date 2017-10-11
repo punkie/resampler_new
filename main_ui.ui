@@ -161,7 +161,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Start</string>
+     <string>Start resampling</string>
     </property>
    </widget>
    <widget class="QProgressBar" name="datasetProgressBar">
@@ -248,6 +248,151 @@
     </property>
     <property name="text">
      <string>Image Differences</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="classifyButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>112</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Classify</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classifyLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>400</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>400</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>Only csv datasets are acceptable!</string>
+    </property>
+    <property name="text">
+     <string>The button below is doing a 10-Fold Cross-validation using SVM on the normal and resampled datasets</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classifyingStatusLabel">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>290</y>
+      <width>169</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>169</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>Only csv datasets are acceptable!</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="normalClassifyProgressBar">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>370</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="resampleClassifyProgressBar">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>370</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classifyLabelNormalDataset">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>180</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>180</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>Only csv datasets are acceptable!</string>
+    </property>
+    <property name="text">
+     <string>Classify progress on normal dataset:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classifyLabelResampledDataset">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>340</y>
+      <width>200</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>Only csv datasets are acceptable!</string>
+    </property>
+    <property name="text">
+     <string>Classify progress on resampled dataset:</string>
     </property>
    </widget>
   </widget>
