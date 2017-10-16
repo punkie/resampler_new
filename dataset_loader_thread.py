@@ -1,30 +1,33 @@
 from PyQt5.QtCore import QThread, pyqtSignal
-from PyQt5.QtWidgets import QLabel, QComboBox, QPushButton, QProgressBar
 from general_functions import load_dataset, compute_some_statistics_for_the_dataset, get_statistics_string
+from widgets import Widgets
 
 
 class DatasetLoader(QThread):
 
-    update_dataset_load_progress_bar = pyqtSignal(int)
-    update_dataset = pyqtSignal(dict)
+    update_dataset_load_progress_bar = pyqtSignal(object)
 
     def __init__(self, main_window, path):
         super(DatasetLoader, self).__init__()
         self.path = path
         self.main_window = main_window
+        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setValue(0)
+        self.main_window.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).setEnabled(False)
+        self.main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(False)
 
     def __update_other_widgets(self):
-        self.main_window.findChild(QLabel, "datasetPickedLabel").setText(self.path)
-        self.main_window.findChild(QComboBox, "resamplingAlgorithms").setEnabled(True)
-        self.main_window.findChild(QPushButton, "outputDirectoryButton").setEnabled(True)
+        self.main_window.widgets.get_label(Widgets.Labels.DatasetPickedLabel.value).setText(self.path)
+        self.main_window.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).setEnabled(True)
+        self.main_window.widgets.get_button(Widgets.Buttons.OutputDirectoryButton.value).setEnabled(True)
         dataset_statistics = get_statistics_string(self.main_window.state.dataset)
-        self.main_window.findChild(QLabel, "datasetStatisticsLabel").setText(dataset_statistics)
-        self.main_window.findChild(QLabel, "resampledDatasetStatistics").setText(" ")
-        self.main_window.findChild(QLabel, "resamplingStatusLabel").setText(" ")
-        self.main_window.findChild(QPushButton, "imgDiffsButton").setEnabled(False)
-        self.main_window.findChild(QPushButton, "classifyButton").setEnabled(True)
-        self.main_window.findChild(QLabel, "classifyingStatusLabel").setText(" ")
-        self.main_window.findChild(QProgressBar, "classifyProgressBar").setValue(0)
+        self.main_window.widgets.get_label(Widgets.Labels.DatasetStatisticsLabel.value).setText(dataset_statistics)
+        self.main_window.widgets.get_label(Widgets.Labels.ResampledDatasetStatistics.value).setText(" ")
+        self.main_window.widgets.get_label(Widgets.Labels.ResamplingStatusLabel.value).setText(" ")
+        self.main_window.widgets.get_button(Widgets.Buttons.ImgDiffsButton.value).setEnabled(False)
+        self.main_window.widgets.get_button(Widgets.Buttons.ClassifyButton.value).setEnabled(True)
+        self.main_window.widgets.get_label(Widgets.Labels.ClassifyingStatusLabel.value).setText(" ")
+        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
+        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
 
     def __load_dataset(self):
         load_dataset(self)
@@ -37,4 +40,4 @@ class DatasetLoader(QThread):
         self.__load_dataset()
         self.__compute_some_statistics_for_the_dataset()
         self.__update_other_widgets()
-
+        # QApplication.processEvents()

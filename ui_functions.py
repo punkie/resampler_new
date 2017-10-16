@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QFileDialog, QLabel, QComboBox, QPushButton, QProgressBar
+from PyQt5.QtWidgets import QFileDialog,QComboBox
 
 from classifier_thread import Classifying
 from dataset_loader_thread import DatasetLoader
 from general_functions import draw_comparision_picture, classify
 from resampling_methods import ResamplingAlgorithms
 from resampling_thread import Resampling
-
+from widgets import Widgets
 
 
 def choose_dataset(main_window):
@@ -21,13 +21,13 @@ def choose_dataset(main_window):
 def choose_outputdir(main_window):
     od = QFileDialog(main_window).getExistingDirectory()
     if od != "":
-        main_window.findChild(QLabel, "outputDirectoryPickedLabel").setText(od)
+        main_window.widgets.get_label(Widgets.Labels.OutputDirectoryPickedLabel.value).setText(od)
         main_window.state.output_dir = od
-        main_window.findChild(QPushButton, "startButton").setEnabled(True)
+        main_window.widgets.get_button(Widgets.Buttons.StartButton.value).setEnabled(True)
 
 
 def choose_sampling_algorithm(main_window):
-    chosen_algorithm_name = main_window.findChild(QComboBox, "resamplingAlgorithms").currentText()
+    chosen_algorithm_name = main_window.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).currentText()
     main_window.state.sampling_algorithm = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
 
 
@@ -43,12 +43,24 @@ def show_img_diffs(main_window):
 
 def classify_datasets(main_window):
     #classify(main_window.state)
-    main_window.findChild(QProgressBar, "classifyProgressBar").setValue(0)
-    main_window.classifier = Classifying(main_window)
-    main_window.classifier.show_plot.connect(main_window.show_plot)
-    main_window.classifier.update_classify_progress_bar.connect(main_window.update_classify_progress_bar)
+    main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
+    main_window.classifier = Classifying(main_window, False)
+    main_window.state.normal_classify_thread_finished = False
+    main_window.classifier.show_roc_plot.connect(main_window.show_roc_plot)
+    main_window.classifier.update_normal_classify_progress_bar.connect(main_window.update_normal_classify_progress_bar)
     main_window.classifier.start()
-    main_window.classifier_two = Classifying(main_window, True)
-    # main_window.classifier_two.show_plot.connect(main_window.show_plot)
-    # main_window.classifier_two.update_classify_progress_bar.connect(main_window.update_classify_progress_bar)
-    main_window.classifier_two.start()
+
+    main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
+    main_window.classifier_rd = Classifying(main_window, True)
+    main_window.state.resample_classify_thread_finished = False
+    main_window.classifier_rd.show_roc_plot.connect(main_window.show_roc_plot)
+    main_window.classifier_rd.update_resample_classify_progress_bar.connect(main_window.update_resample_classify_progress_bar)
+    main_window.classifier_rd.start()
+
+
+def toggle_widgets(widgets_to_be_blocked, widgets_to_be_enabled):
+    for w in widgets_to_be_blocked:
+        w.setEnabled(False)
+    for w in widgets_to_be_enabled:
+        w.setEnabled(True)
+
