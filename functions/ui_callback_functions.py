@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QFileDialog,QComboBox
+from PyQt5.QtWidgets import QFileDialog
+from functions.drawing_functions import draw_comparision_picture, draw_roc_graph, draw_pr_graph
+from rs_types.resampling_methods import ResamplingAlgorithms
+from rs_types.widgets import Widgets
+from threads.classifier_thread import Classifying
+from threads.dataset_loader_thread import DatasetLoader
+from threads.resampling_thread import Resampling
 
-from classifier_thread import Classifying
-from dataset_loader_thread import DatasetLoader
-from general_functions import draw_comparision_picture, classify
-from resampling_methods import ResamplingAlgorithms
-from resampling_thread import Resampling
-from widgets import Widgets
 
 
 def choose_dataset(main_window):
@@ -46,16 +46,24 @@ def classify_datasets(main_window):
     main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
     main_window.classifier = Classifying(main_window, False)
     main_window.state.normal_classify_thread_finished = False
-    main_window.classifier.show_roc_plot.connect(main_window.show_roc_plot)
+    # main_window.classifier.show_roc_plot.connect(main_window.show_roc_plot)
     main_window.classifier.update_normal_classify_progress_bar.connect(main_window.update_normal_classify_progress_bar)
     main_window.classifier.start()
 
     main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
     main_window.classifier_rd = Classifying(main_window, True)
     main_window.state.resample_classify_thread_finished = False
-    main_window.classifier_rd.show_roc_plot.connect(main_window.show_roc_plot)
+    # main_window.classifier_rd.show_roc_plot.connect(main_window.show_roc_plot)
     main_window.classifier_rd.update_resample_classify_progress_bar.connect(main_window.update_resample_classify_progress_bar)
     main_window.classifier_rd.start()
+
+
+def show_roc_graphs(main_window):
+    draw_roc_graph(main_window.state)
+
+
+def show_pr_graphs(main_window):
+    draw_pr_graph(main_window.state)
 
 
 def toggle_widgets(widgets_to_be_blocked, widgets_to_be_enabled):

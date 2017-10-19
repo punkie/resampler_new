@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QPushButton, QComboBox, QLabel, QProgressBar
 
 
 # kinda custom enum...
-class Widgets():
+class Widgets:
 
     class Buttons(Enum):
         DatasetButton = "datasetButton"

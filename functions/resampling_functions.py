@@ -1,5 +1,6 @@
 import datetime
-import general_functions
+
+from functions import file_handling_functions
 
 
 def do_resampling(state):
@@ -16,14 +17,14 @@ def do_resampling(state):
     resampled_dataset = {}
     resampled_dataset['x_values'] = x_resampled_values
     resampled_dataset['y_values'] = y_resampled_values
-    general_functions.write_dataset_to_csv(__create_resampled_file_name(output_directory, dataset['name'], sampling_algorithm.value[0]),
-                         x_values_param=x_resampled_values, y_values_param=y_resampled_values)
+    file_handling_functions.write_dataset_to_csv(__create_resampled_file_name(output_directory, dataset['name'], sampling_algorithm.value[0]),
+                                                 x_values_param=x_resampled_values, y_values_param=y_resampled_values)
     return resampled_dataset
 
 
 def do_resampling_without_writing_to_file(sampling_algorithm, x_values, y_values):
     x_resampled_values, y_resampled_values = sampling_algorithm.value[1].fit_sample(x_values, y_values)
-    resampled_dataset = {}
+    resampled_dataset = dict()
     resampled_dataset['x_values'] = x_resampled_values
     resampled_dataset['y_values'] = y_resampled_values
     return resampled_dataset
