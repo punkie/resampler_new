@@ -1,6 +1,6 @@
 from enum import Enum
 
-from imblearn.over_sampling import RandomOverSampler, SMOTE
+from imblearn.over_sampling import RandomOverSampler, SMOTE, ADASYN
 from imblearn.under_sampling import RandomUnderSampler
 
 
@@ -8,6 +8,7 @@ class ResamplingAlgorithms(Enum):
     RO = ("Random Oversampling", RandomOverSampler())
     RU = ("Random Undersampling", RandomUnderSampler())
     SMOTE = ("Smote", SMOTE(kind="regular"))
+    # ADASYN = ("Adasyn", ADASYN())
 
     @classmethod
     def get_algorithm_by_name(cls, name):

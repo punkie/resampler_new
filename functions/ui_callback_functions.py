@@ -7,7 +7,6 @@ from threads.dataset_loader_thread import DatasetLoader
 from threads.resampling_thread import Resampling
 
 
-
 def choose_dataset(main_window):
     ds_dialog = QFileDialog(main_window)
     ds_dialog.show()
