@@ -36,7 +36,8 @@ class Widgets:
 
     def __init__(self, main_window):
         self.buttons = {button.value: main_window.findChild(QPushButton, button.value) for button in Widgets.Buttons}
-        self.combo_boxes = {combo_box.value: main_window.findChild(QComboBox, combo_box.value) for combo_box in Widgets.ComboBoxes}
+        self.combo_boxes = {combo_box.value: main_window.findChild(QComboBox, combo_box.value)
+                            for combo_box in Widgets.ComboBoxes}
         self.labels = {label.value: main_window.findChild(QLabel, label.value) for label in Widgets.Labels}
         self.progress_bars = {progress_bar.value: main_window.findChild(QProgressBar, progress_bar.value)
                              for progress_bar in Widgets.ProgressBars}

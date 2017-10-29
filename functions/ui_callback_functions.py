@@ -27,7 +27,8 @@ def choose_outputdir(main_window):
 
 
 def choose_sampling_algorithm(main_window):
-    chosen_algorithm_name = main_window.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).currentText()
+    chosen_algorithm_name = main_window.widgets.\
+        get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).currentText()
     main_window.state.sampling_algorithm = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
 
 
@@ -54,7 +55,8 @@ def classify_datasets(main_window):
     main_window.classifier_rd = Classifying(main_window, True)
     main_window.state.resample_classify_thread_finished = False
     main_window.classifier_rd.update_gui_after_classification.connect(main_window.update_gui_after_classification)
-    main_window.classifier_rd.update_resample_classify_progress_bar.connect(main_window.update_resample_classify_progress_bar)
+    main_window.classifier_rd.update_resample_classify_progress_bar.connect\
+        (main_window.update_resample_classify_progress_bar)
     main_window.classifier_rd.start()
 
 

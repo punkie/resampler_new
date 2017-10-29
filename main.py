@@ -57,6 +57,7 @@ if __name__ == '__main__':
     mw.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).clicked.connect(lambda: show_roc_graphs(mw))
     mw.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).clicked.connect(lambda: show_pr_graphs(mw))
     # load default items for the resampling algos
-    mw.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).addItems([ra.value[0] for ra in ResamplingAlgorithms])
+    mw.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).addItems\
+            ([ra.value[0] for ra in ResamplingAlgorithms])
     mw.show()
     sys.exit(app.exec_())

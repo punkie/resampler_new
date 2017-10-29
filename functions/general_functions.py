@@ -43,7 +43,8 @@ def classify(classifier_thread):
     for train, test in cv.split(X_normal, y_normal):
         if classifier_thread.do_resampling:
             r_dataset = resampling_functions.\
-            do_resampling_without_writing_to_file(classifier_thread.main_window.state.sampling_algorithm, X_normal[train], y_normal[train])
+            do_resampling_without_writing_to_file(classifier_thread.main_window.state.sampling_algorithm,
+                                                  X_normal[train], y_normal[train])
             classifier_ = classifier.fit(r_dataset['x_values'], r_dataset['y_values'])
         else:
             classifier_ = classifier.fit(X_normal[train], y_normal[train])
@@ -66,7 +67,8 @@ def classify(classifier_thread):
         else:
             classifier_thread.update_normal_classify_progress_bar.emit(i)
     #grouped_pr_rec_f1s = zip(*pr_rec_f1s)
-    classifying_data['pre_rec_f1_tuple'] = ((sum(map(operator.itemgetter(0), pr_rec_f1s)) / (i + 1)), (sum(map(operator.itemgetter(1), pr_rec_f1s)) / (i + 1)),
+    classifying_data['pre_rec_f1_tuple'] = ((sum(map(operator.itemgetter(0), pr_rec_f1s)) / (i + 1)),
+                                            (sum(map(operator.itemgetter(1), pr_rec_f1s)) / (i + 1)),
     (sum(map(operator.itemgetter(2), pr_rec_f1s)) / (i + 1)))
 
     mean_tpr = np.mean(tprs, axis=0)

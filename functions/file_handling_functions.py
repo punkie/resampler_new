@@ -41,7 +41,8 @@ def load_dataset(dataset_loader):
 def __binarize_custom_dataset():
     with open("E:/python-workspace/resampler/non-binarized-dataset/eula.csv", newline="") as csv_input_file:
         reader = csv.reader(csv_input_file, delimiter=",")
-        with open("E:/python-workspace/resampler/binarized-datasets/ecoli-custom.csv", "w", newline="\n") as csv_output_file:
+        with open("E:/python-workspace/resampler/binarized-datasets/ecoli-custom.csv", "w", newline="\n")\
+                as csv_output_file:
             dataset_writer = csv.writer(csv_output_file, delimiter=",")
             for row in reader:
                 row[-1] = 1 if row[-1] == 'om' else -1

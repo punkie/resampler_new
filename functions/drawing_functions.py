@@ -68,7 +68,8 @@ def draw_roc_graph(state):
         if x == 0:
             ax.set_title('ROC for the normal dataset')
         else:
-            ax.set_title('ROC for the resampled dataset\n (using {} algorithm)'.format(state.sampling_algorithm.value[0]))
+            ax.set_title('ROC for the resampled dataset\n (using {} algorithm)'
+                         .format(state.sampling_algorithm.value[0]))
     #plt.legend(loc="lower right")
     plt.show()
 
@@ -80,12 +81,12 @@ def draw_pr_graph(state):
         # currently drawing only for the first fold
         ax = ax1 if x == 0 else ax2
         ax.get_figure().set_size_inches(12, 9)
-        fpr, tpr, roc_auc, i, y_test_from_normal_ds, predicted_y_scores, average_precision = classified_data[x]['main_tuples'][x]
+        fpr, tpr, roc_auc, i, y_test_from_normal_ds, predicted_y_scores, average_precision = \
+            classified_data[x]['main_tuples'][x]
         precision, recall, _ = precision_recall_curve(y_test_from_normal_ds, predicted_y_scores)
         ax.step(recall, precision, color='b', alpha=0.2, where='post')
-        ax.set_title('2-class Precision-Recall curve \nfor the 1st Fold of the Cross-validation \non {0}: AUC={1:0.2f}'.format(
-            "normal dataset" if x == 0 else "resampled dataset",
-            average_precision))
+        ax.set_title('2-class Precision-Recall curve \nfor the 1st Fold of the Cross-validation \non {0}: AUC={1:0.2f}'
+            .format("normal dataset" if x == 0 else "resampled dataset", average_precision))
         ax.fill_between(recall, precision, step='post', alpha=0.2,
                          color='b')
         ax.spines['top'].set_visible(False)
