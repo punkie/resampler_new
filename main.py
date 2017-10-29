@@ -1,11 +1,9 @@
 import sys
-
 from PyQt5.QtWidgets import QMainWindow, QApplication
-
-
 from functions.ui_callback_functions import choose_dataset, \
     choose_outputdir, perform_resampling, \
     choose_sampling_algorithm, show_img_diffs, classify_datasets, show_roc_graphs, show_pr_graphs
+from functions.ui_helping_functions import update_widgets_after_classification, update_widgets_after_datasetload
 from generated_pyqt_ui import Ui_MainWindow
 from rs_types.resampling_methods import ResamplingAlgorithms
 from rs_types.state import BasicState
@@ -22,6 +20,13 @@ class MainWindow(QMainWindow):
 
     def update_resample_classify_progress_bar(self, value):
         self.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(value)
+
+    def update_gui_after_classification(self):
+        if self.state.resample_classify_thread_finished and self.state.normal_classify_thread_finished:
+            update_widgets_after_classification(self)
+
+    def update_gui_after_dataset_load(self, value):
+        update_widgets_after_datasetload(self, value)
 
     def __init__(self):
         super(MainWindow, self).__init__()

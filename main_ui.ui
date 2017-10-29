@@ -96,6 +96,9 @@
       <height>34</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Only csv datasets are acceptable!</string>
+    </property>
     <property name="text">
      <string>Choose...</string>
     </property>
@@ -111,6 +114,9 @@
       <width>121</width>
       <height>34</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Choose the output dir, where the resampled dataset file will be stored!</string>
     </property>
     <property name="text">
      <string>Choose...</string>
@@ -225,7 +231,7 @@
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>200</y>
+      <y>170</y>
       <width>191</width>
       <height>51</height>
      </rect>
@@ -268,6 +274,9 @@
       <height>34</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Needs the dataset to be loaded!</string>
+    </property>
     <property name="text">
      <string>Classify</string>
     </property>
@@ -288,10 +297,10 @@
      </size>
     </property>
     <property name="toolTip">
-     <string>Only csv datasets are acceptable!</string>
+     <string/>
     </property>
     <property name="text">
-     <string>The button below is doing a 10-Fold Cross-validation using SVM on the normal and resampled datasets</string>
+     <string>The button below is doing a 10-Fold Cross-validation using RandomForest on the normal and resampled datasets!</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
@@ -313,7 +322,7 @@
      </size>
     </property>
     <property name="toolTip">
-     <string>Only csv datasets are acceptable!</string>
+     <string/>
     </property>
     <property name="text">
      <string/>
@@ -373,7 +382,7 @@
      </size>
     </property>
     <property name="toolTip">
-     <string>Only csv datasets are acceptable!</string>
+     <string/>
     </property>
     <property name="text">
      <string>Classify progress on normal dataset:</string>
@@ -395,7 +404,7 @@
      </size>
     </property>
     <property name="toolTip">
-     <string>Only csv datasets are acceptable!</string>
+     <string/>
     </property>
     <property name="text">
      <string>Classify progress on resampled dataset:</string>
@@ -413,6 +422,9 @@
       <height>34</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Needs the classification done!</string>
+    </property>
     <property name="text">
      <string>Show ROC Graphs</string>
     </property>
@@ -429,6 +441,9 @@
       <height>34</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Needs the classification done!</string>
+    </property>
     <property name="text">
      <string>Show PR Graphs</string>
     </property>
@@ -439,7 +454,7 @@
       <x>720</x>
       <y>10</y>
       <width>3</width>
-      <height>530</height>
+      <height>691</height>
      </rect>
     </property>
     <property name="orientation">
@@ -468,7 +483,7 @@
      </font>
     </property>
     <property name="toolTip">
-     <string>Only csv datasets are acceptable!</string>
+     <string/>
     </property>
     <property name="text">
      <string>Statistics for the standart dataset:</string>
@@ -478,7 +493,7 @@
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>160</y>
+      <y>140</y>
       <width>220</width>
       <height>31</height>
      </rect>
@@ -496,10 +511,82 @@
      </font>
     </property>
     <property name="toolTip">
-     <string>Only csv datasets are acceptable!</string>
+     <string/>
     </property>
     <property name="text">
      <string>Statistics for the resampled dataset:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statsLabelNormalDs_3">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>390</y>
+      <width>220</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>220</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>Mean statistics for the two variants:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="afterClassificationStatistics">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>430</y>
+      <width>231</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classifyLabel_2">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>510</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>400</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>The statistics are for the minor class and are averaged for all folds!</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

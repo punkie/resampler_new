@@ -40,13 +40,13 @@ def draw_comparision_picture(normal_dataset, resampled_dataset, sampling_algo_na
 
 
 def draw_roc_graph(state):
-    classified_datas = [state.classified_data_normal_case, state.classified_data_resampled_case]
+    classified_data = [state.classified_data_normal_case, state.classified_data_resampled_case]
     f, (ax1, ax2) = plt.subplots(1, 2)
     for x in range(2):
-        mean_fpr, mean_tpr, mean_auc, std_auc, tprs_lower, tprs_upper = classified_datas[x]['mean_values_tuple']
+        mean_fpr, mean_tpr, mean_auc, std_auc, tprs_lower, tprs_upper = classified_data[x]['mean_values_tuple']
         ax = ax1 if x == 0 else ax2
         ax.get_figure().set_size_inches(12, 9)
-        for mt in classified_datas[x]['main_tuples']:
+        for mt in classified_data[x]['main_tuples']:
             fpr, tpr, roc_auc, i, y_test_from_normal_ds, predicted_y_scores, average_precision = mt
             #plt.figure(normal_classifying_data['figure_number'])
             ax.plot(fpr, tpr, lw=1, alpha=0.3,
@@ -74,13 +74,13 @@ def draw_roc_graph(state):
 
 
 def draw_pr_graph(state):
-    classified_datas = [state.classified_data_normal_case, state.classified_data_resampled_case]
+    classified_data = [state.classified_data_normal_case, state.classified_data_resampled_case]
     f, (ax1, ax2) = plt.subplots(1, 2)
     for x in range(2):
         # currently drawing only for the first fold
         ax = ax1 if x == 0 else ax2
         ax.get_figure().set_size_inches(12, 9)
-        fpr, tpr, roc_auc, i, y_test_from_normal_ds, predicted_y_scores, average_precision = classified_datas[x]['main_tuples'][x]
+        fpr, tpr, roc_auc, i, y_test_from_normal_ds, predicted_y_scores, average_precision = classified_data[x]['main_tuples'][x]
         precision, recall, _ = precision_recall_curve(y_test_from_normal_ds, predicted_y_scores)
         ax.step(recall, precision, color='b', alpha=0.2, where='post')
         ax.set_title('2-class Precision-Recall curve \nfor the 1st Fold of the Cross-validation \non {0}: AUC={1:0.2f}'.format(

@@ -1,13 +1,13 @@
-from collections import Counter
-
 import numpy as np
+import operator
 from scipy import interp
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import average_precision_score
 from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import StratifiedKFold
-
+from sklearn.metrics import precision_recall_fscore_support
 from functions import resampling_functions
+from collections import Counter
 
 
 def compute_some_statistics_for_the_dataset(dataset):
@@ -21,16 +21,12 @@ def compute_some_statistics_for_the_dataset(dataset):
 
 def classify(classifier_thread):
     classifying_data = {}
-    if classifier_thread.do_resampling:
-        classifying_data['figure_number'] = 2
-    else:
-        classifying_data['figure_number'] = 1
     classifying_data['main_tuples'] = []
     normal_dataset = classifier_thread.main_window.state.dataset
     #resampled_dataset = state.resampled_dataset
     random_state = np.random.RandomState(0)
     cv = StratifiedKFold(n_splits=10)
-    classifier = RandomForestClassifier()
+    classifier = RandomForestClassifier(n_estimators=100, criterion='entropy')
     # classifier = svm.LinearSVC(random_state=random_state)
     # classifier = tree.DecisionTreeClassifier(criterion="entropy")
     X_normal = normal_dataset['x_values']
@@ -43,6 +39,7 @@ def classify(classifier_thread):
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
     i = 0
+    pr_rec_f1s = []
     for train, test in cv.split(X_normal, y_normal):
         if classifier_thread.do_resampling:
             r_dataset = resampling_functions.\
@@ -51,9 +48,12 @@ def classify(classifier_thread):
         else:
             classifier_ = classifier.fit(X_normal[train], y_normal[train])
         #predicted_y_scores = classifier_.decision_function(X_normal[test])
+        predicted_classes = classifier_.predict(X_normal[test])
         probas_ = classifier_.predict_proba(X_normal[test])
         average_precision = average_precision_score(y_normal[test], probas_[:, 1])
         fpr, tpr, thresholds = roc_curve(y_normal[test], probas_[:, 1])
+        prf1 = precision_recall_fscore_support(y_normal[test], predicted_classes, average='binary')
+        pr_rec_f1s.append(prf1)
         tprs.append(interp(mean_fpr, fpr, tpr))
         tprs[-1][0] = 0.0
         roc_auc = auc(fpr, tpr)
@@ -65,6 +65,9 @@ def classify(classifier_thread):
             classifier_thread.update_resample_classify_progress_bar.emit(i)
         else:
             classifier_thread.update_normal_classify_progress_bar.emit(i)
+    #grouped_pr_rec_f1s = zip(*pr_rec_f1s)
+    classifying_data['pre_rec_f1_tuple'] = ((sum(map(operator.itemgetter(0), pr_rec_f1s)) / (i + 1)), (sum(map(operator.itemgetter(1), pr_rec_f1s)) / (i + 1)),
+    (sum(map(operator.itemgetter(2), pr_rec_f1s)) / (i + 1)))
 
     mean_tpr = np.mean(tprs, axis=0)
     mean_tpr[-1] = 1.0
@@ -82,3 +85,17 @@ def __create_statistics_string(dataset):
     dataset_statistics_string = 'Number of examples: {}\nPercentage of minor class examples: {}'.format(
         dataset['number_of_examples'], dataset['target_class_percentage'])
     dataset['dataset_statistics_string'] = dataset_statistics_string
+
+def get_mean_precision_recall_f1_scores(state):
+    precision, recall, f1 = state.classified_data_normal_case['pre_rec_f1_tuple']
+    precision_re, recall_re, f1_re = state.classified_data_resampled_case['pre_rec_f1_tuple']
+
+    heading = "{:>40}".format("Normal DS  /  Resampled DS")
+    precision = "{:>15}".format("Precision: ") + "{:.3f}".format(precision) + \
+                "{:>15}".format("Precision: ") + "{:.3f}".format(precision_re)
+    recall = "{:>17}".format("Recall: ") + "{:.3f}".format(recall) + \
+             "{:>17}".format("Recall: ") + "{:.3f}".format(recall_re)
+    f_score = "{:>14}".format("F_score: ") +  "{:.3f}".format(f1) + \
+              "{:>15}".format("F_score: ") +  "{:.3f}".format(f1_re)
+    result_scores = heading + "\n\n" + precision + "\n" + recall + "\n" + f_score
+    return result_scores

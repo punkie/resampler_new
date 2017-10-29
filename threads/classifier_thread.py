@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QThread, pyqtSignal
-from functions.general_functions import classify
+from functions.general_functions import classify, get_mean_precision_recall_f1_scores
 from rs_types.widgets import Widgets
 
 
@@ -7,6 +7,7 @@ class Classifying(QThread):
 
     update_normal_classify_progress_bar = pyqtSignal(int)
     update_resample_classify_progress_bar = pyqtSignal(int)
+    update_gui_after_classification = pyqtSignal()
 
     def __init__(self, main_window, do_resampling):
         super(Classifying, self).__init__()
@@ -32,11 +33,8 @@ class Classifying(QThread):
             self.main_window.state.resample_classify_thread_finished = True
         else:
             self.main_window.state.normal_classify_thread_finished = True
-        if self.main_window.state.resample_classify_thread_finished and self.main_window.state.normal_classify_thread_finished:
-            self.main_window.widgets. \
-                get_label(Widgets.Labels.ClassifyingStatusLabel.value).setText("Done!")
-            self.main_window.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).setEnabled(True)
-            self.main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(True)
+        self.update_gui_after_classification.emit()
+
 
     def __custom_pre_process(self):
         self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(
@@ -44,3 +42,5 @@ class Classifying(QThread):
         self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
         self.main_window.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).setEnabled(False)
         self.main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(False)
+        self.main_window.widgets. \
+            get_label(Widgets.Labels.AfterClassificationStatistics.value).setText(" ")
