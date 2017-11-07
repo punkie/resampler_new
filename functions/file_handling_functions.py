@@ -37,6 +37,39 @@ def load_dataset(dataset_loader):
         dataset['y_values'] = np.array(y_values)
         dataset_loader.main_window.state.dataset = dataset
 
+def __labelize_dataset(path, output_file_path):
+    with open(path, newline="") as csv_input_file:
+        reader = csv.reader(csv_input_file, delimiter=",")
+        with open(output_file_path, "w", newline="\n") \
+                as csv_output_file:
+            dataset_writer = csv.writer(csv_output_file, delimiter=",")
+            reader_as_list = list(reader)
+            parse_header = True
+            for row in reader_as_list:
+                if parse_header:
+                    dict_with_labelencoders = __parse_custom_header(row)
+                    parse_header = False
+                    continue
+                labelized_row = []
+                for idx, element in enumerate(row):
+                    if dict_with_labelencoders.get(str(idx)) != None:
+                        if (element == "''"):
+                            labelized_row.append(dict_with_labelencoders.get(str(idx)).index(""))
+                        else:
+                            labelized_row.append(
+                                dict_with_labelencoders.get(str(idx)).index(element.replace("'", "")))
+                    else:
+                        labelized_row.append(element)
+                dataset_writer.writerow(labelized_row)
+
+def __parse_custom_header(row):
+    result_dict = dict()
+    for element in row:
+        el_idx, el_list = element.split('=')
+        el_list = eval(el_list.replace(";", ","))
+        # result_dict[el_idx] = preprocessing.LabelEncoder().fit(el_list)
+        result_dict[el_idx] = el_list
+    return result_dict
 
 def __binarize_custom_dataset():
     with open("E:/python-workspace/resampler/non-binarized-dataset/eula.csv", newline="") as csv_input_file:
@@ -48,10 +81,12 @@ def __binarize_custom_dataset():
                 row[-1] = 1 if row[-1] == 'om' else -1
                 dataset_writer.writerow(row[1:])
 
-
 def __extract_binarized_imbalanced_datasets():
     for dataset_name, dataset_values in fetch_datasets().items():
         write_dataset_to_csv("./binarized-datasets/" + dataset_name + ".csv", dataset_values)
 
 # if __name__ == '__main__':
-#     __extract_binarized_imbalanced_datasets()
+    # __labelize_dataset("E:/python-workspace/resampler/binarized-datasets/"
+    #                    "2_Class_Data_February_Cleaned_with_custom_header.csv",
+    #                    "E:/python-workspace/resampler/binarized-datasets/custom_ds.csv")
+    #__extract_binarized_imbalanced_datasets()
