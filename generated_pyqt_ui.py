@@ -203,7 +203,7 @@ class Ui_MainWindow(object):
         self.imgDiffsButton.setText(_translate("MainWindow", "Dataset diffs as imgs"))
         self.classifyButton.setToolTip(_translate("MainWindow", "Needs the dataset to be loaded!"))
         self.classifyButton.setText(_translate("MainWindow", "Classify"))
-        self.classifyLabel.setText(_translate("MainWindow", "The button below is doing a 10-Fold Cross-validation using RandomForest on the normal and resampled datasets!"))
+        self.classifyLabel.setText(_translate("MainWindow", "The button below is doing a 10-Fold Cross-validation using CART on the normal and resampled datasets!"))
         self.classifyLabelNormalDataset.setText(_translate("MainWindow", "Classify progress on normal dataset:"))
         self.classifyLabelResampledDataset.setText(_translate("MainWindow", "Classify progress on resampled dataset:"))
         self.showROCGraphs.setToolTip(_translate("MainWindow", "Needs the classification done!"))
