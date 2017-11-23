@@ -1,6 +1,7 @@
+import numpy as np
 from matplotlib import pyplot as plt
+from scikitplot.metrics import plot_precision_recall_curve
 from sklearn.decomposition import PCA
-from sklearn.metrics import precision_recall_curve
 
 
 def draw_comparision_picture(normal_dataset, resampled_dataset, sampling_algo_name):
@@ -78,21 +79,22 @@ def draw_pr_graph(state):
     classified_data = [state.classified_data_normal_case, state.classified_data_resampled_case]
     f, (ax1, ax2) = plt.subplots(1, 2)
     for x in range(2):
-        # currently drawing only for the first fold
+        probas = np.concatenate(classified_data[x]['preds_list'], axis=0)
+        y_true = np.concatenate(classified_data[x]['trues_list'])
         ax = ax1 if x == 0 else ax2
+        plot_precision_recall_curve(y_true, probas,
+            title="Normal dataset with average precision = {0:0.2f}".format(classified_data[x]['average_precision']) if x == 0
+    else "Resampled dataset with {0} and\n average precision ={1:0.2f}".format(state.sampling_algorithm.value[0], classified_data[x]['average_precision']),
+            curves=('micro', 'each_class'), ax=ax,
+            figsize=None, cmap='nipy_spectral',
+            title_fontsize="large",
+            text_fontsize="medium")
         ax.get_figure().set_size_inches(12, 9)
-        fpr, tpr, roc_auc, i, y_test_from_normal_ds, predicted_y_scores, average_precision = \
-            classified_data[x]['main_tuples'][x]
-        precision, recall, _ = precision_recall_curve(y_test_from_normal_ds, predicted_y_scores)
-        ax.step(recall, precision, color='b', alpha=0.2, where='post')
-        ax.set_title('2-class Precision-Recall curve \nfor the 1st Fold of the Cross-validation \non {0}: AUC={1:0.2f}'
-            .format("normal dataset" if x == 0 else "resampled dataset", average_precision))
-        ax.fill_between(recall, precision, step='post', alpha=0.2,
-                         color='b')
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.set_xlabel('Recall')
         ax.set_ylabel('Precision')
         ax.set_ylim([0.0, 1.05])
         ax.set_xlim([0.0, 1.0])
+
     plt.show()

@@ -16,6 +16,7 @@ class Widgets:
 
     class ComboBoxes(Enum):
         ResamplingAlgorithms = "resamplingAlgorithms"
+        ClassificationAlgorithms = "classAlgorithms"
 
     class Labels(Enum):
         DatasetPickedLabel = "datasetPickedLabel"
@@ -25,6 +26,7 @@ class Widgets:
         ResampledDatasetStatistics = "resampledDatasetStatistics"
         OutputDirectoryPickedLabel = "outputDirectoryPickedLabel"
         AfterClassificationStatistics = "afterClassificationStatistics"
+        ClassificationAlgorithmLabel = "classAlgorithmLabel"
 
     class ProgressBars(Enum):
         DatasetProgressBar = "datasetProgressBar"

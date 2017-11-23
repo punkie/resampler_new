@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QFileDialog
 from functions.drawing_functions import draw_comparision_picture, draw_roc_graph, draw_pr_graph
+from rs_types.classification_algorithms import ClassificationAlgorithms
 from rs_types.resampling_methods import ResamplingAlgorithms
 from rs_types.widgets import Widgets
 from threads.classifier_thread import Classifying
@@ -30,6 +31,12 @@ def choose_sampling_algorithm(main_window):
     chosen_algorithm_name = main_window.widgets.\
         get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).currentText()
     main_window.state.sampling_algorithm = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
+
+
+def choose_classification_algorithm(main_window):
+    chosen_algorithm_name = main_window.widgets. \
+        get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).currentText()
+    main_window.state.classification_algorithm = ClassificationAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
 
 
 def perform_resampling(main_window):

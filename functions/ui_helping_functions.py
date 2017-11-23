@@ -21,6 +21,7 @@ def update_widgets_after_datasetload(main_window, path):
     main_window.widgets.get_label(Widgets.Labels.ResampledDatasetStatistics.value).setText(" ")
     main_window.widgets.get_label(Widgets.Labels.ResamplingStatusLabel.value).setText(" ")
     main_window.widgets.get_button(Widgets.Buttons.ImgDiffsButton.value).setEnabled(False)
+    main_window.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).setEnabled(True)
     main_window.widgets.get_button(Widgets.Buttons.ClassifyButton.value).setEnabled(True)
     main_window.widgets.get_label(Widgets.Labels.ClassifyingStatusLabel.value).setText(" ")
     main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)

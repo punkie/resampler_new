@@ -2,9 +2,11 @@ import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from functions.ui_callback_functions import choose_dataset, \
     choose_outputdir, perform_resampling, \
-    choose_sampling_algorithm, show_img_diffs, classify_datasets, show_roc_graphs, show_pr_graphs
+    choose_sampling_algorithm, show_img_diffs, classify_datasets, show_roc_graphs, show_pr_graphs, \
+    choose_classification_algorithm
 from functions.ui_helping_functions import update_widgets_after_classification, update_widgets_after_datasetload
 from generated_pyqt_ui import Ui_MainWindow
+from rs_types.classification_algorithms import ClassificationAlgorithms
 from rs_types.resampling_methods import ResamplingAlgorithms
 from rs_types.state import BasicState
 from rs_types.widgets import Widgets
@@ -36,6 +38,7 @@ class MainWindow(QMainWindow):
         self.widgets = Widgets(self)
         # default algorithm
         self.state.sampling_algorithm = ResamplingAlgorithms.RO
+        self.state.classification_algorithm = ClassificationAlgorithms.CART
 
 if __name__ == '__main__':
     # exceptions hook
@@ -54,10 +57,15 @@ if __name__ == '__main__':
     mw.widgets.get_button(Widgets.Buttons.ClassifyButton.value).clicked.connect(lambda: classify_datasets(mw))
     mw.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).activated.connect(
         lambda: choose_sampling_algorithm(mw))
+    mw.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).activated.connect(
+        lambda: choose_classification_algorithm(mw))
     mw.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).clicked.connect(lambda: show_roc_graphs(mw))
     mw.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).clicked.connect(lambda: show_pr_graphs(mw))
-    # load default items for the resampling algos
+    # load default items for the different algos
     mw.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).addItems\
             ([ra.value[0] for ra in ResamplingAlgorithms])
+    mw.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).addItems \
+        ([ca.value[0] for ca in ClassificationAlgorithms])
+
     mw.show()
     sys.exit(app.exec_())

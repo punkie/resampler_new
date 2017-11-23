@@ -4,9 +4,9 @@ from imblearn.under_sampling import RandomUnderSampler
 
 
 class ResamplingAlgorithms(Enum):
-    RO = ("Random Oversampling", RandomOverSampler())
-    RU = ("Random Undersampling", RandomUnderSampler())
-    SMOTE = ("Smote", SMOTE(kind="regular"))
+    RO = ("Random Oversampling", RandomOverSampler(random_state=1))
+    RU = ("Random Undersampling", RandomUnderSampler(random_state=1))
+    SMOTE = ("Smote", SMOTE(kind="regular", random_state=1))
     # ADASYN = ("Adasyn", ADASYN())
 
     @classmethod

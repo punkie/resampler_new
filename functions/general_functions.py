@@ -1,9 +1,8 @@
+import copy
 import numpy as np
 import operator
 from imblearn.metrics import classification_report_imbalanced
 from scipy import interp
-from sklearn import tree, svm
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import average_precision_score
 from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import StratifiedKFold
@@ -32,18 +31,18 @@ def classify(classifier_thread):
     cv = StratifiedKFold(n_splits=10, random_state=rand_state)
     # classifier = RandomForestClassifier(n_estimators=100, criterion='entropy', random_state=rand_state)
     # classifier = svm.SVC(probability=True, random_state=rand_state)
-    classifier = tree.DecisionTreeClassifier(random_state=rand_state, criterion='entropy')
+    classifier = copy.deepcopy(classifier_thread.main_window.state.classification_algorithm.value[1])
     X_normal = normal_dataset['x_values']
     y_normal = normal_dataset['y_values']
-
-    #X_resampled = resampled_dataset['x_values']
-    #y_resampled = resampled_dataset['y_values']
 
     tprs = []
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
     i = 0
     pr_rec_f1s = []
+    preds_list = []
+    trues_list = []
+    average_precisions = []
     for train, test in cv.split(X_normal, y_normal):
         if classifier_thread.do_resampling:
             r_dataset = resampling_functions.\
@@ -55,7 +54,10 @@ def classify(classifier_thread):
         #predicted_y_scores = classifier_.decision_function(X_normal[test])
         predicted_classes = classifier_.predict(X_normal[test])
         probas_ = classifier_.predict_proba(X_normal[test])
+        preds_list.append(probas_)
+        trues_list.append(y_normal[test])
         average_precision = average_precision_score(y_normal[test], probas_[:, 1])
+        average_precisions.append(average_precision)
         fpr, tpr, thresholds = roc_curve(y_normal[test], probas_[:, 1])
         prf1 = precision_recall_fscore_support(y_normal[test], predicted_classes, average='binary')
         pr_rec_f1s.append(prf1)
@@ -79,6 +81,25 @@ def classify(classifier_thread):
                                             (sum(map(operator.itemgetter(1), pr_rec_f1s)) / i),
     (sum(map(operator.itemgetter(2), pr_rec_f1s)) / i))
 
+    classifying_data['preds_list'] = preds_list
+    classifying_data['trues_list'] = trues_list
+    classifying_data['average_precision'] = sum(average_precisions) / i
+    # sorted_recall = sorted((map(operator.itemgetter(1), pr_rec_f1s)))
+    # recalls = []
+    # max_precisions = []
+    # for rec in np.linspace(0, 1, num=11):
+    #     filtered_recalls = list(filter(lambda x: x[1] >= rec, pr_rec_f1s))
+    #     max_precision = max(map(operator.itemgetter(0), filtered_recalls)) if len(filtered_recalls) > 0 else 0
+    #     recalls.append(rec)
+    #     max_precisions.append(max_precision)
+    # classifying_data['recalls'] = recalls
+    # classifying_data['max_precisions'] =  max_precisions
+    # classifying_data['sorted_recall'] = sorted_recall
+    # classifying_data['precision'] = list(map(operator.itemgetter(0), pr_rec_f1s))
+    #
+    # classifying_data['decreasing_max_precision'] = list(
+    #     np.maximum.accumulate(classifying_data['precision'][::-1])[::-1])
+
     mean_tpr = np.mean(tprs, axis=0)
     mean_tpr[-1] = 1.0
     mean_auc = auc(mean_fpr, mean_tpr)
@@ -91,11 +112,49 @@ def classify(classifier_thread):
     return classifying_data
 
 
-def __create_statistics_string(dataset):
-    dataset_statistics_string = 'Number of examples: {}\nPercentage of minor class examples: {}\n' \
-                                'Imbalanced ratio: {}'.format(
-        dataset['number_of_examples'], dataset['target_class_percentage'], dataset['imbalanced_ratio'])
-    dataset['dataset_statistics_string'] = dataset_statistics_string
+# def compute_data_for_pr_graph(state):
+#     classifying_data = {}
+#     normal_dataset = state.dataset
+#     rand_state = np.random.RandomState(1)
+#     cv = StratifiedKFold(n_splits=10)
+#     classifier = copy.deepcopy(state.classification_algorithm.value[1])
+#     # classifier.random_state = None
+#     # classifier reset random state
+#     X_normal = normal_dataset['x_values']
+#     y_normal = normal_dataset['y_values']
+#
+#     list_with_max_precisions = []
+#     for cv_iterations in range(20):
+#         i = 0
+#         pr_rec_f1s = []
+#         for train, test in cv.split(X_normal, y_normal):
+#             if False:
+#                 r_dataset = resampling_functions. \
+#                     do_resampling_without_writing_to_file(state.sampling_algorithm,
+#                                                           X_normal[train], y_normal[train])
+#                 classifier_ = classifier.fit(r_dataset['x_values'], r_dataset['y_values'])
+#             else:
+#                 classifier_ = classifier.fit(X_normal[train], y_normal[train])
+#             predicted_classes = classifier_.predict(X_normal[test])
+#             prf1 = precision_recall_fscore_support(y_normal[test], predicted_classes, average='binary')
+#             pr_rec_f1s.append(prf1)
+#             i += 1
+#         # grouped_pr_rec_f1s = zip(*pr_rec_f1s)
+#         classifying_data['pre_rec_f1_tuple'] = ((sum(map(operator.itemgetter(0), pr_rec_f1s)) / i),
+#                                                 (sum(map(operator.itemgetter(1), pr_rec_f1s)) / i),
+#                                                 (sum(map(operator.itemgetter(2), pr_rec_f1s)) / i))
+#         sorted_recall = sorted((map(operator.itemgetter(1), pr_rec_f1s)))
+#         recalls = []
+#         max_precisions = []
+#         for rec in np.linspace(0, 1, num=11):
+#             filtered_recalls = list(filter(lambda x: x[1] >= rec, pr_rec_f1s))
+#             max_precision = max(map(operator.itemgetter(0), filtered_recalls)) if len(filtered_recalls) > 0 else 0
+#             recalls.append(rec)
+#             max_precisions.append(max_precision)
+#         list_with_max_precisions.append(max_precisions)
+#     classifying_data['recalls'] = recalls
+#     classifying_data['max_precisions'] = list(map(lambda x: sum(x) / 20, zip(*list_with_max_precisions)))
+#     return classifying_data
 
 
 def get_mean_precision_recall_f1_scores(state):
@@ -111,3 +170,12 @@ def get_mean_precision_recall_f1_scores(state):
               "{:>15}".format("F_score: ") +  "{:.3f}".format(f1_re)
     result_scores = heading + "\n\n" + precision + "\n" + recall + "\n" + f_score
     return result_scores
+
+
+def __create_statistics_string(dataset):
+    dataset_statistics_string = 'Number of examples: {}\nPercentage of minor class examples: {}\n' \
+                                'Imbalanced ratio: {}'.format(
+        dataset['number_of_examples'], dataset['target_class_percentage'], dataset['imbalanced_ratio'])
+    dataset['dataset_statistics_string'] = dataset_statistics_string
+
+

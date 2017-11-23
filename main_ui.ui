@@ -269,7 +269,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>290</y>
+      <y>350</y>
       <width>112</width>
       <height>34</height>
      </rect>
@@ -300,7 +300,7 @@
      <string/>
     </property>
     <property name="text">
-     <string>The button below is doing a 10-Fold Cross-validation using CART on the normal and resampled datasets!</string>
+     <string>The button below is doing a 10-Fold Cross-validation on the normal and resampled datasets!</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
@@ -310,7 +310,7 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>290</y>
+      <y>350</y>
       <width>169</width>
       <height>31</height>
      </rect>
@@ -335,7 +335,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>370</y>
+      <y>430</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -354,7 +354,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>370</y>
+      <y>430</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -370,7 +370,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>340</y>
+      <y>400</y>
       <width>180</width>
       <height>31</height>
      </rect>
@@ -392,7 +392,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>340</y>
+      <y>400</y>
       <width>200</width>
       <height>31</height>
      </rect>
@@ -587,6 +587,41 @@
     </property>
     <property name="wordWrap">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="classAlgorithmLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>169</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>169</width>
+      <height>91</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>Classification algorithm:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="classAlgorithms">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>300</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
     </property>
    </widget>
   </widget>
