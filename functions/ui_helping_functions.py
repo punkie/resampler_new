@@ -9,13 +9,14 @@ def update_widgets_after_classification(main_window):
     main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(True)
     main_window.widgets. \
         get_label(Widgets.Labels.AfterClassificationStatistics.value).setText(
-        get_mean_precision_recall_f1_scores(main_window.state))
+            get_mean_precision_recall_f1_scores(main_window.state))
+
 
 def update_widgets_after_datasetload(main_window, path):
     main_window.widgets.get_label(Widgets.Labels.DatasetPickedLabel.value).setText(path)
     main_window.widgets. \
         get_label(Widgets.Labels.DatasetStatisticsLabel.value).setText(
-        main_window.state.dataset['dataset_statistics_string'])
+            main_window.state.dataset['dataset_statistics_string'])
     main_window.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).setEnabled(True)
     main_window.widgets.get_button(Widgets.Buttons.OutputDirectoryButton.value).setEnabled(True)
     main_window.widgets.get_label(Widgets.Labels.ResampledDatasetStatistics.value).setText(" ")

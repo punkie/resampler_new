@@ -15,4 +15,4 @@ class BasicState:
         self.resample_classify_thread_finished = resample_classify_thread_finished
         self.classified_data_normal_case = classified_data_normal_case
         self.classified_data_resampled_case = classified_data_resampled_case
-        self.classification_algoritm = classification_algorithm
+        self.classification_algorithm = classification_algorithm

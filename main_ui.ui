@@ -6,14 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>988</width>
-    <height>737</height>
+    <width>990</width>
+    <height>823</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>1</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -60,13 +72,19 @@
      <rect>
       <x>20</x>
       <y>110</y>
-      <width>169</width>
+      <width>220</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="maximumSize">
      <size>
-      <width>169</width>
+      <width>300</width>
       <height>91</height>
      </size>
     </property>
@@ -165,6 +183,12 @@
       <width>112</width>
       <height>34</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="toolTip">
      <string>Needs the output dir to be chosen!</string>
@@ -274,6 +298,12 @@
       <height>34</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="toolTip">
      <string>Needs the dataset to be loaded!</string>
     </property>
@@ -371,21 +401,27 @@
      <rect>
       <x>20</x>
       <y>400</y>
-      <width>180</width>
+      <width>181</width>
       <height>31</height>
      </rect>
     </property>
-    <property name="maximumSize">
-     <size>
-      <width>180</width>
-      <height>91</height>
-     </size>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="toolTip">
      <string/>
     </property>
     <property name="text">
      <string>Classify progress on normal dataset:</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="classifyLabelResampledDataset">
@@ -421,6 +457,12 @@
       <width>112</width>
       <height>34</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>1</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="toolTip">
      <string>Needs the classification done!</string>
@@ -624,30 +666,83 @@
      </rect>
     </property>
    </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>590</y>
+      <width>377</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="classifyLabelResampledDataset_2">
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>91</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Classify progress on resampled dataset:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="classifyLabelNormalDataset_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Classify progress on normal dataset:</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>988</width>
-     <height>21</height>
-    </rect>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
-   <widget class="QMenu" name="menuAsd">
+   <widget class="QMenu" name="menuasd">
     <property name="title">
-     <string>File</string>
+     <string>asd</string>
     </property>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="actionQqq"/>
    </widget>
-   <addaction name="menuAsd"/>
+   <addaction name="menuasd"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionQqq">
    <property name="text">
     <string>Test</string>
+   </property>
+  </action>
+  <action name="actionasd">
+   <property name="text">
+    <string>asd</string>
    </property>
   </action>
  </widget>

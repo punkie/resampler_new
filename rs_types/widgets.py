@@ -5,6 +5,16 @@ from PyQt5.QtWidgets import QPushButton, QComboBox, QLabel, QProgressBar, QScrol
 # kinda custom enum...
 class Widgets:
 
+    def __init__(self, main_window):
+        self.buttons = {button.value: main_window.findChild(QPushButton, button.value) for button in Widgets.Buttons}
+        self.combo_boxes = {combo_box.value: main_window.findChild(QComboBox, combo_box.value)
+                            for combo_box in Widgets.ComboBoxes}
+        self.labels = {label.value: main_window.findChild(QLabel, label.value) for label in Widgets.Labels}
+        self.progress_bars = {progress_bar.value: main_window.findChild(QProgressBar, progress_bar.value)
+                              for progress_bar in Widgets.ProgressBars}
+        self.scroll_areas = {scroll_area.value: main_window.findChild(QScrollArea, scroll_area.value)
+                             for scroll_area in Widgets.ScrollAreas}
+
     class Buttons(Enum):
         DatasetButton = "datasetButton"
         OutputDirectoryButton = "outputDirectoryButton"
@@ -36,27 +46,17 @@ class Widgets:
     class ScrollAreas(Enum):
         AfterClassificationStatisticsArea = "afterClassificationStatisticsArea"
 
-    def __init__(self, main_window):
-        self.buttons = {button.value: main_window.findChild(QPushButton, button.value) for button in Widgets.Buttons}
-        self.combo_boxes = {combo_box.value: main_window.findChild(QComboBox, combo_box.value)
-                            for combo_box in Widgets.ComboBoxes}
-        self.labels = {label.value: main_window.findChild(QLabel, label.value) for label in Widgets.Labels}
-        self.progress_bars = {progress_bar.value: main_window.findChild(QProgressBar, progress_bar.value)
-                             for progress_bar in Widgets.ProgressBars}
-        self.scroll_areas = {scroll_area.value: main_window.findChild(QScrollArea, scroll_area.value)
-                             for scroll_area in Widgets.ScrollAreas}
+    def get_button(self, widget_id):
+        return self.buttons[widget_id]
 
-    def get_button(self, id):
-        return self.buttons[id]
+    def get_combo_box(self, widget_id):
+        return self.combo_boxes[widget_id]
 
-    def get_combo_box(self, id):
-        return self.combo_boxes[id]
+    def get_label(self, widget_id):
+        return self.labels[widget_id]
 
-    def get_label(self, id):
-        return self.labels[id]
+    def get_progress_bar(self, widget_id):
+        return self.progress_bars[widget_id]
 
-    def get_progress_bar(self, id):
-        return self.progress_bars[id]
-
-    def get_scroll_area(self, id):
-        return self.scroll_areas[id]
+    def get_scroll_area(self, widget_id):
+        return self.scroll_areas[widget_id]

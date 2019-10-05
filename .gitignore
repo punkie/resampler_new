@@ -3,6 +3,10 @@ __pycache__/
 binarized-datasets/
 resampled-datasets/
 non-binarized-dataset/
+agre-resampled/
+keel-datasets/
+output-test-dir/
+results/
 build/
 dist/
 test/

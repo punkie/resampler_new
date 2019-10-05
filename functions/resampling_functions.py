@@ -13,7 +13,7 @@ def do_resampling(state):
     y_values = dataset['y_values']
     x_values = dataset['x_values']
     x_resampled_values, y_resampled_values = sampling_algorithm.value[1].fit_sample(x_values, y_values)
-    resampled_dataset = {}
+    resampled_dataset = dict()
     resampled_dataset['x_values'] = x_resampled_values
     resampled_dataset['y_values'] = y_resampled_values
     file_handling_functions.write_dataset_to_csv\

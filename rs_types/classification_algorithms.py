@@ -15,4 +15,4 @@ class ClassificationAlgorithms(Enum):
     @classmethod
     def get_algorithm_by_name(cls, name):
         filtered_algos = filter(lambda ca: ca.value[0] == name, ClassificationAlgorithms)
-        return list(filtered_algos).pop()
+        return next(filtered_algos, ClassificationAlgorithms.CART)

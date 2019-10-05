@@ -35,7 +35,6 @@ class Classifying(QThread):
             self.main_window.state.normal_classify_thread_finished = True
         self.update_gui_after_classification.emit()
 
-
     def __custom_pre_process(self):
         self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(
             0)

@@ -1,4 +1,7 @@
 import numpy as np
+import matplotlib
+matplotlib.get_backend()
+matplotlib.use("QT5Agg")
 from matplotlib import pyplot as plt
 from scikitplot.metrics import plot_precision_recall_curve
 from sklearn.decomposition import PCA

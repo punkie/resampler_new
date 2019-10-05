@@ -27,5 +27,7 @@ class DatasetLoader(QThread):
         self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setValue(0)
         self.main_window.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).setEnabled(False)
         self.main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(False)
+        self.main_window.widgets.get_button(Widgets.Buttons.ClassifyButton.value).setEnabled(False)
+        self.main_window.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).setEnabled(False)
         self.main_window.widgets. \
             get_label(Widgets.Labels.AfterClassificationStatistics.value).setText(" ")
