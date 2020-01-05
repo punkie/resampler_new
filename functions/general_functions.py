@@ -1,7 +1,7 @@
 import copy
 import numpy as np
 import operator
-from imblearn.metrics import classification_report_imbalanced
+from imblearn.metrics import classification_report_imbalanced, specificity_score
 from scipy import interp
 from sklearn.metrics import average_precision_score
 from sklearn.metrics import roc_curve, auc
@@ -39,6 +39,8 @@ def classify(classifier_thread):
     aucs = []
     mean_fpr = np.linspace(0, 1, 100)
     i = 0
+    g_means_1 = []
+    g_means_2 = []
     pr_rec_f1s = []
     preds_list = []
     trues_list = []
@@ -65,10 +67,17 @@ def classify(classifier_thread):
         tprs[-1][0] = 0.0
         roc_auc = auc(fpr, tpr)
         aucs.append(roc_auc)
-        if not classifier_thread.do_resampling:
-            print("iteration #{} with resampled dataset ({})."
-                   " statistics:\n{}\n".format(i, classifier_thread.do_resampling,
-                                               (classification_report_imbalanced(y_normal[test], predicted_classes))))
+        report_from_imbalanced_learning = classification_report_imbalanced(y_normal[test], predicted_classes)
+        specificity = specificity_score(y_normal[test], predicted_classes);
+        g_means_1.append(np.sqrt(prf1[1] * specificity))
+        #pr_rec_f1s.append(g_mean1)
+        g_means_2.append(np.sqrt(prf1[0] * prf1[1]))
+        # pr_rec_f1s.append(g_mean2)
+        #pr_rec_f1s.append(prf1)
+
+        # print("iteration #{} with resampled dataset ({})."
+        #    " statistics:\n{}\n".format(i, classifier_thread.do_resampling,
+        #                                (classification_report_imbalanced(y_normal[test], predicted_classes))))
         classifying_data['main_tuples'].append((fpr, tpr, roc_auc, i, y_normal[test], probas_[:, 1], average_precision))
 
         i += 1
@@ -77,9 +86,16 @@ def classify(classifier_thread):
         else:
             classifier_thread.update_normal_classify_progress_bar.emit(i)
     #grouped_pr_rec_f1s = zip(*pr_rec_f1s)
-    classifying_data['pre_rec_f1_tuple'] = ((sum(map(operator.itemgetter(0), pr_rec_f1s)) / i),
+    classifying_data['pre_rec_f1_g_mean1_g_mean2_tuple'] = ((sum(map(operator.itemgetter(0), pr_rec_f1s)) / i),
                                             (sum(map(operator.itemgetter(1), pr_rec_f1s)) / i),
-    (sum(map(operator.itemgetter(2), pr_rec_f1s)) / i))
+    (sum(map(operator.itemgetter(2), pr_rec_f1s)) / i),
+    sum(g_means_1) / i,
+    sum(g_means_2) / i)
+    # \
+    #     ,
+    #
+    # (sum(pr_rec_f1s[1]) / i),
+    # (sum(pr_rec_f1s[2]) / i))
 
     classifying_data['preds_list'] = preds_list
     classifying_data['trues_list'] = trues_list
@@ -158,8 +174,8 @@ def classify(classifier_thread):
 
 
 def get_mean_precision_recall_f1_scores(state):
-    precision, recall, f1 = state.classified_data_normal_case['pre_rec_f1_tuple']
-    precision_re, recall_re, f1_re = state.classified_data_resampled_case['pre_rec_f1_tuple']
+    precision, recall, f1, gm1, gm2 = state.classified_data_normal_case['pre_rec_f1_g_mean1_g_mean2_tuple']
+    precision_re, recall_re, f1_re, gm1_re, gm2_re = state.classified_data_resampled_case['pre_rec_f1_g_mean1_g_mean2_tuple']
 
     heading = "{:>40}".format("Normal DS  /  Resampled DS")
     precision = "{:>15}".format("Precision: ") + "{:.3f}".format(precision) + \
@@ -168,7 +184,12 @@ def get_mean_precision_recall_f1_scores(state):
              "{:>17}".format("Recall: ") + "{:.3f}".format(recall_re)
     f_score = "{:>14}".format("F_score: ") +  "{:.3f}".format(f1) + \
               "{:>15}".format("F_score: ") +  "{:.3f}".format(f1_re)
-    result_scores = heading + "\n\n" + precision + "\n" + recall + "\n" + f_score
+    g_mean1 = "{:>14}".format("G_mean_1: ") +  "{:.3f}".format(gm1) + \
+              "{:>15}".format("G_mean_1: ") +  "{:.3f}".format(gm1_re)
+    g_mean2 = "{:>14}".format("G_mean_2: ") +  "{:.3f}".format(gm2) + \
+              "{:>15}".format("G_mean_2: ") +  "{:.3f}".format(gm2_re)
+    result_scores = heading + "\n\n" + precision + "\n" + recall + "\n" + f_score + "\n" + g_mean1 + "\n" + g_mean2
+    print (result_scores)
     return result_scores
 
 

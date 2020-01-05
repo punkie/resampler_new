@@ -57,6 +57,7 @@ def draw_roc_graph(state):
                 label='ROC fold %d (AUC = %0.2f)' % (i, roc_auc))
         ax.plot([0, 1], [0, 1], linestyle='--', lw=2, color='r',
                 label='Luck', alpha=.8)
+        print ("Mean ROC (AUC = %0.2f STD %0.2f)" % (mean_auc, std_auc))
         ax.plot(mean_fpr, mean_tpr, color='b',
                  label=r'Mean ROC (AUC = %0.2f $\pm$ %0.2f)' % (mean_auc, std_auc),
                  lw=2, alpha=.8)

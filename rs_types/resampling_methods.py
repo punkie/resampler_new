@@ -1,6 +1,7 @@
 from enum import Enum
 from imblearn.over_sampling import RandomOverSampler, SMOTE, ADASYN
-from imblearn.under_sampling import RandomUnderSampler
+from imblearn.under_sampling import RandomUnderSampler, TomekLinks, CondensedNearestNeighbour, OneSidedSelection, \
+    NearMiss
 from imblearn.under_sampling import ClusterCentroids
 
 
@@ -9,6 +10,13 @@ class ResamplingAlgorithms(Enum):
     RU = ("Random Undersampling", RandomUnderSampler(random_state=1))
     SMOTE = ("Smote", SMOTE(kind="regular", random_state=1))
     CLUSTERCENTROIDS = ("ClusterCentroids", ClusterCentroids(random_state=1))
+    TOMEK_LINKS = ("TomekLinks", TomekLinks(random_state=1))
+    NM1 = ("NM1", NearMiss(random_state=1, version=1))
+    NM2 = ("NM2", NearMiss(random_state=1, version=2))
+    NM3 = ("NM3", NearMiss(random_state=1, version=3))
+    CNN = ("CNN", CondensedNearestNeighbour(random_state=1))
+    OSS = ("OneSidedSelection", OneSidedSelection(random_state=1))
+    # EditedNearestNeighbours = ("EditedNearestNeighbours", EditedNearestNeighbours())
     # ADASYN = ("Adasyn", ADASYN())
 
     @classmethod
