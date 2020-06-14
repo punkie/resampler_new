@@ -16,6 +16,7 @@ def compute_some_statistics_for_the_dataset(dataset):
     unique_target_values = Counter(dataset['y_values'])
     first_mc_tuple, second_mc_tuple = unique_target_values.most_common(2)
     dataset['y_values_as_set'] = (first_mc_tuple[0], second_mc_tuple[0])
+    dataset['number_of_negative_examples'] = second_mc_tuple[1]
     dataset['target_class_percentage'] = second_mc_tuple[1] / len(dataset['y_values'])
     dataset['imbalanced_ratio'] = first_mc_tuple[1] / second_mc_tuple[1]
     __create_statistics_string(dataset)

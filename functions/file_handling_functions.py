@@ -1,6 +1,8 @@
 import csv
 import numpy as np
 from collections import deque
+
+import pandas as pd
 from imblearn.datasets import fetch_datasets
 from rs_types.widgets import Widgets
 
@@ -16,26 +18,56 @@ def write_dataset_to_csv(path, dataset=None, x_values_param=None, y_values_param
 
 
 def load_dataset(dataset_loader):
-    with open(dataset_loader.path, newline="") as csv_input_file:
-        reader = csv.reader(csv_input_file, delimiter=",")
-        reader_as_list = list(reader)
-        dataset = dict()
-        dataset['name'] = dataset_loader.path.split("/")[-1].split(".csv")[0]
-        x_values = deque()
-        y_values = deque()
-        rows_count = 0
-        dataset_loader.main_window.widgets.\
-            get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setMaximum(len(reader_as_list))
-        for row in reader_as_list:
-            # this here is very dangerous. should be refactored.
-            row_floats = list(map(float, row))
-            rows_count += 1
-            x_values.append(row_floats[:-1])
-            y_values.append(row_floats[-1])
-            dataset_loader.update_dataset_load_progress_bar.emit(rows_count)
-        dataset['x_values'] = np.array(x_values)
-        dataset['y_values'] = np.array(y_values)
-        dataset_loader.main_window.state.dataset = dataset
+    first_row = pd.read_csv(dataset_loader.path, sep=',', nrows=1)
+    header_row = has_header(first_row)
+    tfr = pd.read_csv(dataset_loader.path, sep=',', iterator=True, header=0)
+    ds_as_dataframe = pd.concat(tfr)
+    dataset = dict()
+    columns_length = len(ds_as_dataframe.columns)
+    if header_row:
+        dataset['header_row'] = first_row.columns.to_numpy().flatten()
+    else:
+        dataset['header_row'] = np.array(['X_{}'.format(i) for i in range(columns_length - 1)] + ['Y'])
+    dataset['dataset_as_dataframe'] = ds_as_dataframe
+    dataset['x_values'] = ds_as_dataframe.iloc[:, :columns_length-1].to_numpy()
+    dataset['y_values'] = ds_as_dataframe.iloc[:, columns_length-1:].to_numpy().flatten()
+    dataset['name'] = dataset_loader.path.split("/")[-1].split(".csv")[0]
+    # print ('asd')
+
+    # with open(dataset_loader.path, newline="") as csv_input_file:
+    #     # try:
+    #         reader = csv.reader(csv_input_file, delimiter=",")
+    #         reader_as_list = list(reader)
+    #
+    #         dataset['name'] = dataset_loader.path.split("/")[-1].split(".csv")[0]
+    #         x_values = deque()
+    #         y_values = deque()
+    #         rows_count = 0
+    #         dataset_loader.main_window.widgets.\
+    #             get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setMinimum(0)
+    #         dataset_loader.main_window.widgets.\
+    #             get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setMaximum(0)
+    #         for row in reader_as_list:
+    #             # this here is very dangerous. should be refactored.
+    #             row_floats = list(map(float, row))
+    #             rows_count += 1
+    #             x_values.append(row_floats[:-1])
+    #             y_values.append(row_floats[-1])
+    #             # dataset_loader.update_dataset_load_progress_bar_signal.emit(rows_count)
+    #         dataset['x_values'] = np.array(x_values)
+    #         dataset['y_values'] = np.array(y_values)
+    dataset_loader.main_window.state.dataset = dataset
+        # except Exception:
+        #     print ("wow")
+
+
+def has_header(dataframe):
+    for el in dataframe:
+        try:
+            float(el)
+        except ValueError:
+            return 1
+    return None
 
 
 def __labelize_dataset(path, output_file_path):

@@ -14,13 +14,14 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.utils.multiclass import unique_labels
 
 
+# thyroid sick figure
 def print_examples():
     ts = fetch_datasets()['thyroid_sick']
     print(ts.data.shape)
     target_classes = sorted(Counter(ts.target).items())
     print(sorted(Counter(ts.target).items()))
-    ds = load_ds()
-    labels = ['Целеви класове']
+    ds = load_ds('../datasets/binarized-datasets/thyroid_sic_2.data')
+    labels = ['Target classes']
     healty, sick = ([len(list(filter(lambda x: x[-1] == 0, ds)))], [len(list(filter(lambda x: x[-1] == 1, ds)))])
     # healty = [target_classes[0][1]]
     # sick = [target_classes[1][1]]
@@ -29,13 +30,17 @@ def print_examples():
     width = 0.35  # the width of the bars
 
     fig, ax = plt.subplots()
-    rects1 = ax.bar(x - width / 2, healty, width, label='Здрави')
-    rects2 = ax.bar(x + width / 2, sick, width, label='Болни')
+    rects1 = ax.bar(x - width / 2, healty, width, label='Healthy')
+    rects2 = ax.bar(x + width / 2, sick, width, label='Sick')
 
     # Add some text for labels, title and custom x-axis tick labels, etc.
-    ax.set_ylabel('Брой примери')
+    ax.set_ylabel('Number of samples')
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.xaxis.set_ticks_position('bottom')
+    ax.yaxis.set_ticks_position('left')
     ax.legend()
 
     def autolabel(rects):
@@ -54,6 +59,7 @@ def print_examples():
     fig.tight_layout()
 
     plt.show()
+
 
 def load_ds(path):
     df = pd.read_csv(path, sep=',', header=None)
@@ -88,7 +94,7 @@ def logistic_regression():
     print (accuracy_score(y_test, predicted_y_s))
     cm = confusion_matrix(y_test, predicted_y_s)
 
-    probs = clf.predict_proba(grid)[:, 1].reshape(xx.shape)
+    probs = clf.predict_proba(grid)[:, 0].reshape(xx.shape)
 
     f, ax = plt.subplots(figsize=(8, 6))
     cont = ax.contour(xx, yy, probs, levels=[.5], cmap="Greys", vmin=0, vmax=.6)
@@ -112,7 +118,11 @@ def logistic_regression():
     ax.set(aspect="equal",
            xlim=(-5, 5), ylim=(-5, 5),
            xlabel="$X_1$", ylabel="$X_2$")
-    plt.show()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.xaxis.set_ticks_position('bottom')
+    ax.yaxis.set_ticks_position('left')
+    #plt.show()
     return cm
     # ts = fetch_datasets()['thyroid_sick']
     # pca = PCA(n_components=2)
@@ -169,14 +179,14 @@ def plot_confusion_matrix(cm,
 
     plt.figure(figsize=(10, 2))
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
-    plt.title(title, fontdict={'size': 22})
+    plt.title(title, fontdict={'size': 10})
     # plt.colorbar()
 
     if target_names is not None:
         # tick_marks = np.array(len(target_names))
         tick_marks = np.arange(len(target_names))
-        plt.yticks(tick_marks, target_names, fontsize=22)
-        plt.xticks(tick_marks, target_names, fontsize=22)
+        plt.yticks(tick_marks, target_names, fontsize=10)
+        plt.xticks(tick_marks, target_names, fontsize=10)
 
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
@@ -186,17 +196,17 @@ def plot_confusion_matrix(cm,
     for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
         if normalize:
             plt.text(j, i, "{:0.4f}".format(cm[i, j]),
-                     horizontalalignment="center", fontdict={'size': 22},
+                     horizontalalignment="center", fontdict={'size': 10},
                      color="white" if cm[i, j] > thresh else "black")
         else:
             plt.text(j, i, "{:,}".format(cm[i, j]),
-                     horizontalalignment="center", fontdict={'size': 22},
+                     horizontalalignment="center", fontdict={'size': 10},
                      color="white" if cm[i, j] > thresh else "black")
 
 
     plt.tight_layout()
-    plt.ylabel('Истинска стойност', fontdict={'size': 22})
-    plt.xlabel('Предсказана стойност\n\nточност={:0.4f}'.format(accuracy), fontdict={'size': 22})
+    plt.ylabel('Actual class', fontdict={'size': 10})
+    plt.xlabel('Predicted class\n\nAccuracy={:0.4f}'.format(accuracy), fontdict={'size': 10})
     plt.show()
 
 if __name__ == "__main__":
@@ -209,4 +219,4 @@ if __name__ == "__main__":
                           normalize=False,
                           target_names=['0', '1'],
                           title="Confusion Matrix")
-    #print_examples()
+    # print_examples()

@@ -1,3 +1,4 @@
+import pandas as pd
 from PyQt5.QtWidgets import QFileDialog
 from functions.drawing_functions import draw_comparision_picture, draw_roc_graph, draw_pr_graph
 from rs_types.classification_algorithms import ClassificationAlgorithms
@@ -14,8 +15,9 @@ def choose_dataset(main_window):
     if ds_dialog.exec_():
         file_paths = ds_dialog.selectedFiles()
         main_window.dloader = DatasetLoader(main_window, file_paths[0])
-        main_window.dloader.update_dataset_load_progress_bar.connect(main_window.update_dataset_load_progress_bar)
-        main_window.dloader.update_gui_after_dataset_load.connect(main_window.update_gui_after_dataset_load)
+        main_window.dloader.update_dataset_load_progress_bar_signal.connect(main_window.update_dataset_load_progress_bar)
+        main_window.dloader.update_gui_after_dataset_load_signal.connect(main_window.update_gui_after_dataset_load)
+        main_window.dloader.reraise_non_mt_exception_signal.connect(main_window.reraise_non_mt_exception)
         main_window.dloader.start()
 
 

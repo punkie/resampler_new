@@ -1,0 +1,25 @@
+Undersampling methods:
+1. Random Undersampling
+2. Nearmiss - 1-4 (Predefined percentage??) is it true?
+3. Cleaning algorithms..
+ 3.1 CNN
+ 3.2 Tomek links
+ 3.3 OSS
+ 3.4 CNN+TN
+ 3.5 ENN
+ 3.6 NCL
+ 3.7 IHT
+4. Clustering based
+ 4.1 CPM
+ 4.2 Cluster Centroids
+ 4.3 Undersampling Based on Clustering (UBC)
+ 4.4 ClusterOSS
+ 4.5 DSUS
+5. Advanced undersampling - will skip this (just read it)
+
+
+Oversampling methods:
+1. Random Oversampling
+2. SMOTE i raznovidnostite mu
+3. Adasyn
+4. 
