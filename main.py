@@ -44,8 +44,8 @@ class MainWindow(QMainWindow):
         self.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(value)
 
     def update_gui_after_classification(self):
-        if self.state.resample_classify_thread_finished and self.state.normal_classify_thread_finished:
-            update_widgets_after_classification(self)
+        #if self.state.resample_classify_thread_finished and self.state.normal_classify_thread_finished:
+        update_widgets_after_classification(self)
 
     def update_gui_after_dataset_load(self, value):
         update_widgets_after_successful_datasetload(self, value)
@@ -69,19 +69,21 @@ class MainWindow(QMainWindow):
             lambda: choose_outputdir(mw))
         self.widgets.get_button(Widgets.Buttons.StartButton.value).clicked.connect(lambda: perform_resampling(self))
         # self.widgets.get_button(Widgets.Buttons.ImgDiffsButton.value).clicked.connect(lambda: show_img_diffs(self))
-        # self.widgets.get_button(Widgets.Buttons.ClassifyButton.value).clicked.connect(lambda: classify_datasets(self))
-        self.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).activated.connect(
-            lambda: choose_sampling_algorithm(self))
-        # self.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).activated.connect(
-        #     lambda: choose_classification_algorithm(self))
+        self.widgets.get_button(Widgets.Buttons.ClassifyButton.value).clicked.connect(lambda: classify_datasets(self))
+        self.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).activated.connect(lambda: choose_sampling_algorithm(self))
+        self.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithmsClassCase.value).activated.connect(lambda: choose_sampling_algorithm(self))
+        self.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).activated.connect(lambda: choose_classification_algorithm(self))
         # self.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).clicked.connect(lambda: show_roc_graphs(self))
         # self.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).clicked.connect(lambda: show_pr_graphs(self))
 
     def __fill_combo_boxes(self):
         self.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).addItems(
             [ra.value[0] for ra in ResamplingAlgorithms])
-        # self.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).addItems(
-        #     [ca.value[0] for ca in ClassificationAlgorithms])
+        self.widgets.get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithmsClassCase.value).addItems(
+            [ra.value[0] for ra in ResamplingAlgorithms])
+        self.widgets.get_combo_box(Widgets.ComboBoxes.ClassificationAlgorithms.value).addItems(
+            [ca.value[0] for ca in ClassificationAlgorithms])
+
 
     def __create_error_dialog(self, error_traceback, error_msg):
         dialog = QDialog(self)

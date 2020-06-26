@@ -1,0 +1,134 @@
+\begin{longtable}{|p{1.5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Under-sampling results DecisionTreeClassifier} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{abalone\_19.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{0.529} & \multicolumn{1}{c|}{0.020} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.025} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.026} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.014}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RU (50.0)}} & \multicolumn{1}{c|}{\textbf{1.052}} & \multicolumn{1}{c|}{0.017} & \multicolumn{1}{c|}{0.708} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{\textbf{0.683}} & \multicolumn{1}{c|}{\textbf{0.109}} & \multicolumn{1}{c|}{\textbf{0.698}} & \multicolumn{1}{c|}{0.016}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CC (50.0)}} & \multicolumn{1}{c|}{0.991} & \multicolumn{1}{c|}{0.017} & \multicolumn{1}{c|}{0.625} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.630} & \multicolumn{1}{c|}{0.103} & \multicolumn{1}{c|}{0.679} & \multicolumn{1}{c|}{0.015}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{TL (0.8)}} & \multicolumn{1}{c|}{0.553} & \multicolumn{1}{c|}{0.050} & \multicolumn{1}{c|}{0.058} & \multicolumn{1}{c|}{0.054} & \multicolumn{1}{c|}{0.107} & \multicolumn{1}{c|}{0.054} & \multicolumn{1}{c|}{0.524} & \multicolumn{1}{c|}{0.022}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM1 (50.0)}} & \multicolumn{1}{c|}{0.986} & \multicolumn{1}{c|}{0.008} & \multicolumn{1}{c|}{0.892} & \multicolumn{1}{c|}{0.016} & \multicolumn{1}{c|}{0.397} & \multicolumn{1}{c|}{0.086} & \multicolumn{1}{c|}{0.540} & \multicolumn{1}{c|}{0.009}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM2 (50.0)}} & \multicolumn{1}{c|}{1.003} & \multicolumn{1}{c|}{0.008} & \multicolumn{1}{c|}{\textbf{0.933}} & \multicolumn{1}{c|}{0.016} & \multicolumn{1}{c|}{0.355} & \multicolumn{1}{c|}{0.088} & \multicolumn{1}{c|}{0.536} & \multicolumn{1}{c|}{0.008}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM3 (50.0)}} & \multicolumn{1}{c|}{0.881} & \multicolumn{1}{c|}{0.009} & \multicolumn{1}{c|}{0.650} & \multicolumn{1}{c|}{0.018} & \multicolumn{1}{c|}{0.496} & \multicolumn{1}{c|}{0.077} & \multicolumn{1}{c|}{0.556} & \multicolumn{1}{c|}{0.010}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CNN (15.0)}} & \multicolumn{1}{c|}{0.778} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{0.317} & \multicolumn{1}{c|}{0.052} & \multicolumn{1}{c|}{0.436} & \multicolumn{1}{c|}{0.094} & \multicolumn{1}{c|}{0.619} & \multicolumn{1}{c|}{0.020}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{OSS (0.8)}} & \multicolumn{1}{c|}{0.553} & \multicolumn{1}{c|}{\textbf{0.053}} & \multicolumn{1}{c|}{0.058} & \multicolumn{1}{c|}{\textbf{0.056}} & \multicolumn{1}{c|}{0.107} & \multicolumn{1}{c|}{0.056} & \multicolumn{1}{c|}{0.524} & \multicolumn{1}{c|}{\textbf{0.023}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ENN (0.8)}} & \multicolumn{1}{c|}{0.553} & \multicolumn{1}{c|}{0.040} & \multicolumn{1}{c|}{0.058} & \multicolumn{1}{c|}{0.047} & \multicolumn{1}{c|}{0.107} & \multicolumn{1}{c|}{0.048} & \multicolumn{1}{c|}{0.524} & \multicolumn{1}{c|}{0.019}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NCL (0.8)}} & \multicolumn{1}{c|}{0.528} & \multicolumn{1}{c|}{0.025} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{0.058} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.016}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{IHT (47.6)}} & \multicolumn{1}{c|}{0.896} & \multicolumn{1}{c|}{0.008} & \multicolumn{1}{c|}{0.775} & \multicolumn{1}{c|}{0.016} & \multicolumn{1}{c|}{0.411} & \multicolumn{1}{c|}{0.078} & \multicolumn{1}{c|}{0.508} & \multicolumn{1}{c|}{0.008}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.596} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.546} & \multicolumn{1}{c|}{0.110}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RU (50.0)}} & \multicolumn{1}{c|}{0.864} & \multicolumn{1}{c|}{0.014} & \multicolumn{1}{c|}{0.600} & \multicolumn{1}{c|}{0.028} & \multicolumn{1}{c|}{0.489} & \multicolumn{1}{c|}{0.091} & \multicolumn{1}{c|}{0.564} & \multicolumn{1}{c|}{0.016}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CC (50.0)}} & \multicolumn{1}{c|}{1.110} & \multicolumn{1}{c|}{0.015} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{0.418} & \multicolumn{1}{c|}{0.121} & \multicolumn{1}{c|}{0.610} & \multicolumn{1}{c|}{0.015}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{TL (1.2)}} & \multicolumn{1}{c|}{0.597} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.547} & \multicolumn{1}{c|}{0.110}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM1 (50.0)}} & \multicolumn{1}{c|}{1.014} & \multicolumn{1}{c|}{0.016} & \multicolumn{1}{c|}{0.800} & \multicolumn{1}{c|}{0.031} & \multicolumn{1}{c|}{0.502} & \multicolumn{1}{c|}{0.112} & \multicolumn{1}{c|}{0.614} & \multicolumn{1}{c|}{0.018}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM2 (50.0)}} & \multicolumn{1}{c|}{\textbf{1.132}} & \multicolumn{1}{c|}{0.016} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{0.031} & \multicolumn{1}{c|}{\textbf{0.508}} & \multicolumn{1}{c|}{0.124} & \multicolumn{1}{c|}{0.632} & \multicolumn{1}{c|}{0.016}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM3 (50.0)}} & \multicolumn{1}{c|}{0.791} & \multicolumn{1}{c|}{0.015} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{0.459} & \multicolumn{1}{c|}{0.085} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.017}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CNN (11.8)}} & \multicolumn{1}{c|}{0.808} & \multicolumn{1}{c|}{0.064} & \multicolumn{1}{c|}{0.350} & \multicolumn{1}{c|}{0.101} & \multicolumn{1}{c|}{0.355} & \multicolumn{1}{c|}{\textbf{0.140}} & \multicolumn{1}{c|}{\textbf{0.633}} & \multicolumn{1}{c|}{0.068}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{OSS (1.2)}} & \multicolumn{1}{c|}{0.597} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.547} & \multicolumn{1}{c|}{0.110}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ENN (1.2)}} & \multicolumn{1}{c|}{0.595} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.545} & \multicolumn{1}{c|}{0.110}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NCL (1.2)}} & \multicolumn{1}{c|}{0.596} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.546} & \multicolumn{1}{c|}{0.110}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{IHT (2.1)}} & \multicolumn{1}{c|}{0.627} & \multicolumn{1}{c|}{\textbf{0.117}} & \multicolumn{1}{c|}{0.150} & \multicolumn{1}{c|}{\textbf{0.125}} & \multicolumn{1}{c|}{0.169} & \multicolumn{1}{c|}{0.129} & \multicolumn{1}{c|}{0.552} & \multicolumn{1}{c|}{\textbf{0.118}}\\ 
+	\hline
+	\caption{tab:testtab}
+	\label{tab:testtab}
+\end{longtable}
+\begin{longtable}{|p{1.5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Under-sampling results SVC} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{abalone\_19.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{\textbf{0.701}} & \multicolumn{1}{c|}{0.028}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RU (50.0)}} & \multicolumn{1}{c|}{\textbf{1.096}} & \multicolumn{1}{c|}{\textbf{0.012}} & \multicolumn{1}{c|}{\textbf{0.867}} & \multicolumn{1}{c|}{\textbf{0.024}} & \multicolumn{1}{c|}{\textbf{0.618}} & \multicolumn{1}{c|}{\textbf{0.103}} & \multicolumn{1}{c|}{0.690} & \multicolumn{1}{c|}{0.026}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CC (50.0)}} & \multicolumn{1}{c|}{1.045} & \multicolumn{1}{c|}{0.011} & \multicolumn{1}{c|}{0.817} & \multicolumn{1}{c|}{0.023} & \multicolumn{1}{c|}{0.603} & \multicolumn{1}{c|}{0.096} & \multicolumn{1}{c|}{0.637} & \multicolumn{1}{c|}{0.020}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{TL (0.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.659} & \multicolumn{1}{c|}{0.050}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM1 (50.0)}} & \multicolumn{1}{c|}{0.860} & \multicolumn{1}{c|}{0.008} & \multicolumn{1}{c|}{0.658} & \multicolumn{1}{c|}{0.017} & \multicolumn{1}{c|}{0.494} & \multicolumn{1}{c|}{0.074} & \multicolumn{1}{c|}{0.505} & \multicolumn{1}{c|}{0.021}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM2 (50.0)}} & \multicolumn{1}{c|}{0.863} & \multicolumn{1}{c|}{0.007} & \multicolumn{1}{c|}{0.758} & \multicolumn{1}{c|}{0.014} & \multicolumn{1}{c|}{0.361} & \multicolumn{1}{c|}{0.074} & \multicolumn{1}{c|}{0.452} & \multicolumn{1}{c|}{0.010}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM3 (50.0)}} & \multicolumn{1}{c|}{0.883} & \multicolumn{1}{c|}{0.009} & \multicolumn{1}{c|}{0.683} & \multicolumn{1}{c|}{0.017} & \multicolumn{1}{c|}{0.511} & \multicolumn{1}{c|}{0.077} & \multicolumn{1}{c|}{0.572} & \multicolumn{1}{c|}{0.023}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CNN (15.0)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.397} & \multicolumn{1}{c|}{0.011}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{OSS (0.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.695} & \multicolumn{1}{c|}{0.036}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ENN (0.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.696} & \multicolumn{1}{c|}{\textbf{0.068}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NCL (0.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.665} & \multicolumn{1}{c|}{0.027}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{IHT (48.1)}} & \multicolumn{1}{c|}{0.615} & \multicolumn{1}{c|}{0.006} & \multicolumn{1}{c|}{0.283} & \multicolumn{1}{c|}{0.012} & \multicolumn{1}{c|}{0.246} & \multicolumn{1}{c|}{0.042} & \multicolumn{1}{c|}{0.496} & \multicolumn{1}{c|}{0.015}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{\textbf{0.853}} & \multicolumn{1}{c|}{\textbf{0.508}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RU (50.0)}} & \multicolumn{1}{c|}{0.814} & \multicolumn{1}{c|}{0.013} & \multicolumn{1}{c|}{0.600} & \multicolumn{1}{c|}{0.025} & \multicolumn{1}{c|}{0.427} & \multicolumn{1}{c|}{0.086} & \multicolumn{1}{c|}{0.572} & \multicolumn{1}{c|}{0.030}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CC (50.0)}} & \multicolumn{1}{c|}{0.644} & \multicolumn{1}{c|}{0.010} & \multicolumn{1}{c|}{0.350} & \multicolumn{1}{c|}{0.019} & \multicolumn{1}{c|}{0.315} & \multicolumn{1}{c|}{0.058} & \multicolumn{1}{c|}{0.556} & \multicolumn{1}{c|}{0.027}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{TL (1.2)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.848} & \multicolumn{1}{c|}{0.504}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM1 (50.0)}} & \multicolumn{1}{c|}{\textbf{1.042}} & \multicolumn{1}{c|}{\textbf{0.015}} & \multicolumn{1}{c|}{\textbf{0.850}} & \multicolumn{1}{c|}{\textbf{0.029}} & \multicolumn{1}{c|}{\textbf{0.515}} & \multicolumn{1}{c|}{\textbf{0.111}} & \multicolumn{1}{c|}{0.558} & \multicolumn{1}{c|}{0.050}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM2 (50.0)}} & \multicolumn{1}{c|}{0.689} & \multicolumn{1}{c|}{0.009} & \multicolumn{1}{c|}{0.550} & \multicolumn{1}{c|}{0.018} & \multicolumn{1}{c|}{0.314} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.454} & \multicolumn{1}{c|}{0.026}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NM3 (50.0)}} & \multicolumn{1}{c|}{0.428} & \multicolumn{1}{c|}{0.004} & \multicolumn{1}{c|}{0.150} & \multicolumn{1}{c|}{0.007} & \multicolumn{1}{c|}{0.118} & \multicolumn{1}{c|}{0.024} & \multicolumn{1}{c|}{0.711} & \multicolumn{1}{c|}{0.067}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{CNN (11.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.462} & \multicolumn{1}{c|}{0.130}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{OSS (1.2)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.772} & \multicolumn{1}{c|}{0.494}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ENN (1.2)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.829} & \multicolumn{1}{c|}{0.448}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{NCL (1.2)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.842} & \multicolumn{1}{c|}{0.449}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{IHT (2.1)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.562} & \multicolumn{1}{c|}{0.102}\\ 
+	\hline
+	\caption{tab:testtab}
+	\label{tab:testtab}
+\end{longtable}

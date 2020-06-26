@@ -69,7 +69,7 @@ def classify(classifier_thread):
         roc_auc = auc(fpr, tpr)
         aucs.append(roc_auc)
         report_from_imbalanced_learning = classification_report_imbalanced(y_normal[test], predicted_classes)
-        specificity = specificity_score(y_normal[test], predicted_classes);
+        specificity = specificity_score(y_normal[test], predicted_classes)
         g_means_1.append(np.sqrt(prf1[1] * specificity))
         #pr_rec_f1s.append(g_mean1)
         g_means_2.append(np.sqrt(prf1[0] * prf1[1]))
@@ -175,7 +175,8 @@ def classify(classifier_thread):
 
 
 def get_mean_precision_recall_f1_scores(state):
-    precision, recall, f1, gm1, gm2 = state.classified_data_normal_case['pre_rec_f1_g_mean1_g_mean2_tuple']
+    # precision, recall, f1, gm1, gm2 = state.classified_data_normal_case['pre_rec_f1_g_mean1_g_mean2_tuple']
+    precision, recall, f1, gm1, gm2 = (0, 0, 0, 0, 0)
     precision_re, recall_re, f1_re, gm1_re, gm2_re = state.classified_data_resampled_case['pre_rec_f1_g_mean1_g_mean2_tuple']
 
     heading = "{:>40}".format("Normal DS  /  Resampled DS")

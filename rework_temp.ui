@@ -1245,7 +1245,7 @@
          <string>Number of folds (CV):</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="classAlgorithms">
         <property name="geometry">
          <rect>
           <x>130</x>
@@ -1258,7 +1258,7 @@
          <string/>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_2">
+       <widget class="QComboBox" name="resamplingAlgorithmsClassCase">
         <property name="geometry">
          <rect>
           <x>130</x>
@@ -1317,13 +1317,13 @@
          <string>Results for #2 run</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_33">
+       <widget class="QLabel" name="afterClassificationStatistics">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>170</y>
-          <width>121</width>
-          <height>16</height>
+          <x>200</x>
+          <y>430</y>
+          <width>391</width>
+          <height>291</height>
          </rect>
         </property>
         <property name="text">
@@ -1395,7 +1395,7 @@
          <enum>Qt::Vertical</enum>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="classifyButton">
         <property name="geometry">
          <rect>
           <x>10</x>

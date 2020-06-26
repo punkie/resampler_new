@@ -1,0 +1,112 @@
+Latex statistics for dataset abalone_19.csv with sm RandomOverSampler and algo SVC
+Precision & \multicolumn{1}{c|}{0.026}
+Recall & \multicolumn{1}{c|}{0.725}
+F_measure & \multicolumn{1}{c|}{0.050}
+G_mean_1 & \multicolumn{1}{c|}{0.728}
+G_mean_2 & \multicolumn{1}{c|}{0.020}
+AUC_ROC & \multicolumn{1}{c|}{0.835}
+AUC_PR & \multicolumn{1}{c|}{0.077}
+Latex statistics for dataset abalone_19.csv with sm SMOTE and algo SVC
+Precision & \multicolumn{1}{c|}{0.029}
+Recall & \multicolumn{1}{c|}{0.725}
+F_measure & \multicolumn{1}{c|}{0.055}
+G_mean_1 & \multicolumn{1}{c|}{0.742}
+G_mean_2 & \multicolumn{1}{c|}{0.021}
+AUC_ROC & \multicolumn{1}{c|}{0.837}
+AUC_PR & \multicolumn{1}{c|}{0.107}
+Latex statistics for dataset abalone_19.csv with sm ADASYN and algo SVC
+Precision & \multicolumn{1}{c|}{0.029}
+Recall & \multicolumn{1}{c|}{0.725}
+F_measure & \multicolumn{1}{c|}{0.055}
+G_mean_1 & \multicolumn{1}{c|}{0.741}
+G_mean_2 & \multicolumn{1}{c|}{0.021}
+AUC_ROC & \multicolumn{1}{c|}{0.838}
+AUC_PR & \multicolumn{1}{c|}{0.111}
+Latex statistics for dataset abalone_19.csv with sm RandomUnderSampler and algo SVC
+Precision & \multicolumn{1}{c|}{0.012}
+Recall & \multicolumn{1}{c|}{0.917}
+F_measure & \multicolumn{1}{c|}{0.023}
+G_mean_1 & \multicolumn{1}{c|}{0.587}
+G_mean_2 & \multicolumn{1}{c|}{0.011}
+AUC_ROC & \multicolumn{1}{c|}{0.691}
+AUC_PR & \multicolumn{1}{c|}{0.068}
+Latex statistics for dataset abalone_19.csv with sm ClusterCentroids and algo SVC
+Precision & \multicolumn{1}{c|}{0.013}
+Recall & \multicolumn{1}{c|}{0.908}
+F_measure & \multicolumn{1}{c|}{0.025}
+G_mean_1 & \multicolumn{1}{c|}{0.638}
+G_mean_2 & \multicolumn{1}{c|}{0.012}
+AUC_ROC & \multicolumn{1}{c|}{0.683}
+AUC_PR & \multicolumn{1}{c|}{0.060}
+Latex statistics for dataset abalone_19.csv with sm TomekLinks and algo SVC
+Precision & \multicolumn{1}{c|}{0.000}
+Recall & \multicolumn{1}{c|}{0.000}
+F_measure & \multicolumn{1}{c|}{0.000}
+G_mean_1 & \multicolumn{1}{c|}{0.000}
+G_mean_2 & \multicolumn{1}{c|}{0.000}
+AUC_ROC & \multicolumn{1}{c|}{0.736}
+AUC_PR & \multicolumn{1}{c|}{0.044}
+Latex statistics for dataset abalone_19.csv with sm NearMiss and algo SVC
+Precision & \multicolumn{1}{c|}{0.010}
+Recall & \multicolumn{1}{c|}{0.750}
+F_measure & \multicolumn{1}{c|}{0.020}
+G_mean_1 & \multicolumn{1}{c|}{0.531}
+G_mean_2 & \multicolumn{1}{c|}{0.008}
+AUC_ROC & \multicolumn{1}{c|}{0.483}
+AUC_PR & \multicolumn{1}{c|}{0.018}
+Latex statistics for dataset abalone_19.csv with sm NearMiss and algo SVC
+Precision & \multicolumn{1}{c|}{0.007}
+Recall & \multicolumn{1}{c|}{0.675}
+F_measure & \multicolumn{1}{c|}{0.013}
+G_mean_1 & \multicolumn{1}{c|}{0.354}
+G_mean_2 & \multicolumn{1}{c|}{0.005}
+AUC_ROC & \multicolumn{1}{c|}{0.421}
+AUC_PR & \multicolumn{1}{c|}{0.011}
+Latex statistics for dataset abalone_19.csv with sm NearMiss and algo SVC
+Precision & \multicolumn{1}{c|}{0.010}
+Recall & \multicolumn{1}{c|}{0.717}
+F_measure & \multicolumn{1}{c|}{0.020}
+G_mean_1 & \multicolumn{1}{c|}{0.547}
+G_mean_2 & \multicolumn{1}{c|}{0.008}
+AUC_ROC & \multicolumn{1}{c|}{0.574}
+AUC_PR & \multicolumn{1}{c|}{0.016}
+Latex statistics for dataset abalone_19.csv with sm CondensedNearestNeighbour and algo SVC
+Precision & \multicolumn{1}{c|}{0.000}
+Recall & \multicolumn{1}{c|}{0.000}
+F_measure & \multicolumn{1}{c|}{0.000}
+G_mean_1 & \multicolumn{1}{c|}{0.000}
+G_mean_2 & \multicolumn{1}{c|}{0.000}
+AUC_ROC & \multicolumn{1}{c|}{0.339}
+AUC_PR & \multicolumn{1}{c|}{0.009}
+Latex statistics for dataset abalone_19.csv with sm OneSidedSelection and algo SVC
+Precision & \multicolumn{1}{c|}{0.000}
+Recall & \multicolumn{1}{c|}{0.000}
+F_measure & \multicolumn{1}{c|}{0.000}
+G_mean_1 & \multicolumn{1}{c|}{0.000}
+G_mean_2 & \multicolumn{1}{c|}{0.000}
+AUC_ROC & \multicolumn{1}{c|}{0.712}
+AUC_PR & \multicolumn{1}{c|}{0.047}
+Latex statistics for dataset abalone_19.csv with sm EditedNearestNeighbours and algo SVC
+Precision & \multicolumn{1}{c|}{0.000}
+Recall & \multicolumn{1}{c|}{0.000}
+F_measure & \multicolumn{1}{c|}{0.000}
+G_mean_1 & \multicolumn{1}{c|}{0.000}
+G_mean_2 & \multicolumn{1}{c|}{0.000}
+AUC_ROC & \multicolumn{1}{c|}{0.708}
+AUC_PR & \multicolumn{1}{c|}{0.047}
+Latex statistics for dataset abalone_19.csv with sm SMOTEENN and algo SVC
+Precision & \multicolumn{1}{c|}{0.025}
+Recall & \multicolumn{1}{c|}{0.725}
+F_measure & \multicolumn{1}{c|}{0.049}
+G_mean_1 & \multicolumn{1}{c|}{0.730}
+G_mean_2 & \multicolumn{1}{c|}{0.019}
+AUC_ROC & \multicolumn{1}{c|}{0.845}
+AUC_PR & \multicolumn{1}{c|}{0.120}
+Latex statistics for dataset abalone_19.csv with sm SMOTETomek and algo SVC
+Precision & \multicolumn{1}{c|}{0.029}
+Recall & \multicolumn{1}{c|}{0.725}
+F_measure & \multicolumn{1}{c|}{0.055}
+G_mean_1 & \multicolumn{1}{c|}{0.742}
+G_mean_2 & \multicolumn{1}{c|}{0.021}
+AUC_ROC & \multicolumn{1}{c|}{0.837}
+AUC_PR & \multicolumn{1}{c|}{0.107}

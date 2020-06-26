@@ -31,7 +31,7 @@ def choose_outputdir(main_window):
 
 def choose_sampling_algorithm(main_window):
     chosen_algorithm_name = main_window.widgets.\
-        get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).currentText()
+        get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithmsClassCase.value).currentText()
     main_window.state.sampling_algorithm = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
 
 
@@ -53,20 +53,22 @@ def show_img_diffs(main_window):
 
 def classify_datasets(main_window):
     #classify(main_window.state)
-    main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
-    main_window.classifier = Classifying(main_window, False)
-    main_window.state.normal_classify_thread_finished = False
-    main_window.classifier.update_gui_after_classification.connect(main_window.update_gui_after_classification)
-    main_window.classifier.update_normal_classify_progress_bar.connect(main_window.update_normal_classify_progress_bar)
-    main_window.classifier.start()
+    # main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
+    # main_window.classifier = Classifying(main_window, False)
+    # main_window.state.normal_classify_thread_finished = False
+    # main_window.classifier.update_gui_after_classification.connect(main_window.update_gui_after_classification)
+    # main_window.classifier.update_normal_classify_progress_bar.connect(main_window.update_normal_classify_progress_bar)
+    # main_window.classifier.start()
 
-    main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
+    # main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
     main_window.classifier_rd = Classifying(main_window, True)
     main_window.state.resample_classify_thread_finished = False
     main_window.classifier_rd.update_gui_after_classification.connect(main_window.update_gui_after_classification)
-    main_window.classifier_rd.update_resample_classify_progress_bar.connect\
-        (main_window.update_resample_classify_progress_bar)
+    main_window.classifier_rd.reraise_non_mt_exception_signal.connect(main_window.reraise_non_mt_exception)
+    # main_window.classifier_rd.update_resample_classify_progress_bar.connect\
+    #     (main_window.update_resample_classify_progress_bar)
     main_window.classifier_rd.start()
+    print ("test")
 
 
 def show_roc_graphs(main_window):

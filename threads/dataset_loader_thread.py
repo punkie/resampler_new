@@ -32,7 +32,7 @@ class DatasetLoader(QThread):
     def __custom_pre_process(self):
         self.main_window.setEnabled(False)
         self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setVisible(True)
-        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setValue(0)
+        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setMaximum(100)
         self.main_window.widgets.get_label(Widgets.Labels.DatasetLoadingResultLabel.value).setText("")
         self.main_window.widgets.get_label(Widgets.Labels.FilePathLabel.value).setText("")
         self.main_window.widgets.get_label(Widgets.Labels.DatasetPickedLabel.value).setText("")

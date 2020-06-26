@@ -1,0 +1,4440 @@
+Basic information for the dataset:
+Pos examples:
+Neg examples:
+Imbalanced ratio:
+********************************************************************************
+Sampling_algorithm:RandomOverSampler(random_state=1, sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.96       994
+        1.0       0.99      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.96      1100
+
+Precision: 0.9902912621359223
+Recall: 0.9622641509433962
+F_measure: 0.9760765550239234
+G_mean_1: 0.9804570762440007
+G_mean_2: 0.9529217805458875
+AUC_ROC: 0.9806290573630463
+AUC_PR: 0.9565581441822512
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.98       994
+        1.0       0.95      0.99      0.99      0.97      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9454545454545454
+Recall: 0.9904761904761905
+F_measure: 0.9674418604651163
+G_mean_1: 0.9922184542509848
+G_mean_2: 0.9364502164502164
+AUC_ROC: 0.9922199865861837
+AUC_PR: 0.9373601345575867
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.98       994
+        1.0       0.94      0.99      0.99      0.96      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9369369369369369
+Recall: 0.9904761904761905
+F_measure: 0.962962962962963
+G_mean_1: 0.9917161922829623
+G_mean_2: 0.9280137280137281
+AUC_ROC: 0.9917169684775319
+AUC_PR: 0.9289236461210983
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.92      0.99      0.96      0.93       994
+        1.0       0.97      0.92      1.00      0.95      0.96      0.91       105
+
+avg / total       0.99      0.99      0.93      0.99      0.96      0.93      1099
+
+Precision: 0.97
+Recall: 0.9238095238095239
+F_measure: 0.9463414634146342
+G_mean_1: 0.9596985809581028
+G_mean_2: 0.8960952380952382
+AUC_ROC: 0.9603957075788063
+AUC_PR: 0.9033745829542008
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.98      0.97       994
+        1.0       0.96      0.97      1.00      0.97      0.98      0.97       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.97      1099
+
+Precision: 0.9622641509433962
+Recall: 0.9714285714285714
+F_measure: 0.9668246445497629
+G_mean_1: 0.9836256412513086
+G_mean_2: 0.9347708894878706
+AUC_ROC: 0.9837022132796781
+AUC_PR: 0.9375006438099815
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.92      1.00      0.96      0.93       994
+        1.0       0.99      0.92      1.00      0.96      0.96      0.92       105
+
+avg / total       0.99      0.99      0.93      0.99      0.96      0.93      1099
+
+Precision: 0.9897959183673469
+Recall: 0.9238095238095239
+F_measure: 0.9556650246305419
+G_mean_1: 0.9606665071556734
+G_mean_2: 0.9143828960155491
+AUC_ROC: 0.9614017437961101
+AUC_PR: 0.9216622408745118
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.94      0.99      0.97      0.94       993
+        1.0       0.95      0.94      0.99      0.95      0.97      0.93       106
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.94      1099
+
+Precision: 0.9523809523809523
+Recall: 0.9433962264150944
+F_measure: 0.9478672985781991
+G_mean_1: 0.9688374443907962
+G_mean_2: 0.8984725965858041
+AUC_ROC: 0.9691804898440023
+AUC_PR: 0.9039321052300262
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.93      0.99      0.96      0.93       993
+        1.0       0.95      0.93      0.99      0.94      0.96      0.92       106
+
+avg / total       0.99      0.99      0.94      0.99      0.96      0.93      1099
+
+Precision: 0.9519230769230769
+Recall: 0.9339622641509434
+F_measure: 0.942857142857143
+G_mean_1: 0.9639810857673257
+G_mean_2: 0.8890602322206096
+AUC_ROC: 0.9644635087119269
+AUC_PR: 0.895429658972202
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       993
+        1.0       0.95      0.95      0.99      0.95      0.97      0.94       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9528301886792453
+Recall: 0.9528301886792453
+F_measure: 0.9528301886792453
+G_mean_1: 0.9736695813212128
+G_mean_2: 0.9078853684585262
+AUC_ROC: 0.9738974709760777
+AUC_PR: 0.9124349589953779
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       993
+        1.0       0.95      0.95      0.99      0.95      0.97      0.94       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9528301886792453
+Recall: 0.9528301886792453
+F_measure: 0.9528301886792453
+G_mean_1: 0.9736695813212128
+G_mean_2: 0.9078853684585262
+AUC_ROC: 0.9738974709760777
+AUC_PR: 0.9124349589953779
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: RandomOverSampler
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.9604707220500668
+Avg Recall: 0.9545283018867925
+Avg F_measure: 0.9571697329840774
+Avg G_mean_1: 0.9748540144943579
+Avg G_mean_2: 0.9165938314331956
+Avg AUC_ROC: 0.9751504617589439
+Avg AUC_PR: 0.9209611074692615
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1100
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       994
+        1.0       0.99      0.98      1.00      0.99      0.99      0.98       105
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9903846153846154
+Recall: 0.9809523809523809
+F_measure: 0.985645933014354
+G_mean_1: 0.9899320720785303
+G_mean_2: 0.9715201465201465
+AUC_ROC: 0.9999520935134616
+AUC_PR: 0.9995420398491804
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       1.00      1.00      1.00      1.00      1.00      1.00       105
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1099
+
+Precision: 1.0
+Recall: 1.0
+F_measure: 1.0
+G_mean_1: 1.0
+G_mean_2: 1.0
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.96       994
+        1.0       0.99      0.96      1.00      0.98      0.98      0.96       105
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.96      1099
+
+Precision: 0.9901960784313726
+Recall: 0.9619047619047619
+F_measure: 0.9758454106280193
+G_mean_1: 0.9802739672544042
+G_mean_2: 0.9524743230625584
+AUC_ROC: 0.9998419085944237
+AUC_PR: 0.9984892477909748
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.99      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9904761904761905
+Recall: 0.9904761904761905
+F_measure: 0.9904761904761905
+G_mean_1: 0.9947259600292909
+G_mean_2: 0.9810430839002269
+AUC_ROC: 0.9992430775126953
+AUC_PR: 0.9844381241081714
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      1.00      0.97      0.95       994
+        1.0       1.00      0.94      1.00      0.97      0.97      0.94       105
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.95      1099
+
+Precision: 1.0
+Recall: 0.9428571428571428
+F_measure: 0.9705882352941176
+G_mean_1: 0.9710083124552245
+G_mean_2: 0.9428571428571428
+AUC_ROC: 0.9999808374053847
+AUC_PR: 0.9998219848687139
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       993
+        1.0       1.00      0.97      1.00      0.99      0.99      0.97       106
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 1.0
+Recall: 0.9716981132075472
+F_measure: 0.985645933014354
+G_mean_1: 0.9857474895770961
+G_mean_2: 0.9716981132075472
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.9999667483706701
+AUC_PR: 0.9996422740490956
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       1.00      0.98      1.00      0.99      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 1.0
+Recall: 0.9811320754716981
+F_measure: 0.9904761904761905
+G_mean_1: 0.9905211130872972
+G_mean_2: 0.9811320754716981
+AUC_ROC: 0.999976248836193
+AUC_PR: 0.9996569468267581
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.9996864846377472
+AUC_PR: 0.9974393367994294
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: RandomOverSampler
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9971056884292178
+Avg Recall: 0.9744115004492364
+Avg F_measure: 0.9855477017948797
+Avg G_mean_1: 0.9869382028294285
+Avg G_mean_2: 0.9715819224641962
+Avg AUC_ROC: 0.9998647398870576
+Avg AUC_PR: 0.9979029954292322
+----------------------------------------------------------
+
+
+Sampling_algorithm:SMOTE(k_neighbors=5, n_jobs=None, random_state=1, sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       994
+        1.0       0.95      0.95      0.99      0.95      0.97      0.94       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1100
+
+Precision: 0.9528301886792453
+Recall: 0.9528301886792453
+F_measure: 0.9528301886792453
+G_mean_1: 0.9736720599285401
+G_mean_2: 0.9078853684585262
+AUC_ROC: 0.9739000037963631
+AUC_PR: 0.9124308230039807
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      1.00      0.98      0.96       994
+        1.0       0.95      0.96      0.99      0.96      0.98      0.95       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9528301886792453
+Recall: 0.9619047619047619
+F_measure: 0.957345971563981
+G_mean_1: 0.978297606439061
+G_mean_2: 0.9165318957771789
+AUC_ROC: 0.9784372904091215
+AUC_PR: 0.9201715682066602
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.94      0.96      0.99      0.95      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.9351851851851852
+Recall: 0.9619047619047619
+F_measure: 0.9483568075117371
+G_mean_1: 0.9773079272717732
+G_mean_2: 0.8995590828924163
+AUC_ROC: 0.9774312541918178
+AUC_PR: 0.9031987553218976
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       994
+        1.0       0.94      0.95      0.99      0.95      0.97      0.94       105
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9433962264150944
+Recall: 0.9523809523809523
+F_measure: 0.9478672985781991
+G_mean_1: 0.9729502423024309
+G_mean_2: 0.8984725965858041
+AUC_ROC: 0.9731723675385647
+AUC_PR: 0.9030221871226558
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.97      1.00      0.98      0.97       994
+        1.0       0.94      0.97      0.99      0.96      0.98      0.96       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.97      1099
+
+Precision: 0.9444444444444444
+Recall: 0.9714285714285714
+F_measure: 0.9577464788732395
+G_mean_1: 0.9826315776913981
+G_mean_2: 0.9174603174603174
+AUC_ROC: 0.9826961770623743
+AUC_PR: 0.9201900717824284
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       994
+        1.0       0.93      0.95      0.99      0.94      0.97      0.94       105
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9345794392523364
+Recall: 0.9523809523809523
+F_measure: 0.9433962264150944
+G_mean_1: 0.9724577339224536
+G_mean_2: 0.8900756564307966
+AUC_ROC: 0.9726693494299128
+AUC_PR: 0.8946252469676482
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.93      1.00      0.97      0.94       993
+        1.0       0.98      0.93      1.00      0.96      0.97      0.93       106
+
+avg / total       0.99      0.99      0.94      0.99      0.97      0.94      1099
+
+Precision: 0.9801980198019802
+Recall: 0.9339622641509434
+F_measure: 0.9565217391304348
+G_mean_1: 0.965443510505626
+G_mean_2: 0.9154679618905287
+AUC_ROC: 0.9659740827300538
+AUC_PR: 0.9218373886421211
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       993
+        1.0       0.92      0.95      0.99      0.94      0.97      0.94       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9181818181818182
+Recall: 0.9528301886792453
+F_measure: 0.9351851851851851
+G_mean_1: 0.971696591287121
+G_mean_2: 0.8748713550600343
+AUC_ROC: 0.9718833722852419
+AUC_PR: 0.879420945596886
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       993
+        1.0       0.94      0.96      0.99      0.95      0.98      0.95       106
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9357798165137615
+Recall: 0.9622641509433962
+F_measure: 0.9488372093023256
+G_mean_1: 0.9774869915042907
+G_mean_2: 0.9004673706075819
+AUC_ROC: 0.9776074027627355
+AUC_PR: 0.9041070430370632
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.87      0.99      0.93      0.88       993
+        1.0       0.98      0.87      1.00      0.92      0.93      0.85       106
+
+avg / total       0.99      0.99      0.88      0.99      0.93      0.88      1099
+
+Precision: 0.9787234042553191
+Recall: 0.8679245283018868
+F_measure: 0.9199999999999999
+G_mean_1: 0.9306860064735527
+G_mean_2: 0.8494580489763147
+AUC_ROC: 0.9329552148055255
+AUC_PR: 0.8621969024794994
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: SMOTE
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.9476148731408429
+Avg Recall: 0.9469811320754717
+Avg F_measure: 0.9468087105239441
+Avg G_mean_1: 0.9702630247326247
+Avg G_mean_2: 0.8970249654139499
+Avg AUC_ROC: 0.9706726515011711
+Avg AUC_PR: 0.9021200932160841
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1100
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.99      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9904761904761905
+Recall: 0.9904761904761905
+F_measure: 0.9904761904761905
+G_mean_1: 0.9947259600292909
+G_mean_2: 0.9810430839002269
+AUC_ROC: 0.9999329309188464
+AUC_PR: 0.9993534131216142
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       1.00      1.00      1.00      1.00      1.00      1.00       105
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1099
+
+Precision: 1.0
+Recall: 1.0
+F_measure: 1.0
+G_mean_1: 1.0
+G_mean_2: 1.0
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       994
+        1.0       1.00      0.98      1.00      0.99      0.99      0.98       105
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 1.0
+Recall: 0.9809523809523809
+F_measure: 0.9903846153846153
+G_mean_1: 0.990430401872025
+G_mean_2: 0.9809523809523809
+AUC_ROC: 0.9994874005940404
+AUC_PR: 0.9964460935889508
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.99      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9904761904761905
+Recall: 0.9904761904761905
+F_measure: 0.9904761904761905
+G_mean_1: 0.9947259600292909
+G_mean_2: 0.9810430839002269
+AUC_ROC: 0.9989987544313501
+AUC_PR: 0.9820475304102201
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       994
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       105
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9619047619047619
+F_measure: 0.9805825242718447
+G_mean_1: 0.9807674351775563
+G_mean_2: 0.9619047619047619
+AUC_ROC: 0.9999664654594232
+AUC_PR: 0.999650502402796
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       1.00      0.98      1.00      0.99      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 1.0
+Recall: 0.9811320754716981
+F_measure: 0.9904761904761905
+G_mean_1: 0.9905211130872972
+G_mean_2: 0.9811320754716981
+AUC_ROC: 0.9999809990689543
+AUC_PR: 0.9998252969951082
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       0.99      0.98      1.00      0.99      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9904761904761905
+Recall: 0.9811320754716981
+F_measure: 0.9857819905213271
+G_mean_1: 0.9900222356378294
+G_mean_2: 0.9717879604672058
+AUC_ROC: 0.9999619981379086
+AUC_PR: 0.9996422740490956
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       993
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1099
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 0.9999904995344772
+AUC_PR: 0.9999118321283724
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.999800490224021
+AUC_PR: 0.9980400211532287
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: SMOTE
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9971428571428571
+Avg Recall: 0.9829469901168014
+Avg F_measure: 0.9899468259389806
+Avg G_mean_1: 0.9912687424426634
+Avg G_mean_2: 0.9801259573011596
+Avg AUC_ROC: 0.9998119538369021
+Avg AUC_PR: 0.9974916963849385
+----------------------------------------------------------
+
+
+Sampling_algorithm:ADASYN(n_jobs=None, n_neighbors=5, random_state=1, sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.94      0.96      0.99      0.95      0.98      0.95       106
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1100
+
+Precision: 0.9444444444444444
+Recall: 0.9622641509433962
+F_measure: 0.9532710280373832
+G_mean_1: 0.9779855394762353
+G_mean_2: 0.9088050314465409
+AUC_ROC: 0.9781139668197867
+AUC_PR: 0.9124413950829046
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.93      0.96      0.99      0.94      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.926605504587156
+Recall: 0.9619047619047619
+F_measure: 0.9439252336448597
+G_mean_1: 0.9768127116700398
+G_mean_2: 0.89130624726955
+AUC_ROC: 0.9769282360831656
+AUC_PR: 0.8949459196990314
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       994
+        1.0       0.95      0.95      0.99      0.95      0.97      0.94       105
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9523809523809523
+Recall: 0.9523809523809523
+F_measure: 0.9523809523809523
+G_mean_1: 0.973442501500281
+G_mean_2: 0.9070294784580498
+AUC_ROC: 0.9736753856472167
+AUC_PR: 0.9115790689949015
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       994
+        1.0       0.99      0.95      1.00      0.97      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.9900990099009901
+Recall: 0.9523809523809523
+F_measure: 0.970873786407767
+G_mean_1: 0.9754090540128213
+G_mean_2: 0.9429514380009429
+AUC_ROC: 0.9756874580818242
+AUC_PR: 0.9475010285377946
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      1.00      0.98      0.96       994
+        1.0       0.95      0.96      0.99      0.96      0.98      0.95       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9528301886792453
+Recall: 0.9619047619047619
+F_measure: 0.957345971563981
+G_mean_1: 0.978297606439061
+G_mean_2: 0.9165318957771789
+AUC_ROC: 0.9784372904091215
+AUC_PR: 0.9201715682066602
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      1.00      0.97      0.95       994
+        1.0       0.99      0.94      1.00      0.97      0.97      0.94       105
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.95      1099
+
+Precision: 0.99
+Recall: 0.9428571428571428
+F_measure: 0.9658536585365853
+G_mean_1: 0.9705197547828097
+G_mean_2: 0.9334285714285714
+AUC_ROC: 0.9709255533199196
+AUC_PR: 0.9388880800727935
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.92      0.99      0.96      0.93       993
+        1.0       0.98      0.92      1.00      0.95      0.96      0.92       106
+
+avg / total       0.99      0.99      0.93      0.99      0.96      0.93      1099
+
+Precision: 0.98
+Recall: 0.9245283018867925
+F_measure: 0.9514563106796116
+G_mean_1: 0.960555157523149
+G_mean_2: 0.9060377358490566
+AUC_ROC: 0.9612571015979784
+AUC_PR: 0.9133170807080192
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.91      0.99      0.95      0.91       993
+        1.0       0.94      0.91      0.99      0.92      0.95      0.89       106
+
+avg / total       0.99      0.99      0.91      0.99      0.95      0.91      1099
+
+Precision: 0.9411764705882353
+Recall: 0.9056603773584906
+F_measure: 0.923076923076923
+G_mean_1: 0.9487824351332352
+G_mean_2: 0.8523862375138734
+AUC_ROC: 0.9498090406429917
+AUC_PR: 0.8614854185875768
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.90      0.99      0.94      0.90       993
+        1.0       0.91      0.90      0.99      0.90      0.94      0.88       106
+
+avg / total       0.98      0.98      0.91      0.98      0.94      0.89      1099
+
+Precision: 0.9134615384615384
+Recall: 0.8962264150943396
+F_measure: 0.9047619047619048
+G_mean_1: 0.9423924432381324
+G_mean_2: 0.8186683599419449
+AUC_ROC: 0.9435814854927892
+AUC_PR: 0.8286774591230186
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.87      0.99      0.93      0.87       993
+        1.0       0.94      0.87      0.99      0.90      0.93      0.85       106
+
+avg / total       0.98      0.98      0.88      0.98      0.93      0.87      1099
+
+Precision: 0.9387755102040817
+Recall: 0.8679245283018868
+F_measure: 0.9019607843137256
+G_mean_1: 0.9288058308028085
+G_mean_2: 0.8147862918752408
+AUC_ROC: 0.9309411161146898
+AUC_PR: 0.8275251453784255
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: ADASYN
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.9529773619246644
+Avg Recall: 0.9328032345013476
+Avg F_measure: 0.9424906553403695
+Avg G_mean_1: 0.9633003034578573
+Avg G_mean_2: 0.8891931287560949
+Avg AUC_ROC: 0.9639356634209484
+Avg AUC_PR: 0.8956532164391126
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1100
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.98      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9811320754716981
+Recall: 0.9904761904761905
+F_measure: 0.9857819905213271
+G_mean_1: 0.9942249648023319
+G_mean_2: 0.9717879604672058
+AUC_ROC: 0.999861071189039
+AUC_PR: 0.9986483873896342
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1099
+
+Precision: 1.0
+Recall: 0.9904761904761905
+F_measure: 0.9952153110047847
+G_mean_1: 0.9952267030562386
+G_mean_2: 0.9904761904761905
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       994
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       105
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9619047619047619
+F_measure: 0.9805825242718447
+G_mean_1: 0.9807674351775563
+G_mean_2: 0.9619047619047619
+AUC_ROC: 0.9999664654594231
+AUC_PR: 0.9996397068292928
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       994
+        1.0       0.99      0.98      1.00      0.99      0.99      0.98       105
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9903846153846154
+Recall: 0.9809523809523809
+F_measure: 0.985645933014354
+G_mean_1: 0.9899320720785303
+G_mean_2: 0.9715201465201465
+AUC_ROC: 0.999166427134234
+AUC_PR: 0.9812794111332441
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      1.00      0.97      0.95       994
+        1.0       1.00      0.94      1.00      0.97      0.97      0.94       105
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.95      1099
+
+Precision: 1.0
+Recall: 0.9428571428571428
+F_measure: 0.9705882352941176
+G_mean_1: 0.9710083124552245
+G_mean_2: 0.9428571428571428
+AUC_ROC: 0.9999041870269234
+AUC_PR: 0.9991302275705946
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       1.00      0.98      1.00      0.99      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 1.0
+Recall: 0.9811320754716981
+F_measure: 0.9904761904761905
+G_mean_1: 0.9905211130872972
+G_mean_2: 0.9811320754716981
+AUC_ROC: 0.9999714986034316
+AUC_PR: 0.999736297351107
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       993
+        1.0       1.00      0.97      1.00      0.99      0.99      0.97       106
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 1.0
+Recall: 0.9716981132075472
+F_measure: 0.985645933014354
+G_mean_1: 0.9857474895770961
+G_mean_2: 0.9716981132075472
+AUC_ROC: 0.9999857493017158
+AUC_PR: 0.9998252969951085
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       993
+        1.0       0.98      0.99      1.00      0.99      0.99      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9813084112149533
+Recall: 0.9905660377358491
+F_measure: 0.9859154929577464
+G_mean_1: 0.9942690480830925
+G_mean_2: 0.9720507846940575
+AUC_ROC: 0.9998669934826806
+AUC_PR: 0.9986355597205672
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.92      1.00      0.96      0.92       993
+        1.0       1.00      0.92      1.00      0.96      0.96      0.91       106
+
+avg / total       0.99      0.99      0.92      0.99      0.96      0.92      1099
+
+Precision: 1.0
+Recall: 0.9150943396226415
+F_measure: 0.9556650246305419
+G_mean_1: 0.9566056343251599
+G_mean_2: 0.9150943396226415
+AUC_ROC: 0.9998432423188736
+AUC_PR: 0.998593798776017
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: ADASYN
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9952825102071268
+Avg Recall: 0.9715723270440251
+Avg F_measure: 0.983077729869237
+Avg G_mean_1: 0.9853574613767278
+Avg G_mean_2: 0.9669087552957241
+Avg AUC_ROC: 0.999856563451632
+Avg AUC_PR: 0.9975488685765566
+----------------------------------------------------------
+
+
+Sampling_algorithm:RandomUnderSampler(random_state=1, replacement=False, sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.98      0.99      0.99      0.99      0.98       994
+        1.0       0.88      0.99      0.98      0.93      0.99      0.98       106
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1100
+
+Precision: 0.875
+Recall: 0.9905660377358491
+F_measure: 0.9292035398230089
+G_mean_1: 0.9877336979631443
+G_mean_2: 0.8667452830188679
+AUC_ROC: 0.9877377472381457
+AUC_PR: 0.8676543739279587
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.97      0.98      0.97      0.93       994
+        1.0       0.73      0.97      0.96      0.83      0.97      0.94       105
+
+avg / total       0.97      0.96      0.97      0.97      0.97      0.93      1099
+
+Precision: 0.7285714285714285
+Recall: 0.9714285714285714
+F_measure: 0.8326530612244898
+G_mean_1: 0.9665875351276256
+G_mean_2: 0.7077551020408163
+AUC_ROC: 0.9665995975855131
+AUC_PR: 0.7104848563629272
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.98      0.98      0.97      0.94       994
+        1.0       0.74      0.98      0.96      0.84      0.97      0.95       105
+
+avg / total       0.97      0.97      0.98      0.97      0.97      0.94      1099
+
+Precision: 0.7410071942446043
+Recall: 0.9809523809523809
+F_measure: 0.8442622950819672
+G_mean_1: 0.9723296408809075
+G_mean_2: 0.726892771497088
+AUC_ROC: 0.9723675385647217
+AUC_PR: 0.7287126077118287
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.97      0.92      0.98      0.94      0.90       994
+        1.0       0.74      0.92      0.97      0.82      0.94      0.89       105
+
+avg / total       0.97      0.96      0.93      0.96      0.94      0.90      1099
+
+Precision: 0.7404580152671756
+Recall: 0.9238095238095239
+F_measure: 0.8220338983050848
+G_mean_1: 0.9445688991751084
+G_mean_2: 0.6840421664849147
+AUC_ROC: 0.9448021462105969
+AUC_PR: 0.6913215113438773
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.98      0.98      0.97      0.94       994
+        1.0       0.74      0.98      0.96      0.84      0.97      0.95       105
+
+avg / total       0.97      0.97      0.98      0.97      0.97      0.94      1099
+
+Precision: 0.7410071942446043
+Recall: 0.9809523809523809
+F_measure: 0.8442622950819672
+G_mean_1: 0.9723296408809075
+G_mean_2: 0.726892771497088
+AUC_ROC: 0.9723675385647217
+AUC_PR: 0.7287126077118287
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.97      0.97      0.99      0.97      0.95       994
+        1.0       0.80      0.97      0.97      0.88      0.97      0.95       105
+
+avg / total       0.98      0.97      0.97      0.98      0.97      0.95      1099
+
+Precision: 0.8031496062992126
+Recall: 0.9714285714285714
+F_measure: 0.8793103448275863
+G_mean_1: 0.9731373301307734
+G_mean_2: 0.7802024746906637
+AUC_ROC: 0.973138832997988
+AUC_PR: 0.7829322290127747
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.96      0.98      0.96      0.92       993
+        1.0       0.71      0.96      0.96      0.82      0.96      0.92       106
+
+avg / total       0.97      0.96      0.96      0.96      0.96      0.92      1099
+
+Precision: 0.7083333333333334
+Recall: 0.9622641509433962
+F_measure: 0.816
+G_mean_1: 0.9599813314037287
+G_mean_2: 0.6816037735849056
+AUC_ROC: 0.9599840392179216
+AUC_PR: 0.685243446014387
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.97      0.98      0.97      0.94       993
+        1.0       0.75      0.97      0.96      0.84      0.97      0.94       106
+
+avg / total       0.97      0.97      0.97      0.97      0.97      0.94      1099
+
+Precision: 0.7463768115942029
+Recall: 0.9716981132075472
+F_measure: 0.8442622950819673
+G_mean_1: 0.9682194663390191
+G_mean_2: 0.7252529395679519
+AUC_ROC: 0.9682256930589599
+AUC_PR: 0.7279826938900629
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.98      0.97      0.99      0.98      0.96       993
+        1.0       0.86      0.97      0.98      0.91      0.98      0.95       106
+
+avg / total       0.98      0.98      0.97      0.98      0.98      0.96      1099
+
+Precision: 0.8583333333333333
+Recall: 0.9716981132075472
+F_measure: 0.911504424778761
+G_mean_1: 0.9772731440478172
+G_mean_2: 0.8340408805031446
+AUC_ROC: 0.9772891371677213
+AUC_PR: 0.8367706348252556
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.97      0.99      0.98      0.98      0.96       993
+        1.0       0.77      0.99      0.97      0.87      0.98      0.96       106
+
+avg / total       0.98      0.97      0.99      0.97      0.98      0.96      1099
+
+Precision: 0.7720588235294118
+Recall: 0.9905660377358491
+F_measure: 0.8677685950413223
+G_mean_1: 0.9796132004312215
+G_mean_2: 0.7647752497225305
+AUC_ROC: 0.9796737540139466
+AUC_PR: 0.7656851678299008
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: RandomUnderSampler
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.7714295740417307
+Avg Recall: 0.9715363881401619
+Avg F_measure: 0.8591260749246155
+Avg G_mean_1: 0.9701773886380252
+Avg G_mean_2: 0.7498203412607971
+Avg AUC_ROC: 0.9702186024620236
+Avg AUC_PR: 0.7525500128630801
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       0.96      1.00      1.00      0.98      1.00      1.00       106
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1100
+
+Precision: 0.9636363636363636
+Recall: 1.0
+F_measure: 0.9814814814814815
+G_mean_1: 0.997985899264506
+G_mean_2: 0.9636363636363636
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.98      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9811320754716981
+Recall: 0.9904761904761905
+F_measure: 0.9857819905213271
+G_mean_1: 0.9942249648023319
+G_mean_2: 0.9717879604672058
+AUC_ROC: 0.9999041870269234
+AUC_PR: 0.9990928562725968
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       0.99      1.00      1.00      1.00      1.00      1.00       105
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1099
+
+Precision: 0.9905660377358491
+Recall: 1.0
+F_measure: 0.9952606635071091
+G_mean_1: 0.9994968553140606
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.99      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9904761904761905
+Recall: 0.9904761904761905
+F_measure: 0.9904761904761905
+G_mean_1: 0.9947259600292909
+G_mean_2: 0.9810430839002269
+AUC_ROC: 0.9994538660534635
+AUC_PR: 0.9964830485039544
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       994
+        1.0       0.98      0.99      1.00      0.99      0.99      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.9811320754716981
+Recall: 0.9904761904761905
+F_measure: 0.9857819905213271
+G_mean_1: 0.9942249648023319
+G_mean_2: 0.9717879604672058
+AUC_ROC: 0.9991137299990418
+AUC_PR: 0.9834466286470849
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.98      0.97       994
+        1.0       0.98      0.97      1.00      0.98      0.98      0.97       105
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 0.9807692307692307
+Recall: 0.9714285714285714
+F_measure: 0.9760765550239234
+G_mean_1: 0.984618701212713
+G_mean_2: 0.9527472527472527
+AUC_ROC: 0.9998179553511546
+AUC_PR: 0.9982623349775667
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       0.97      0.98      1.00      0.98      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9719626168224299
+Recall: 0.9811320754716981
+F_measure: 0.9765258215962441
+G_mean_1: 0.9890237258168184
+G_mean_2: 0.9536236995238935
+AUC_ROC: 0.9997909897584982
+AUC_PR: 0.9980603194689815
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       993
+        1.0       0.96      1.00      1.00      0.98      1.00      1.00       106
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1099
+
+Precision: 0.9636363636363636
+Recall: 1.0
+F_measure: 0.9814814814814815
+G_mean_1: 0.9979838689168921
+G_mean_2: 0.9636363636363636
+AUC_ROC: 0.9999762488361931
+AUC_PR: 0.9997338169970862
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      0.99      0.99       993
+        1.0       0.96      0.99      1.00      0.98      0.99      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      0.99      0.99      1099
+
+Precision: 0.963302752293578
+Recall: 0.9905660377358491
+F_measure: 0.9767441860465116
+G_mean_1: 0.993265242629716
+G_mean_2: 0.9542149904794877
+AUC_ROC: 0.9999572479051474
+AUC_PR: 0.9995750467448581
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.98      1.00      0.99      0.98       993
+        1.0       0.95      0.98      0.99      0.97      0.99      0.97       106
+
+avg / total       0.99      0.99      0.98      0.99      0.99      0.98      1099
+
+Precision: 0.9541284403669725
+Recall: 0.9811320754716981
+F_measure: 0.9674418604651164
+G_mean_1: 0.9880242068896068
+G_mean_2: 0.9361260169638221
+AUC_ROC: 0.9995534781204279
+AUC_PR: 0.9963848477754664
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: RandomUnderSampler
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9740742146680373
+Avg Recall: 0.9895687331536388
+Avg F_measure: 0.9817052221120713
+Avg G_mean_1: 0.9933574389678268
+Avg G_mean_2: 0.9639169729557672
+Avg AUC_ROC: 0.9997567703050849
+Avg AUC_PR: 0.9971038899387595
+----------------------------------------------------------
+
+
+Sampling_algorithm:ClusterCentroids(estimator=None, n_jobs=None, random_state=1,
+                 sampling_strategy='auto', voting='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.95      1.00      0.97      0.97      0.94       994
+        1.0       0.66      1.00      0.95      0.80      0.97      0.95       106
+
+avg / total       0.97      0.95      0.99      0.96      0.97      0.94      1100
+
+Precision: 0.6625
+Recall: 1.0
+F_measure: 0.7969924812030075
+G_mean_1: 0.9724577339224536
+G_mean_2: 0.6625
+AUC_ROC: 0.9728370221327968
+AUC_PR: 0.6625
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.90      0.98      0.94      0.94      0.87       994
+        1.0       0.50      0.98      0.90      0.66      0.94      0.89       105
+
+avg / total       0.95      0.90      0.97      0.92      0.94      0.87      1099
+
+Precision: 0.4975845410628019
+Recall: 0.9809523809523809
+F_measure: 0.6602564102564102
+G_mean_1: 0.9371859603049844
+G_mean_2: 0.4881067402806533
+AUC_ROC: 0.9381623071763916
+AUC_PR: 0.489926576495394
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.99      0.98      0.98      0.95       994
+        1.0       0.73      0.99      0.96      0.84      0.98      0.95       105
+
+avg / total       0.97      0.96      0.99      0.97      0.98      0.95      1099
+
+Precision: 0.7272727272727273
+Recall: 0.9904761904761905
+F_measure: 0.8387096774193549
+G_mean_1: 0.9755072775722076
+G_mean_2: 0.7203463203463204
+AUC_ROC: 0.9756203890006707
+AUC_PR: 0.7212562384536907
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.95      0.94      0.97      0.95      0.90       994
+        1.0       0.66      0.94      0.95      0.78      0.95      0.89       105
+
+avg / total       0.96      0.95      0.94      0.95      0.95      0.89      1099
+
+Precision: 0.66
+Recall: 0.9428571428571428
+F_measure: 0.7764705882352942
+G_mean_1: 0.945770147948639
+G_mean_2: 0.6222857142857143
+AUC_ROC: 0.9457746478873239
+AUC_PR: 0.6277452229299364
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.95      0.98      0.97      0.96      0.92       994
+        1.0       0.66      0.98      0.95      0.79      0.96      0.93       105
+
+avg / total       0.97      0.95      0.98      0.95      0.96      0.93      1099
+
+Precision: 0.6560509554140127
+Recall: 0.9809523809523809
+F_measure: 0.7862595419847327
+G_mean_1: 0.9631517042123744
+G_mean_2: 0.64355474673946
+AUC_ROC: 0.9633132126089873
+AUC_PR: 0.6453745829542007
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.96      0.98      0.96      0.93       994
+        1.0       0.74      0.96      0.96      0.83      0.96      0.93       105
+
+avg / total       0.97      0.96      0.96      0.97      0.96      0.93      1099
+
+Precision: 0.7372262773722628
+Recall: 0.9619047619047619
+F_measure: 0.8347107438016529
+G_mean_1: 0.9628432711994859
+G_mean_2: 0.7091414668057003
+AUC_ROC: 0.9628437290409122
+AUC_PR: 0.7127811392351817
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.95      0.95      0.97      0.95      0.90       993
+        1.0       0.66      0.95      0.95      0.78      0.95      0.90       106
+
+avg / total       0.96      0.95      0.95      0.95      0.95      0.90      1099
+
+Precision: 0.6558441558441559
+Recall: 0.9528301886792453
+F_measure: 0.776923076923077
+G_mean_1: 0.9497232211205747
+G_mean_2: 0.6249081107571675
+AUC_ROC: 0.9497282866860476
+AUC_PR: 0.6294577012940191
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.95      0.99      0.97      0.97      0.93       993
+        1.0       0.66      0.99      0.95      0.79      0.97      0.94       106
+
+avg / total       0.97      0.95      0.99      0.95      0.97      0.93      1099
+
+Precision: 0.660377358490566
+Recall: 0.9905660377358491
+F_measure: 0.7924528301886792
+G_mean_1: 0.9678318026503949
+G_mean_2: 0.6541473834104663
+AUC_ROC: 0.9680926865416405
+AUC_PR: 0.6550573015178366
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.95      0.99      0.97      0.97      0.94       993
+        1.0       0.67      0.99      0.95      0.80      0.97      0.94       106
+
+avg / total       0.97      0.95      0.99      0.96      0.97      0.94      1099
+
+Precision: 0.6730769230769231
+Recall: 0.9905660377358491
+F_measure: 0.8015267175572519
+G_mean_1: 0.9693766269418704
+G_mean_2: 0.6667271407837446
+AUC_ROC: 0.9696032605597673
+AUC_PR: 0.6676370588911149
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.94      0.98      0.97      0.96      0.92       993
+        1.0       0.64      0.98      0.94      0.78      0.96      0.93       106
+
+avg / total       0.96      0.95      0.98      0.95      0.96      0.92      1099
+
+Precision: 0.6419753086419753
+Recall: 0.9811320754716981
+F_measure: 0.7761194029850746
+G_mean_1: 0.9611582946830893
+G_mean_2: 0.6298625669694852
+AUC_ROC: 0.9613616067187293
+AUC_PR: 0.6316824031842259
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: ClusterCentroids
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.6571908247175424
+Avg Recall: 0.9772237196765501
+Avg F_measure: 0.7840421470554535
+Avg G_mean_1: 0.9605006040556076
+Avg G_mean_2: 0.6421580190378712
+Avg AUC_ROC: 0.9607337148353267
+Avg AUC_PR: 0.64434182249556
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.98      1.00      0.99      0.99      0.98       994
+        1.0       0.88      1.00      0.98      0.93      0.99      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      0.99      0.98      1100
+
+Precision: 0.8760330578512396
+Recall: 1.0
+F_measure: 0.9339207048458149
+G_mean_1: 0.9924260459804763
+G_mean_2: 0.8760330578512396
+AUC_ROC: 0.9999240727383166
+AUC_PR: 0.9993379675604105
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.98      0.99      0.99      0.99      0.97       994
+        1.0       0.86      0.99      0.98      0.92      0.99      0.97       105
+
+avg / total       0.99      0.98      0.99      0.98      0.99      0.97      1099
+
+Precision: 0.859504132231405
+Recall: 0.9904761904761905
+F_measure: 0.9203539823008849
+G_mean_1: 0.9866795107005393
+G_mean_2: 0.8513183785911059
+AUC_ROC: 0.99961195745904
+AUC_PR: 0.9969364030224398
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      0.99      0.99      0.99       994
+        1.0       0.89      1.00      0.99      0.94      0.99      0.99       105
+
+avg / total       0.99      0.99      1.00      0.99      0.99      0.99      1099
+
+Precision: 0.8898305084745762
+Recall: 1.0
+F_measure: 0.9417040358744395
+G_mean_1: 0.9934392428201386
+G_mean_2: 0.8898305084745762
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.98      0.98      0.99      0.98      0.96       994
+        1.0       0.84      0.98      0.98      0.91      0.98      0.96       105
+
+avg / total       0.98      0.98      0.98      0.98      0.98      0.96      1099
+
+Precision: 0.8442622950819673
+Recall: 0.9809523809523809
+F_measure: 0.907488986784141
+G_mean_1: 0.9809188458385838
+G_mean_2: 0.8281811085089774
+AUC_ROC: 0.9988358723771198
+AUC_PR: 0.9917819292517118
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      0.99      0.99      0.98       994
+        1.0       0.90      0.99      0.99      0.94      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.896551724137931
+Recall: 0.9904761904761905
+F_measure: 0.9411764705882353
+G_mean_1: 0.9892010571346134
+G_mean_2: 0.8880131362889984
+AUC_ROC: 0.998888569512312
+AUC_PR: 0.981844050256134
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.97      1.00      0.98      0.97       994
+        1.0       0.94      0.97      0.99      0.96      0.98      0.96       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.97      1099
+
+Precision: 0.9444444444444444
+Recall: 0.9714285714285714
+F_measure: 0.9577464788732395
+G_mean_1: 0.9826315776913981
+G_mean_2: 0.9174603174603174
+AUC_ROC: 0.9989316853501965
+AUC_PR: 0.99232465664632
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      0.99      0.99      0.99       993
+        1.0       0.90      1.00      0.99      0.95      0.99      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      0.99      0.99      1099
+
+Precision: 0.8983050847457628
+Recall: 1.0
+F_measure: 0.9464285714285715
+G_mean_1: 0.9939393381162579
+G_mean_2: 0.8983050847457628
+AUC_ROC: 0.9995677288187121
+AUC_PR: 0.9961118153468721
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       993
+        1.0       0.92      1.00      0.99      0.96      1.00      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9217391304347826
+Recall: 1.0
+F_measure: 0.9592760180995475
+G_mean_1: 0.9954579628950881
+G_mean_2: 0.9217391304347826
+AUC_ROC: 0.9997957399912596
+AUC_PR: 0.9978759018637477
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      0.99      0.99      0.99       993
+        1.0       0.90      1.00      0.99      0.95      0.99      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      0.99      0.99      1099
+
+Precision: 0.8983050847457628
+Recall: 1.0
+F_measure: 0.9464285714285715
+G_mean_1: 0.9939393381162579
+G_mean_2: 0.8983050847457628
+AUC_ROC: 0.9999619981379088
+AUC_PR: 0.9996569468267582
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      0.99      0.99      0.98       993
+        1.0       0.91      0.99      0.99      0.95      0.99      0.98       106
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9051724137931034
+Recall: 0.9905660377358491
+F_measure: 0.9459459459459458
+G_mean_1: 0.9897439062995047
+G_mean_2: 0.8966330513988289
+AUC_ROC: 0.9997102358015543
+AUC_PR: 0.9975064589100369
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: ClusterCentroids
+Classification algorithm: RandomForestClassifierAvg Precision: 0.8934147875940974
+Avg Recall: 0.9923899371069183
+Avg F_measure: 0.940046976616939
+Avg G_mean_1: 0.9898376825592858
+Avg G_mean_2: 0.8865818858500353
+Avg AUC_ROC: 0.999522786018642
+Avg AUC_PR: 0.995337612968443
+----------------------------------------------------------
+
+
+Sampling_algorithm:TomekLinks(n_jobs=None, sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.99       994
+        1.0       0.95      0.99      0.99      0.97      0.99      0.99       106
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.99      1100
+
+Precision: 0.9545454545454546
+Recall: 0.9905660377358491
+F_measure: 0.9722222222222223
+G_mean_1: 0.9927654865011586
+G_mean_2: 0.945540308747856
+AUC_ROC: 0.9927679283246649
+AUC_PR: 0.9464493996569469
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.94      0.96      0.99      0.95      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.9351851851851852
+Recall: 0.9619047619047619
+F_measure: 0.9483568075117371
+G_mean_1: 0.9773079272717732
+G_mean_2: 0.8995590828924163
+AUC_ROC: 0.9774312541918178
+AUC_PR: 0.9031987553218976
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.98       994
+        1.0       0.94      0.99      0.99      0.96      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9369369369369369
+Recall: 0.9904761904761905
+F_measure: 0.962962962962963
+G_mean_1: 0.9917161922829623
+G_mean_2: 0.9280137280137281
+AUC_ROC: 0.9917169684775319
+AUC_PR: 0.9289236461210983
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.93      1.00      0.97      0.94       994
+        1.0       0.98      0.93      1.00      0.96      0.97      0.93       105
+
+avg / total       0.99      0.99      0.94      0.99      0.97      0.94      1099
+
+Precision: 0.98
+Recall: 0.9333333333333333
+F_measure: 0.9560975609756097
+G_mean_1: 0.9651193703687814
+G_mean_2: 0.9146666666666666
+AUC_ROC: 0.9656606304493629
+AUC_PR: 0.921036093418259
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.94      0.96      0.99      0.95      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.9439252336448598
+Recall: 0.9619047619047619
+F_measure: 0.9528301886792454
+G_mean_1: 0.9778028920678864
+G_mean_2: 0.9079661771250557
+AUC_ROC: 0.9779342723004696
+AUC_PR: 0.911605849554537
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.92      0.99      0.96      0.93       994
+        1.0       0.95      0.92      0.99      0.94      0.96      0.91       105
+
+avg / total       0.99      0.99      0.93      0.99      0.96      0.92      1099
+
+Precision: 0.9509803921568627
+Recall: 0.9238095238095239
+F_measure: 0.9371980676328502
+G_mean_1: 0.958729677550096
+G_mean_2: 0.8785247432306256
+AUC_ROC: 0.9593896713615023
+AUC_PR: 0.8858040880895882
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.97      0.95       993
+        1.0       0.97      0.95      1.00      0.96      0.97      0.95       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9711538461538461
+Recall: 0.9528301886792453
+F_measure: 0.9619047619047619
+G_mean_1: 0.9746545786204637
+G_mean_2: 0.925344702467344
+AUC_ROC: 0.9749045203214958
+AUC_PR: 0.9298942930041957
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.94      0.99      0.97      0.94       993
+        1.0       0.93      0.94      0.99      0.94      0.97      0.93       106
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.94      1099
+
+Precision: 0.9345794392523364
+Recall: 0.9433962264150944
+F_measure: 0.9389671361502347
+G_mean_1: 0.9678563429296348
+G_mean_2: 0.8816787162757891
+AUC_ROC: 0.9681734404985844
+AUC_PR: 0.8871382249200112
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      1.00      0.98      0.96       993
+        1.0       0.95      0.96      0.99      0.96      0.98      0.95       106
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9532710280373832
+Recall: 0.9622641509433962
+F_measure: 0.9577464788732395
+G_mean_1: 0.9784778554094941
+G_mean_2: 0.917298536413331
+AUC_ROC: 0.9786144521081533
+AUC_PR: 0.9209382088428124
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.94      0.99      0.97      0.94       993
+        1.0       0.95      0.94      0.99      0.95      0.97      0.93       106
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.94      1099
+
+Precision: 0.9523809523809523
+Recall: 0.9433962264150944
+F_measure: 0.9478672985781991
+G_mean_1: 0.9688374443907962
+G_mean_2: 0.8984725965858041
+AUC_ROC: 0.9691804898440023
+AUC_PR: 0.9039321052300262
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: TomekLinks
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.9512958468293817
+Avg Recall: 0.9563881401617251
+Avg F_measure: 0.9536153485491063
+Avg G_mean_1: 0.9753267767393048
+Avg G_mean_2: 0.9097065258418617
+Avg AUC_ROC: 0.9755773627877584
+Avg AUC_PR: 0.9138920664159373
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1100
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       994
+        1.0       0.99      0.97      1.00      0.98      0.99      0.97       105
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 0.9902912621359223
+Recall: 0.9714285714285714
+F_measure: 0.9807692307692307
+G_mean_1: 0.9851148557925571
+G_mean_2: 0.961997226074896
+AUC_ROC: 0.999942512216154
+AUC_PR: 0.9994486691675745
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       1.00      1.00      1.00      1.00      1.00      1.00       105
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1099
+
+Precision: 1.0
+Recall: 1.0
+F_measure: 1.0
+G_mean_1: 1.0
+G_mean_2: 1.0
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       994
+        1.0       1.00      0.95      1.00      0.98      0.98      0.95       105
+
+avg / total       1.00      1.00      0.96      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9523809523809523
+F_measure: 0.975609756097561
+G_mean_1: 0.9759000729485332
+G_mean_2: 0.9523809523809523
+AUC_ROC: 0.9997844208105777
+AUC_PR: 0.998075464014667
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       994
+        1.0       0.99      0.98      1.00      0.99      0.99      0.98       105
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9903846153846154
+Recall: 0.9809523809523809
+F_measure: 0.985645933014354
+G_mean_1: 0.9899320720785303
+G_mean_2: 0.9715201465201465
+AUC_ROC: 0.9990466609178883
+AUC_PR: 0.9798218857365314
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.93      1.00      0.97      0.94       994
+        1.0       1.00      0.93      1.00      0.97      0.97      0.93       105
+
+avg / total       0.99      0.99      0.94      0.99      0.97      0.94      1099
+
+Precision: 1.0
+Recall: 0.9333333333333333
+F_measure: 0.9655172413793104
+G_mean_1: 0.9660917830792959
+G_mean_2: 0.9333333333333333
+AUC_ROC: 0.9999856280540386
+AUC_PR: 0.9998219848687139
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.9999904995344773
+AUC_PR: 0.9999118321283724
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.9999809990689543
+AUC_PR: 0.9998236642567448
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       1.00      0.98      1.00      0.99      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 1.0
+Recall: 0.9811320754716981
+F_measure: 0.9904761904761905
+G_mean_1: 0.9905211130872972
+G_mean_2: 0.9811320754716981
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.9996912348705087
+AUC_PR: 0.9972240336483748
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: TomekLinks
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9980675877520537
+Avg Recall: 0.9696585804132974
+Avg F_measure: 0.9835586707551446
+Avg G_mean_1: 0.98456836471425
+Avg G_mean_2: 0.9677722224347065
+Avg AUC_ROC: 0.99984219554726
+Avg AUC_PR: 0.9974127533820978
+----------------------------------------------------------
+
+
+Sampling_algorithm:NearMiss(n_jobs=None, n_neighbors=3, n_neighbors_ver3=3,
+         sampling_strategy='auto', version=1)
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.76      0.98      0.86      0.86      0.73       994
+        1.0       0.30      0.98      0.76      0.46      0.86      0.76       106
+
+avg / total       0.93      0.78      0.96      0.82      0.86      0.73      1100
+
+Precision: 0.30409356725146197
+Recall: 0.9811320754716981
+F_measure: 0.4642857142857143
+G_mean_1: 0.8638362853131055
+G_mean_2: 0.2983559527750193
+AUC_ROC: 0.8708477278766941
+AUC_PR: 0.30017413459320114
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.86      0.97      0.92      0.91      0.82       994
+        1.0       0.42      0.97      0.86      0.59      0.91      0.84       105
+
+avg / total       0.94      0.87      0.96      0.89      0.91      0.83      1099
+
+Precision: 0.41975308641975306
+Recall: 0.9714285714285714
+F_measure: 0.5862068965517241
+G_mean_1: 0.9130335993543013
+G_mean_2: 0.4077601410934744
+AUC_ROC: 0.9147887323943662
+AUC_PR: 0.41048989541558545
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.75      0.99      0.86      0.86      0.72       994
+        1.0       0.29      0.99      0.75      0.45      0.86      0.76       105
+
+avg / total       0.93      0.77      0.97      0.82      0.86      0.73      1099
+
+Precision: 0.2937853107344633
+Recall: 0.9904761904761905
+F_measure: 0.45315904139433555
+G_mean_1: 0.8610240765955088
+G_mean_2: 0.29098735539413506
+AUC_ROC: 0.8694835680751174
+AUC_PR: 0.2918972735015054
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.67      0.99      0.80      0.81      0.64       994
+        1.0       0.24      0.99      0.67      0.39      0.81      0.68       105
+
+avg / total       0.93      0.70      0.96      0.76      0.81      0.65      1099
+
+Precision: 0.24018475750577367
+Recall: 0.9904761904761905
+F_measure: 0.38661710037174724
+G_mean_1: 0.8140285755410871
+G_mean_2: 0.2378972836247663
+AUC_ROC: 0.8297451374916164
+AUC_PR: 0.23880720173213665
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.71      0.97      0.83      0.83      0.67       994
+        1.0       0.26      0.97      0.71      0.41      0.83      0.71       105
+
+avg / total       0.93      0.74      0.95      0.79      0.83      0.68      1099
+
+Precision: 0.26288659793814434
+Recall: 0.9714285714285714
+F_measure: 0.4137931034482758
+G_mean_1: 0.8318190706936494
+G_mean_2: 0.25537555228276876
+AUC_ROC: 0.8418511066398391
+AUC_PR: 0.2581053066048798
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.82      0.96      0.90      0.89      0.78       994
+        1.0       0.36      0.96      0.82      0.52      0.89      0.80       105
+
+avg / total       0.93      0.83      0.95      0.86      0.89      0.78      1099
+
+Precision: 0.35815602836879434
+Recall: 0.9619047619047619
+F_measure: 0.5219638242894057
+G_mean_1: 0.8869887630762368
+G_mean_2: 0.34451198919284026
+AUC_ROC: 0.8899061032863851
+AUC_PR: 0.3481516616223216
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.75      0.97      0.86      0.85      0.71       993
+        1.0       0.29      0.97      0.75      0.45      0.85      0.75       106
+
+avg / total       0.93      0.77      0.95      0.82      0.85      0.72      1099
+
+Precision: 0.29428571428571426
+Recall: 0.9716981132075472
+F_measure: 0.4517543859649123
+G_mean_1: 0.8543984842225097
+G_mean_2: 0.28595687331536385
+AUC_ROC: 0.8614784624446599
+AUC_PR: 0.2886866276374749
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.89      0.98      0.94      0.93      0.87       993
+        1.0       0.49      0.98      0.89      0.65      0.93      0.88       106
+
+avg / total       0.95      0.90      0.97      0.91      0.93      0.87      1099
+
+Precision: 0.48826291079812206
+Recall: 0.9811320754716981
+F_measure: 0.6520376175548589
+G_mean_1: 0.9345773367170407
+G_mean_2: 0.4790504030472141
+AUC_ROC: 0.9356818484105721
+AUC_PR: 0.48087023926195477
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.68      0.97      0.81      0.81      0.64       993
+        1.0       0.24      0.97      0.68      0.39      0.81      0.68       106
+
+avg / total       0.92      0.71      0.94      0.77      0.81      0.64      1099
+
+Precision: 0.24465558194774348
+Recall: 0.9716981132075472
+F_measure: 0.3908918406072106
+G_mean_1: 0.8127237325643987
+G_mean_2: 0.23773136736431677
+AUC_ROC: 0.8257282106823235
+AUC_PR: 0.24046112168642778
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.81      0.96      0.90      0.88      0.77       993
+        1.0       0.36      0.96      0.81      0.52      0.88      0.79       106
+
+avg / total       0.93      0.83      0.95      0.86      0.88      0.77      1099
+
+Precision: 0.3554006968641115
+Recall: 0.9622641509433962
+F_measure: 0.5190839694656489
+G_mean_1: 0.8848674287869115
+G_mean_2: 0.3419893498126356
+AUC_ROC: 0.88798001102054
+AUC_PR: 0.34562902224211695
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: NearMiss
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.32614642521140824
+Avg Recall: 0.9753638814016172
+Avg F_measure: 0.4839793493933834
+Avg G_mean_1: 0.8657297352864749
+Avg G_mean_2: 0.31796162679025347
+Avg AUC_ROC: 0.8727490908322114
+Avg AUC_PR: 0.32032724842976046
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.85      1.00      0.92      0.92      0.83       994
+        1.0       0.41      1.00      0.85      0.58      0.92      0.86       106
+
+avg / total       0.94      0.86      0.99      0.88      0.92      0.83      1100
+
+Precision: 0.4076923076923077
+Recall: 1.0
+F_measure: 0.5792349726775957
+G_mean_1: 0.9192771195538434
+G_mean_2: 0.4076923076923077
+AUC_ROC: 0.9977079457879352
+AUC_PR: 0.9820515337421083
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.82      0.99      0.90      0.90      0.80       994
+        1.0       0.37      0.99      0.82      0.54      0.90      0.83       105
+
+avg / total       0.94      0.84      0.97      0.87      0.90      0.81      1099
+
+Precision: 0.3727598566308244
+Recall: 0.9904761904761905
+F_measure: 0.5416666666666667
+G_mean_1: 0.9033806393081829
+G_mean_2: 0.3692097627581499
+AUC_ROC: 0.9935374149659864
+AUC_PR: 0.9662280797848489
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.85      0.99      0.92      0.92      0.83       994
+        1.0       0.40      0.99      0.85      0.57      0.92      0.85       105
+
+avg / total       0.94      0.86      0.98      0.88      0.92      0.83      1099
+
+Precision: 0.4046692607003891
+Recall: 0.9904761904761905
+F_measure: 0.5745856353591161
+G_mean_1: 0.9154335517757567
+G_mean_2: 0.4008152677413378
+AUC_ROC: 0.99337932356041
+AUC_PR: 0.9682030658812547
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.86      0.98      0.92      0.92      0.83       994
+        1.0       0.42      0.98      0.86      0.59      0.92      0.85       105
+
+avg / total       0.94      0.87      0.97      0.89      0.92      0.83      1099
+
+Precision: 0.42213114754098363
+Recall: 0.9809523809523809
+F_measure: 0.5902578796561605
+G_mean_1: 0.9174983379566967
+G_mean_2: 0.4140905542544887
+AUC_ROC: 0.989652198907732
+AUC_PR: 0.9637993064663263
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.84      1.00      0.91      0.92      0.83       994
+        1.0       0.40      1.00      0.84      0.57      0.92      0.86       105
+
+avg / total       0.94      0.86      0.99      0.88      0.92      0.83      1099
+
+Precision: 0.40229885057471265
+Recall: 1.0
+F_measure: 0.5737704918032787
+G_mean_1: 0.9181820898387223
+G_mean_2: 0.40229885057471265
+AUC_ROC: 0.9956405097250167
+AUC_PR: 0.9664117147936213
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.86      0.98      0.92      0.92      0.83       994
+        1.0       0.42      0.98      0.86      0.59      0.92      0.85       105
+
+avg / total       0.94      0.87      0.97      0.89      0.92      0.83      1099
+
+Precision: 0.42213114754098363
+Recall: 0.9809523809523809
+F_measure: 0.5902578796561605
+G_mean_1: 0.9174983379566967
+G_mean_2: 0.4140905542544887
+AUC_ROC: 0.9900067069081153
+AUC_PR: 0.9460742394088635
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.85      0.99      0.92      0.92      0.83       993
+        1.0       0.41      0.99      0.85      0.58      0.92      0.85       106
+
+avg / total       0.94      0.86      0.98      0.88      0.92      0.83      1099
+
+Precision: 0.41015625
+Recall: 0.9905660377358491
+F_measure: 0.5801104972375691
+G_mean_1: 0.9164803090474376
+G_mean_2: 0.40628685141509435
+AUC_ROC: 0.9904757833133824
+AUC_PR: 0.9424087195361497
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.86      0.97      0.92      0.91      0.82       993
+        1.0       0.42      0.97      0.86      0.59      0.91      0.84       106
+
+avg / total       0.94      0.87      0.96      0.89      0.91      0.82      1099
+
+Precision: 0.4186991869918699
+Recall: 0.9716981132075472
+F_measure: 0.5852272727272727
+G_mean_1: 0.9120119278398006
+G_mean_2: 0.40684921000153396
+AUC_ROC: 0.9863525812764825
+AUC_PR: 0.9397989176819259
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.87      0.99      0.93      0.93      0.85       993
+        1.0       0.44      0.99      0.87      0.61      0.93      0.87       106
+
+avg / total       0.95      0.88      0.98      0.90      0.93      0.85      1099
+
+Precision: 0.4449152542372881
+Recall: 0.9905660377358491
+F_measure: 0.6140350877192982
+G_mean_1: 0.9273009945371509
+G_mean_2: 0.4407179405180684
+AUC_ROC: 0.990846301468772
+AUC_PR: 0.9587222321582048
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.87      0.95      0.93      0.91      0.82       993
+        1.0       0.44      0.95      0.87      0.60      0.91      0.83       106
+
+avg / total       0.94      0.88      0.94      0.90      0.91      0.82      1099
+
+Precision: 0.4353448275862069
+Recall: 0.9528301886792453
+F_measure: 0.5976331360946745
+G_mean_1: 0.9094666180497984
+G_mean_2: 0.41480969420949904
+AUC_ROC: 0.9768806171502404
+AUC_PR: 0.9085159602348004
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: NearMiss
+Classification algorithm: RandomForestClassifierAvg Precision: 0.41407980894955665
+Avg Recall: 0.9848517520215634
+Avg F_measure: 0.5826779519597791
+Avg G_mean_1: 0.9156529925864085
+Avg G_mean_2: 0.40768609934196814
+Avg AUC_ROC: 0.9904479383064071
+Avg AUC_PR: 0.9542213769688102
+----------------------------------------------------------
+
+
+Sampling_algorithm:NearMiss(n_jobs=None, n_neighbors=3, n_neighbors_ver3=3,
+         sampling_strategy='auto', version=2)
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.59      1.00      0.74      0.77      0.56       994
+        1.0       0.21      1.00      0.59      0.34      0.77      0.61       106
+
+avg / total       0.92      0.63      0.96      0.70      0.77      0.57      1100
+
+Precision: 0.20502901353965183
+Recall: 1.0
+F_measure: 0.3402889245585875
+G_mean_1: 0.7658453595133476
+G_mean_2: 0.20502901353965183
+AUC_ROC: 0.7932595573440644
+AUC_PR: 0.20502901353965183
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.58      1.00      0.73      0.76      0.56       994
+        1.0       0.20      1.00      0.58      0.33      0.76      0.60       105
+
+avg / total       0.92      0.62      0.96      0.70      0.76      0.56      1099
+
+Precision: 0.20076481835564053
+Recall: 1.0
+F_measure: 0.3343949044585987
+G_mean_1: 0.7612337756346614
+G_mean_2: 0.20076481835564053
+AUC_ROC: 0.789738430583501
+AUC_PR: 0.20076481835564053
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.63      1.00      0.77      0.79      0.61       994
+        1.0       0.22      1.00      0.63      0.36      0.79      0.66       105
+
+avg / total       0.93      0.67      0.96      0.74      0.79      0.61      1099
+
+Precision: 0.2229299363057325
+Recall: 1.0
+F_measure: 0.36458333333333337
+G_mean_1: 0.7948526558216943
+G_mean_2: 0.2229299363057325
+AUC_ROC: 0.8158953722334004
+AUC_PR: 0.2229299363057325
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.55      0.99      0.71      0.74      0.53       994
+        1.0       0.19      0.99      0.55      0.32      0.74      0.57       105
+
+avg / total       0.92      0.60      0.95      0.68      0.74      0.53      1099
+
+Precision: 0.19012797074954296
+Recall: 0.9904761904761905
+F_measure: 0.3190184049079755
+G_mean_1: 0.7409768288670627
+G_mean_2: 0.1883172281709759
+AUC_ROC: 0.7724010731052985
+AUC_PR: 0.18922714627834625
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.63      0.99      0.77      0.79      0.60       994
+        1.0       0.22      0.99      0.63      0.36      0.79      0.65       105
+
+avg / total       0.92      0.67      0.96      0.73      0.79      0.61      1099
+
+Precision: 0.2208067940552017
+Recall: 0.9904761904761905
+F_measure: 0.3611111111111111
+G_mean_1: 0.7904285134264812
+G_mean_2: 0.21870387220705692
+AUC_ROC: 0.8106304493628438
+AUC_PR: 0.21961379031442727
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.63      1.00      0.77      0.79      0.60       994
+        1.0       0.22      1.00      0.63      0.36      0.79      0.65       105
+
+avg / total       0.93      0.66      0.96      0.73      0.79      0.61      1099
+
+Precision: 0.22012578616352202
+Recall: 1.0
+F_measure: 0.3608247422680413
+G_mean_1: 0.7910464759816441
+G_mean_2: 0.22012578616352202
+AUC_ROC: 0.8128772635814889
+AUC_PR: 0.22012578616352202
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.61      1.00      0.76      0.78      0.59       993
+        1.0       0.22      1.00      0.61      0.36      0.78      0.64       106
+
+avg / total       0.92      0.65      0.96      0.72      0.78      0.59      1099
+
+Precision: 0.2158859470468432
+Recall: 1.0
+F_measure: 0.35510887772194305
+G_mean_1: 0.7824870618828779
+G_mean_2: 0.2158859470468432
+AUC_ROC: 0.8061430010070494
+AUC_PR: 0.2158859470468432
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.63      1.00      0.78      0.80      0.61       993
+        1.0       0.23      1.00      0.63      0.37      0.80      0.66       106
+
+avg / total       0.93      0.67      0.96      0.74      0.80      0.61      1099
+
+Precision: 0.225531914893617
+Recall: 1.0
+F_measure: 0.3680555555555555
+G_mean_1: 0.7958856942224022
+G_mean_2: 0.225531914893617
+AUC_ROC: 0.8167170191339376
+AUC_PR: 0.225531914893617
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.57      0.96      0.72      0.74      0.52       993
+        1.0       0.19      0.96      0.57      0.32      0.74      0.57       106
+
+avg / total       0.92      0.61      0.92      0.68      0.74      0.53      1099
+
+Precision: 0.19172932330827067
+Recall: 0.9622641509433962
+F_measure: 0.31974921630094044
+G_mean_1: 0.7386296318947153
+G_mean_2: 0.184494254504185
+AUC_ROC: 0.7646164662068442
+AUC_PR: 0.18813392693366635
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.67      0.99      0.80      0.82      0.65       993
+        1.0       0.24      0.99      0.67      0.39      0.82      0.69       106
+
+avg / total       0.93      0.70      0.96      0.76      0.82      0.65      1099
+
+Precision: 0.24475524475524477
+Recall: 0.9905660377358491
+F_measure: 0.39252336448598135
+G_mean_1: 0.8169211716254096
+G_mean_2: 0.24244623301227075
+AUC_ROC: 0.8321410249102206
+AUC_PR: 0.2433561511196411
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: NearMiss
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.2137686749173267
+Avg Recall: 0.9933782569631626
+Avg F_measure: 0.35156584347020675
+Avg G_mean_1: 0.7778307168870298
+Avg G_mean_2: 0.21242290041994955
+Avg AUC_ROC: 0.8014419657468647
+Avg AUC_PR: 0.2130598430951088
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.69      1.00      0.81      0.83      0.66       994
+        1.0       0.25      1.00      0.69      0.40      0.83      0.71       106
+
+avg / total       0.93      0.72      0.97      0.77      0.83      0.67      1100
+
+Precision: 0.2529832935560859
+Recall: 1.0
+F_measure: 0.4038095238095238
+G_mean_1: 0.8277141197200295
+G_mean_2: 0.2529832935560859
+AUC_ROC: 0.9853507839489769
+AUC_PR: 0.8154762025810441
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.62      1.00      0.77      0.79      0.60       994
+        1.0       0.22      1.00      0.62      0.36      0.79      0.65       105
+
+avg / total       0.93      0.66      0.96      0.73      0.79      0.61      1099
+
+Precision: 0.2196652719665272
+Recall: 1.0
+F_measure: 0.3602058319039451
+G_mean_1: 0.7904103307432628
+G_mean_2: 0.2196652719665272
+AUC_ROC: 0.9956261377790553
+AUC_PR: 0.9373106196393054
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.66      1.00      0.79      0.81      0.63       994
+        1.0       0.24      1.00      0.66      0.38      0.81      0.68       105
+
+avg / total       0.93      0.69      0.97      0.75      0.81      0.64      1099
+
+Precision: 0.23542600896860988
+Recall: 1.0
+F_measure: 0.38112522686025413
+G_mean_1: 0.8105193704652569
+G_mean_2: 0.23542600896860988
+AUC_ROC: 0.9928619335057967
+AUC_PR: 0.9140823638771951
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.69      1.00      0.82      0.83      0.67       994
+        1.0       0.25      1.00      0.69      0.40      0.83      0.71       105
+
+avg / total       0.93      0.72      0.97      0.78      0.83      0.67      1099
+
+Precision: 0.2536231884057971
+Recall: 1.0
+F_measure: 0.4046242774566474
+G_mean_1: 0.8301414390651263
+G_mean_2: 0.2536231884057971
+AUC_ROC: 0.9833860304685255
+AUC_PR: 0.839727036631651
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.67      1.00      0.80      0.82      0.64       994
+        1.0       0.24      1.00      0.67      0.39      0.82      0.69       105
+
+avg / total       0.93      0.70      0.97      0.76      0.82      0.65      1099
+
+Precision: 0.2408256880733945
+Recall: 1.0
+F_measure: 0.38817005545286504
+G_mean_1: 0.8167019113926663
+G_mean_2: 0.2408256880733945
+AUC_ROC: 0.9863035354987065
+AUC_PR: 0.8388378210976432
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.66      1.00      0.80      0.81      0.64       994
+        1.0       0.24      1.00      0.66      0.38      0.81      0.68       105
+
+avg / total       0.93      0.69      0.97      0.76      0.81      0.64      1099
+
+Precision: 0.23702031602708803
+Recall: 1.0
+F_measure: 0.38321167883211676
+G_mean_1: 0.81237907318647
+G_mean_2: 0.23702031602708803
+AUC_ROC: 0.9924547283702213
+AUC_PR: 0.9249124917782806
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.67      1.00      0.80      0.82      0.65       993
+        1.0       0.24      1.00      0.67      0.39      0.82      0.69       106
+
+avg / total       0.93      0.70      0.97      0.76      0.82      0.65      1099
+
+Precision: 0.24367816091954023
+Recall: 1.0
+F_measure: 0.39186691312384475
+G_mean_1: 0.8177290292985216
+G_mean_2: 0.24367816091954023
+AUC_ROC: 0.9909128047274316
+AUC_PR: 0.925091662313326
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.69      1.00      0.82      0.83      0.67       993
+        1.0       0.26      1.00      0.69      0.41      0.83      0.72       106
+
+avg / total       0.93      0.72      0.97      0.78      0.83      0.68      1099
+
+Precision: 0.25853658536585367
+Recall: 1.0
+F_measure: 0.4108527131782946
+G_mean_1: 0.8329807914909867
+G_mean_2: 0.25853658536585367
+AUC_ROC: 0.9911075642706493
+AUC_PR: 0.9400990508261851
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.63      1.00      0.77      0.79      0.60       993
+        1.0       0.22      1.00      0.63      0.36      0.79      0.65       106
+
+avg / total       0.93      0.66      0.96      0.73      0.79      0.61      1099
+
+Precision: 0.22268907563025211
+Recall: 1.0
+F_measure: 0.3642611683848797
+G_mean_1: 0.7920806412199249
+G_mean_2: 0.22268907563025211
+AUC_ROC: 0.9807473066180243
+AUC_PR: 0.7928681260067085
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.63      1.00      0.77      0.79      0.61       993
+        1.0       0.22      1.00      0.63      0.36      0.79      0.65       106
+
+avg / total       0.93      0.66      0.96      0.73      0.79      0.61      1099
+
+Precision: 0.2231578947368421
+Recall: 1.0
+F_measure: 0.36488812392426856
+G_mean_1: 0.7927160850776181
+G_mean_2: 0.2231578947368421
+AUC_ROC: 0.9876303938893006
+AUC_PR: 0.8754804810214329
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: NearMiss
+Classification algorithm: RandomForestClassifierAvg Precision: 0.23876054836499905
+Avg Recall: 1.0
+Avg F_measure: 0.385301551292664
+Avg G_mean_1: 0.8123372791659863
+Avg G_mean_2: 0.23876054836499905
+Avg AUC_ROC: 0.9886381219076688
+Avg AUC_PR: 0.8803885855772773
+----------------------------------------------------------
+
+
+Sampling_algorithm:NearMiss(n_jobs=None, n_neighbors=3, n_neighbors_ver3=3,
+         sampling_strategy='auto', version=3)
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.77      0.99      0.87      0.87      0.75       994
+        1.0       0.31      0.99      0.77      0.48      0.87      0.78       106
+
+avg / total       0.93      0.79      0.97      0.83      0.87      0.75      1100
+
+Precision: 0.3143712574850299
+Recall: 0.9905660377358491
+F_measure: 0.47727272727272724
+G_mean_1: 0.8731306671048488
+G_mean_2: 0.3114054909049825
+AUC_ROC: 0.8800918719866367
+AUC_PR: 0.3123145818140734
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.66      0.97      0.80      0.80      0.63       994
+        1.0       0.23      0.97      0.66      0.38      0.80      0.67       105
+
+avg / total       0.92      0.69      0.94      0.76      0.80      0.63      1099
+
+Precision: 0.23448275862068965
+Recall: 0.9714285714285714
+F_measure: 0.3777777777777778
+G_mean_1: 0.8037351722282322
+G_mean_2: 0.2277832512315271
+AUC_ROC: 0.8182092555331991
+AUC_PR: 0.2305130055536381
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.79      1.00      0.88      0.89      0.77       994
+        1.0       0.33      1.00      0.79      0.50      0.89      0.80       105
+
+avg / total       0.94      0.81      0.98      0.84      0.89      0.77      1099
+
+Precision: 0.3312302839116719
+Recall: 1.0
+F_measure: 0.49763033175355453
+G_mean_1: 0.8869725598526651
+G_mean_2: 0.3312302839116719
+AUC_ROC: 0.8933601609657947
+AUC_PR: 0.3312302839116719
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.64      0.99      0.78      0.79      0.61       994
+        1.0       0.22      0.99      0.64      0.36      0.79      0.65       105
+
+avg / total       0.92      0.67      0.96      0.74      0.79      0.61      1099
+
+Precision: 0.22317596566523606
+Recall: 0.9904761904761905
+F_measure: 0.36427320490367776
+G_mean_1: 0.7935738840445657
+G_mean_2: 0.2210504802779481
+AUC_ROC: 0.8131455399061033
+AUC_PR: 0.22196039838531845
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.65      0.97      0.79      0.80      0.62       994
+        1.0       0.23      0.97      0.65      0.37      0.80      0.66       105
+
+avg / total       0.92      0.68      0.94      0.75      0.80      0.62      1099
+
+Precision: 0.22869955156950672
+Recall: 0.9714285714285714
+F_measure: 0.37023593466424676
+G_mean_1: 0.7970194549053096
+G_mean_2: 0.2221652786675208
+AUC_ROC: 0.8126760563380281
+AUC_PR: 0.22489503298963182
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.74      0.98      0.85      0.85      0.71       994
+        1.0       0.28      0.98      0.74      0.44      0.85      0.74       105
+
+avg / total       0.93      0.76      0.96      0.81      0.85      0.71      1099
+
+Precision: 0.28296703296703296
+Recall: 0.9809523809523809
+F_measure: 0.4392324093816631
+G_mean_1: 0.8505165286052231
+G_mean_2: 0.27757718472004184
+AUC_ROC: 0.8591884641180416
+AUC_PR: 0.2793970209347825
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.68      0.97      0.81      0.81      0.64       993
+        1.0       0.24      0.97      0.68      0.39      0.81      0.68       106
+
+avg / total       0.92      0.71      0.94      0.77      0.81      0.64      1099
+
+Precision: 0.24407582938388625
+Recall: 0.9716981132075472
+F_measure: 0.39015151515151514
+G_mean_1: 0.8121214918499317
+G_mean_2: 0.23716802289188946
+AUC_ROC: 0.8252246860096145
+AUC_PR: 0.23989777721400046
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.87      0.94      0.93      0.91      0.82       993
+        1.0       0.44      0.94      0.87      0.60      0.91      0.83       106
+
+avg / total       0.94      0.88      0.94      0.90      0.91      0.82      1099
+
+Precision: 0.4424778761061947
+Recall: 0.9433962264150944
+F_measure: 0.6024096385542169
+G_mean_1: 0.9075738872552915
+G_mean_2: 0.4174319585907497
+AUC_ROC: 0.9082540044462177
+AUC_PR: 0.42289146723497173
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.68      0.96      0.81      0.81      0.64       993
+        1.0       0.24      0.96      0.68      0.39      0.81      0.68       106
+
+avg / total       0.92      0.71      0.94      0.77      0.81      0.64      1099
+
+Precision: 0.2446043165467626
+Recall: 0.9622641509433962
+F_measure: 0.390057361376673
+G_mean_1: 0.810564120656405
+G_mean_2: 0.23537396497896024
+AUC_ROC: 0.8225218035683748
+AUC_PR: 0.2390136374084416
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.78      0.94      0.88      0.86      0.73       993
+        1.0       0.32      0.94      0.78      0.48      0.86      0.75       106
+
+avg / total       0.93      0.80      0.93      0.84      0.86      0.73      1099
+
+Precision: 0.31746031746031744
+Recall: 0.9433962264150944
+F_measure: 0.4750593824228029
+G_mean_1: 0.8597303168288681
+G_mean_2: 0.2994908655286014
+AUC_ROC: 0.8634403085751202
+AUC_PR: 0.3049503741728234
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: NearMiss
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.28635451897163283
+Avg Recall: 0.9725606469002696
+Avg F_measure: 0.43841002832588555
+Avg G_mean_1: 0.8394938083331341
+Avg G_mean_2: 0.2780676781703893
+Avg AUC_ROC: 0.849611215144713
+Avg AUC_PR: 0.28070635796193527
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       0.96      1.00      1.00      0.98      1.00      1.00       106
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1100
+
+Precision: 0.9636363636363636
+Recall: 1.0
+F_measure: 0.9814814814814815
+G_mean_1: 0.997985899264506
+G_mean_2: 0.9636363636363636
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.97      1.00      0.98      0.98      0.96       994
+        1.0       0.77      1.00      0.97      0.87      0.98      0.97       105
+
+avg / total       0.98      0.97      1.00      0.97      0.98      0.97      1099
+
+Precision: 0.7664233576642335
+Recall: 1.0
+F_measure: 0.8677685950413223
+G_mean_1: 0.9837717423499608
+G_mean_2: 0.7664233576642335
+AUC_ROC: 0.9999760467567308
+AUC_PR: 0.999731281920868
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       994
+        1.0       0.95      1.00      0.99      0.97      1.00      0.99       105
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9459459459459459
+Recall: 1.0
+F_measure: 0.9722222222222222
+G_mean_1: 0.9969773230601472
+G_mean_2: 0.9459459459459459
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.99       994
+        1.0       0.95      0.99      0.99      0.97      0.99      0.99       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.99      1099
+
+Precision: 0.9541284403669725
+Recall: 0.9904761904761905
+F_measure: 0.9719626168224299
+G_mean_1: 0.9927204621021014
+G_mean_2: 0.945041502839668
+AUC_ROC: 0.9973651432403947
+AUC_PR: 0.9930402930402931
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      0.99      0.99      0.98       994
+        1.0       0.88      0.99      0.99      0.93      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.8813559322033898
+Recall: 0.9904761904761905
+F_measure: 0.9327354260089686
+G_mean_1: 0.9881932106608728
+G_mean_2: 0.8729620661824051
+AUC_ROC: 0.9973459806457793
+AUC_PR: 0.978164052618349
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.99       994
+        1.0       0.95      0.99      0.99      0.97      0.99      0.99       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.99      1099
+
+Precision: 0.9541284403669725
+Recall: 0.9904761904761905
+F_measure: 0.9719626168224299
+G_mean_1: 0.9927204621021014
+G_mean_2: 0.945041502839668
+AUC_ROC: 0.9998658618376929
+AUC_PR: 0.9986353965585959
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       993
+        1.0       0.93      1.00      0.99      0.96      1.00      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9298245614035088
+Recall: 1.0
+F_measure: 0.9636363636363636
+G_mean_1: 0.9959636565842434
+G_mean_2: 0.9298245614035088
+AUC_ROC: 0.999904995344772
+AUC_PR: 0.9991229172761831
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.98      0.99      0.99      0.99      0.97       993
+        1.0       0.87      0.99      0.98      0.93      0.99      0.98       106
+
+avg / total       0.99      0.98      0.99      0.98      0.99      0.97      1099
+
+Precision: 0.8677685950413223
+Recall: 0.9905660377358491
+F_measure: 0.9251101321585904
+G_mean_1: 0.9872209761028821
+G_mean_2: 0.8595820988616872
+AUC_ROC: 0.9994964753272911
+AUC_PR: 0.9965279479430423
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       993
+        1.0       0.95      1.00      0.99      0.97      1.00      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9464285714285714
+Recall: 1.0
+F_measure: 0.9724770642201834
+G_mean_1: 0.9969742744562131
+G_mean_2: 0.9464285714285714
+AUC_ROC: 0.9999619981379088
+AUC_PR: 0.9996489612518531
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.98      0.97       993
+        1.0       0.96      0.97      1.00      0.97      0.98      0.97       106
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.97      1099
+
+Precision: 0.9626168224299065
+Recall: 0.9716981132075472
+F_measure: 0.9671361502347416
+G_mean_1: 0.9837600934232641
+G_mean_2: 0.9353729500969846
+AUC_ROC: 0.9958292956354862
+AUC_PR: 0.9900465533127037
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: NearMiss
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9172257030487186
+Avg Recall: 0.9933692722371967
+Avg F_measure: 0.9526492668648734
+Avg G_mean_1: 0.9916288100106293
+Avg G_mean_2: 0.9110258920899037
+Avg AUC_ROC: 0.9989745796926055
+Avg AUC_PR: 0.9954917403921888
+----------------------------------------------------------
+
+
+Sampling_algorithm:CondensedNearestNeighbour(n_jobs=None, n_neighbors=None, n_seeds_S=1,
+                          random_state=1, sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.91      0.99      0.95      0.95      0.90       994
+        1.0       0.55      0.99      0.91      0.71      0.95      0.91       106
+
+avg / total       0.96      0.92      0.98      0.93      0.95      0.90      1100
+
+Precision: 0.5526315789473685
+Recall: 0.9905660377358491
+F_measure: 0.7094594594594595
+G_mean_1: 0.9517666134197024
+G_mean_2: 0.5474180734856009
+AUC_ROC: 0.952526479632512
+AUC_PR: 0.5483271643946918
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.96      0.99      0.98      0.98      0.95       994
+        1.0       0.73      0.99      0.96      0.84      0.98      0.96       105
+
+avg / total       0.97      0.96      0.99      0.97      0.98      0.95      1099
+
+Precision: 0.7323943661971831
+Recall: 0.9904761904761905
+F_measure: 0.8421052631578948
+G_mean_1: 0.9760178807359711
+G_mean_2: 0.72541918175721
+AUC_ROC: 0.9761234071093225
+AUC_PR: 0.7263290998645803
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.93      0.98      0.96      0.95      0.91       994
+        1.0       0.59      0.98      0.93      0.74      0.95      0.92       105
+
+avg / total       0.96      0.93      0.98      0.94      0.95      0.91      1099
+
+Precision: 0.5919540229885057
+Recall: 0.9809523809523809
+F_measure: 0.7383512544802868
+G_mean_1: 0.9544026161644239
+G_mean_2: 0.5806787082649152
+AUC_ROC: 0.9547619047619049
+AUC_PR: 0.5824985444796559
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.95      0.98      0.97      0.96      0.92       994
+        1.0       0.66      0.98      0.95      0.79      0.96      0.93       105
+
+avg / total       0.97      0.95      0.98      0.95      0.96      0.93      1099
+
+Precision: 0.6560509554140127
+Recall: 0.9809523809523809
+F_measure: 0.7862595419847327
+G_mean_1: 0.9631517042123744
+G_mean_2: 0.64355474673946
+AUC_ROC: 0.9633132126089873
+AUC_PR: 0.6453745829542007
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.88      0.98      0.93      0.93      0.85       994
+        1.0       0.46      0.98      0.88      0.62      0.93      0.87       105
+
+avg / total       0.95      0.89      0.97      0.90      0.93      0.85      1099
+
+Precision: 0.4577777777777778
+Recall: 0.9809523809523809
+F_measure: 0.6242424242424243
+G_mean_1: 0.9276603898972848
+G_mean_2: 0.44905820105820105
+AUC_ROC: 0.9291079812206573
+AUC_PR: 0.45087803727294173
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.87      0.97      0.93      0.92      0.84       994
+        1.0       0.45      0.97      0.87      0.61      0.92      0.86       105
+
+avg / total       0.94      0.88      0.96      0.90      0.92      0.84      1099
+
+Precision: 0.44541484716157204
+Recall: 0.9714285714285714
+F_measure: 0.6107784431137725
+G_mean_1: 0.9204957610468408
+G_mean_2: 0.43268870867124143
+AUC_ROC: 0.921830985915493
+AUC_PR: 0.43541846299335246
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.92      0.99      0.96      0.95      0.91       993
+        1.0       0.57      0.99      0.92      0.72      0.95      0.92       106
+
+avg / total       0.96      0.93      0.98      0.94      0.95      0.91      1099
+
+Precision: 0.5706521739130435
+Recall: 0.9905660377358491
+F_measure: 0.7241379310344828
+G_mean_1: 0.9548610769238293
+G_mean_2: 0.565268662838392
+AUC_ROC: 0.9555045697239164
+AUC_PR: 0.5661785809457623
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.84      0.97      0.91      0.91      0.81       993
+        1.0       0.40      0.97      0.84      0.56      0.91      0.83       106
+
+avg / total       0.94      0.86      0.96      0.88      0.91      0.81      1099
+
+Precision: 0.39768339768339767
+Recall: 0.9716981132075472
+F_measure: 0.5643835616438356
+G_mean_1: 0.9050108469996513
+G_mean_2: 0.38642820718292414
+AUC_ROC: 0.9072992076611754
+AUC_PR: 0.3891579615050352
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.93      0.98      0.97      0.96      0.91       993
+        1.0       0.62      0.98      0.93      0.76      0.96      0.92       106
+
+avg / total       0.96      0.94      0.98      0.95      0.96      0.91      1099
+
+Precision: 0.6153846153846154
+Recall: 0.9811320754716981
+F_measure: 0.7563636363636365
+G_mean_1: 0.9575536165340813
+G_mean_2: 0.6037735849056605
+AUC_ROC: 0.9578369340097665
+AUC_PR: 0.6055934211204012
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.94      0.93      0.96      0.94      0.88       993
+        1.0       0.61      0.93      0.94      0.74      0.94      0.88       106
+
+avg / total       0.96      0.94      0.93      0.94      0.94      0.88      1099
+
+Precision: 0.6149068322981367
+Recall: 0.9339622641509434
+F_measure: 0.7415730337078652
+G_mean_1: 0.9357608705069537
+G_mean_2: 0.5742997773350522
+AUC_ROC: 0.9357626023675161
+AUC_PR: 0.5806692040866446
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: CondensedNearestNeighbour
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.5634850567765614
+Avg Recall: 0.9772686433063793
+Avg F_measure: 0.7097654549188391
+Avg G_mean_1: 0.9446681376441113
+Avg G_mean_2: 0.5508587852238658
+Avg AUC_ROC: 0.9454067285011252
+Avg AUC_PR: 0.5530425059617267
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      0.99      0.99      0.99       994
+        1.0       0.91      1.00      0.99      0.95      0.99      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      0.99      0.99      1100
+
+Precision: 0.9137931034482759
+Recall: 1.0
+F_measure: 0.9549549549549551
+G_mean_1: 0.9949571035109814
+G_mean_2: 0.9137931034482759
+AUC_ROC: 0.9999478000075928
+AUC_PR: 0.999415595257973
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       994
+        1.0       0.95      1.00      0.99      0.97      1.00      0.99       105
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9459459459459459
+Recall: 1.0
+F_measure: 0.9722222222222222
+G_mean_1: 0.9969773230601472
+G_mean_2: 0.9459459459459459
+AUC_ROC: 0.999971256108077
+AUC_PR: 0.9997278747009205
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       994
+        1.0       0.93      1.00      0.99      0.96      1.00      0.99       105
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9292035398230089
+Recall: 1.0
+F_measure: 0.9633027522935781
+G_mean_1: 0.9959677255120114
+G_mean_2: 0.9292035398230089
+AUC_ROC: 0.9999904187026923
+AUC_PR: 0.9999101527403415
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.98       994
+        1.0       0.93      0.99      0.99      0.96      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9285714285714286
+Recall: 0.9904761904761905
+F_measure: 0.9585253456221199
+G_mean_1: 0.99121367581174
+G_mean_2: 0.9197278911564627
+AUC_ROC: 0.9995880042157709
+AUC_PR: 0.996428760424029
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.98       994
+        1.0       0.94      0.99      0.99      0.96      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9369369369369369
+Recall: 0.9904761904761905
+F_measure: 0.962962962962963
+G_mean_1: 0.9917161922829623
+G_mean_2: 0.9280137280137281
+AUC_ROC: 0.9990993580530804
+AUC_PR: 0.9845007715334363
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.99       994
+        1.0       0.95      0.99      0.99      0.97      0.99      0.99       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.99      1099
+
+Precision: 0.9541284403669725
+Recall: 0.9904761904761905
+F_measure: 0.9719626168224299
+G_mean_1: 0.9927204621021014
+G_mean_2: 0.945041502839668
+AUC_ROC: 0.9997413049726933
+AUC_PR: 0.9977860946608057
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      0.99      0.99      0.98       993
+        1.0       0.91      0.99      0.99      0.95      0.99      0.98       106
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9051724137931034
+Recall: 0.9905660377358491
+F_measure: 0.9459459459459458
+G_mean_1: 0.9897439062995047
+G_mean_2: 0.8966330513988289
+AUC_ROC: 0.9997007353360314
+AUC_PR: 0.9972759652700312
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      1.00      1.00      1.00      0.99       993
+        1.0       0.93      1.00      0.99      0.96      1.00      0.99       106
+
+avg / total       0.99      0.99      1.00      0.99      1.00      0.99      1099
+
+Precision: 0.9298245614035088
+Recall: 1.0
+F_measure: 0.9636363636363636
+G_mean_1: 0.9959636565842434
+G_mean_2: 0.9298245614035088
+AUC_ROC: 0.9999619981379088
+AUC_PR: 0.9996431058214694
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.99       993
+        1.0       0.95      0.99      0.99      0.97      0.99      0.99       106
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.99      1099
+
+Precision: 0.9545454545454546
+Recall: 0.9905660377358491
+F_measure: 0.9722222222222223
+G_mean_1: 0.9927629592890609
+G_mean_2: 0.945540308747856
+AUC_ROC: 0.9998289916205894
+AUC_PR: 0.9986305538648813
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.98      1.00      0.99      0.98       993
+        1.0       0.95      0.98      0.99      0.97      0.99      0.97       106
+
+avg / total       0.99      0.99      0.98      0.99      0.99      0.98      1099
+
+Precision: 0.9541284403669725
+Recall: 0.9811320754716981
+F_measure: 0.9674418604651164
+G_mean_1: 0.9880242068896068
+G_mean_2: 0.9361260169638221
+AUC_ROC: 0.9991734594995155
+AUC_PR: 0.9946932052659916
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: CondensedNearestNeighbour
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9352250265201608
+Avg Recall: 0.993369272237197
+Avg F_measure: 0.9633177247147918
+Avg G_mean_1: 0.9930047211342361
+Avg G_mean_2: 0.9289849649741105
+Avg AUC_ROC: 0.9997003326653952
+Avg AUC_PR: 0.9968012079539879
+----------------------------------------------------------
+
+
+Sampling_algorithm:OneSidedSelection(n_jobs=None, n_neighbors=None, n_seeds_S=1, random_state=1,
+                  sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.98      1.00      0.99      0.98       994
+        1.0       0.95      0.98      0.99      0.96      0.99      0.97       106
+
+avg / total       0.99      0.99      0.98      0.99      0.99      0.98      1100
+
+Precision: 0.9454545454545454
+Recall: 0.9811320754716981
+F_measure: 0.9629629629629629
+G_mean_1: 0.9875270877603308
+G_mean_2: 0.9276157804459692
+AUC_ROC: 0.9875479290839375
+AUC_PR: 0.929433962264151
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.93      0.96      0.99      0.94      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.926605504587156
+Recall: 0.9619047619047619
+F_measure: 0.9439252336448597
+G_mean_1: 0.9768127116700398
+G_mean_2: 0.89130624726955
+AUC_ROC: 0.9769282360831656
+AUC_PR: 0.8949459196990314
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.98      0.97       994
+        1.0       0.97      0.97      1.00      0.97      0.98      0.97       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.97      1099
+
+Precision: 0.9714285714285714
+Recall: 0.9714285714285714
+F_measure: 0.9714285714285714
+G_mean_1: 0.9841222964918684
+G_mean_2: 0.9436734693877551
+AUC_ROC: 0.98420523138833
+AUC_PR: 0.9464032237098661
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       994
+        1.0       0.99      0.97      1.00      0.98      0.99      0.97       105
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 0.9902912621359223
+Recall: 0.9714285714285714
+F_measure: 0.9807692307692307
+G_mean_1: 0.9851148557925571
+G_mean_2: 0.961997226074896
+AUC_ROC: 0.9852112676056338
+AUC_PR: 0.964726980397007
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.96       994
+        1.0       0.96      0.96      1.00      0.96      0.98      0.95       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9619047619047619
+Recall: 0.9619047619047619
+F_measure: 0.9619047619047619
+G_mean_1: 0.9787920707650165
+G_mean_2: 0.9252607709750568
+AUC_ROC: 0.9789403085177734
+AUC_PR: 0.9289004434045381
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      1.00      0.97      0.95       994
+        1.0       0.97      0.94      1.00      0.96      0.97      0.93       105
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.94      1099
+
+Precision: 0.9705882352941176
+Recall: 0.9428571428571428
+F_measure: 0.9565217391304348
+G_mean_1: 0.9695419008773005
+G_mean_2: 0.915126050420168
+AUC_ROC: 0.9699195171026157
+AUC_PR: 0.9205855590643901
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      0.99      0.97      0.94       993
+        1.0       0.96      0.94      1.00      0.95      0.97      0.93       106
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.94      1099
+
+Precision: 0.9615384615384616
+Recall: 0.9433962264150944
+F_measure: 0.9523809523809524
+G_mean_1: 0.9693276227395824
+G_mean_2: 0.9071117561683599
+AUC_ROC: 0.9696840145167113
+AUC_PR: 0.912571264812582
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       0.98      0.98      1.00      0.98      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9811320754716981
+Recall: 0.9811320754716981
+F_measure: 0.9811320754716981
+G_mean_1: 0.9895231066746009
+G_mean_2: 0.9626201495194019
+AUC_ROC: 0.9895589883904311
+AUC_PR: 0.9644399857341426
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.92      0.99      0.96      0.92       993
+        1.0       0.93      0.92      0.99      0.93      0.96      0.91       106
+
+avg / total       0.99      0.99      0.93      0.99      0.96      0.92      1099
+
+Precision: 0.9333333333333333
+Recall: 0.9245283018867925
+F_measure: 0.9289099526066351
+G_mean_1: 0.9581288966199404
+G_mean_2: 0.8628930817610063
+AUC_ROC: 0.9587394782344335
+AUC_PR: 0.870172426619969
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.90      0.99      0.94      0.90       993
+        1.0       0.92      0.90      0.99      0.91      0.94      0.88       106
+
+avg / total       0.98      0.98      0.91      0.98      0.94      0.90      1099
+
+Precision: 0.9223300970873787
+Recall: 0.8962264150943396
+F_measure: 0.9090909090909091
+G_mean_1: 0.9428711795876484
+G_mean_2: 0.8266165964462356
+AUC_ROC: 0.9440850101654982
+AUC_PR: 0.8366256956273094
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: OneSidedSelection
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.9564606848235947
+Avg Recall: 0.9535938903863432
+Avg F_measure: 0.9549026389391015
+Avg G_mean_1: 0.9741761728978885
+Avg G_mean_2: 0.9124221128468399
+Avg AUC_ROC: 0.974481998108853
+Avg AUC_PR: 0.9168805461332988
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1100
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       994
+        1.0       0.99      0.97      1.00      0.98      0.99      0.97       105
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 0.9902912621359223
+Recall: 0.9714285714285714
+F_measure: 0.9807692307692307
+G_mean_1: 0.9851148557925571
+G_mean_2: 0.961997226074896
+AUC_ROC: 0.999942512216154
+AUC_PR: 0.9994477447053804
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       105
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1099
+
+Precision: 1.0
+Recall: 0.9904761904761905
+F_measure: 0.9952153110047847
+G_mean_1: 0.9952267030562386
+G_mean_2: 0.9904761904761905
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       994
+        1.0       1.00      0.95      1.00      0.98      0.98      0.95       105
+
+avg / total       1.00      1.00      0.96      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9523809523809523
+F_measure: 0.975609756097561
+G_mean_1: 0.9759000729485332
+G_mean_2: 0.9523809523809523
+AUC_ROC: 0.9998946057296157
+AUC_PR: 0.9989576351071534
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       994
+        1.0       0.99      0.98      1.00      0.99      0.99      0.98       105
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9903846153846154
+Recall: 0.9809523809523809
+F_measure: 0.985645933014354
+G_mean_1: 0.9899320720785303
+G_mean_2: 0.9715201465201465
+AUC_ROC: 0.9991424738909649
+AUC_PR: 0.982307092915902
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      1.00      0.97      0.95       994
+        1.0       1.00      0.94      1.00      0.97      0.97      0.94       105
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.95      1099
+
+Precision: 1.0
+Recall: 0.9428571428571428
+F_measure: 0.9705882352941176
+G_mean_1: 0.9710083124552245
+G_mean_2: 0.9428571428571428
+AUC_ROC: 0.999971256108077
+AUC_PR: 0.9997312819208679
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.999976248836193
+AUC_PR: 0.9997362973511069
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.97       993
+        1.0       1.00      0.96      1.00      0.98      0.98      0.96       106
+
+avg / total       1.00      1.00      0.97      1.00      0.98      0.97      1099
+
+Precision: 1.0
+Recall: 0.9622641509433962
+F_measure: 0.9807692307692307
+G_mean_1: 0.9809506363438459
+G_mean_2: 0.9622641509433962
+AUC_ROC: 0.9999714986034316
+AUC_PR: 0.9997329852247124
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       993
+        1.0       1.00      0.97      1.00      0.99      0.99      0.97       106
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 1.0
+Recall: 0.9716981132075472
+F_measure: 0.985645933014354
+G_mean_1: 0.9857474895770961
+G_mean_2: 0.9716981132075472
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.94      1.00      0.97      0.95       993
+        1.0       1.00      0.94      1.00      0.97      0.97      0.94       106
+
+avg / total       0.99      0.99      0.95      0.99      0.97      0.95      1099
+
+Precision: 1.0
+Recall: 0.9433962264150944
+F_measure: 0.970873786407767
+G_mean_1: 0.9712858623572642
+G_mean_2: 0.9433962264150944
+AUC_ROC: 0.9997529878964069
+AUC_PR: 0.9976762312243215
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: OneSidedSelection
+Classification algorithm: RandomForestClassifierAvg Precision: 0.9980675877520537
+Avg Recall: 0.9668283917340521
+Avg F_measure: 0.9821147310647739
+Avg G_mean_1: 0.9831388482077885
+Avg G_mean_2: 0.9649420337554611
+Avg AUC_ROC: 0.9998651583280843
+Avg AUC_PR: 0.9977589268449444
+----------------------------------------------------------
+
+
+Sampling_algorithm:EditedNearestNeighbours(kind_sel='all', n_jobs=None, n_neighbors=3,
+                        sampling_strategy='auto')
+Classification algorithm:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='entropy',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=RandomState(MT19937) at 0x29AF1024360,
+                       splitter='best')
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.99       994
+        1.0       0.95      0.99      0.99      0.97      0.99      0.99       106
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.99      1100
+
+Precision: 0.9545454545454546
+Recall: 0.9905660377358491
+F_measure: 0.9722222222222223
+G_mean_1: 0.9927654865011586
+G_mean_2: 0.945540308747856
+AUC_ROC: 0.9927679283246649
+AUC_PR: 0.9464493996569469
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      1.00      0.98      0.96       994
+        1.0       0.95      0.96      0.99      0.96      0.98      0.95       105
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9528301886792453
+Recall: 0.9619047619047619
+F_measure: 0.957345971563981
+G_mean_1: 0.978297606439061
+G_mean_2: 0.9165318957771789
+AUC_ROC: 0.9784372904091215
+AUC_PR: 0.9201715682066602
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.99      1.00      0.99      0.98       994
+        1.0       0.93      0.99      0.99      0.96      0.99      0.98       105
+
+avg / total       0.99      0.99      0.99      0.99      0.99      0.98      1099
+
+Precision: 0.9285714285714286
+Recall: 0.9904761904761905
+F_measure: 0.9585253456221199
+G_mean_1: 0.99121367581174
+G_mean_2: 0.9197278911564627
+AUC_ROC: 0.9912139503688799
+AUC_PR: 0.920637809263833
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.93      0.99      0.96      0.94       994
+        1.0       0.96      0.93      1.00      0.95      0.96      0.92       105
+
+avg / total       0.99      0.99      0.94      0.99      0.96      0.93      1099
+
+Precision: 0.9607843137254902
+Recall: 0.9333333333333333
+F_measure: 0.9468599033816426
+G_mean_1: 0.9641459769084412
+G_mean_2: 0.8967320261437909
+AUC_ROC: 0.964654594232059
+AUC_PR: 0.9031014528953832
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      0.99      0.96      0.99      0.98      0.96       994
+        1.0       0.94      0.96      0.99      0.95      0.98      0.95       105
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.9439252336448598
+Recall: 0.9619047619047619
+F_measure: 0.9528301886792454
+G_mean_1: 0.9778028920678864
+G_mean_2: 0.9079661771250557
+AUC_ROC: 0.9779342723004696
+AUC_PR: 0.911605849554537
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.92      0.99      0.96      0.92       994
+        1.0       0.94      0.92      0.99      0.93      0.96      0.91       105
+
+avg / total       0.99      0.99      0.93      0.99      0.96      0.92      1099
+
+Precision: 0.941747572815534
+Recall: 0.9238095238095239
+F_measure: 0.9326923076923078
+G_mean_1: 0.9582448584659707
+G_mean_2: 0.8699953767914934
+AUC_ROC: 0.9588866532528504
+AUC_PR: 0.8772747216504561
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.97      0.95       993
+        1.0       0.96      0.95      1.00      0.96      0.97      0.94       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9619047619047619
+Recall: 0.9528301886792453
+F_measure: 0.957345971563981
+G_mean_1: 0.9741622044649596
+G_mean_2: 0.9165318957771789
+AUC_ROC: 0.9744009956487868
+AUC_PR: 0.9210814863140305
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      0.99      0.95      0.99      0.97      0.95       993
+        1.0       0.94      0.95      0.99      0.95      0.97      0.94       106
+
+avg / total       0.99      0.99      0.96      0.99      0.97      0.95      1099
+
+Precision: 0.9439252336448598
+Recall: 0.9528301886792453
+F_measure: 0.948356807511737
+G_mean_1: 0.9731767088111091
+G_mean_2: 0.8994004584729325
+AUC_ROC: 0.9733939463033688
+AUC_PR: 0.9039500490097842
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.96      1.00      0.98      0.96       993
+        1.0       0.98      0.96      1.00      0.97      0.98      0.96       106
+
+avg / total       0.99      0.99      0.97      0.99      0.98      0.96      1099
+
+Precision: 0.9807692307692307
+Recall: 0.9622641509433962
+F_measure: 0.9714285714285713
+G_mean_1: 0.9799622727313245
+G_mean_2: 0.9437590711175616
+AUC_ROC: 0.9801250261262803
+AUC_PR: 0.947398743547043
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.93      0.99      0.96      0.94       993
+        1.0       0.97      0.93      1.00      0.95      0.96      0.93       106
+
+avg / total       0.99      0.99      0.94      0.99      0.96      0.94      1099
+
+Precision: 0.9705882352941176
+Recall: 0.9339622641509434
+F_measure: 0.951923076923077
+G_mean_1: 0.9649562818546075
+G_mean_2: 0.9064927857935627
+AUC_ROC: 0.9654705580573449
+AUC_PR: 0.9128622125451551
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: EditedNearestNeighbours
+Classification algorithm: DecisionTreeClassifierAvg Precision: 0.9539591653594982
+Avg Recall: 0.9563881401617251
+Avg F_measure: 0.9549530366588884
+Avg G_mean_1: 0.975472796405626
+Avg G_mean_2: 0.9122677886903073
+Avg AUC_ROC: 0.9757285215023825
+Avg AUC_PR: 0.9164533292643829
+----------------------------------------------------------
+
+
+Classification algorithm:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='entropy', max_depth=None, max_features='auto',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, n_estimators=100,
+                       n_jobs=None, oob_score=False,
+                       random_state=RandomState(MT19937) at 0x29AF1024468,
+                       verbose=0, warm_start=False)
+Fold number: 0
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.99      1.00      1.00      0.99       994
+        1.0       1.00      0.99      1.00      1.00      1.00      0.99       106
+
+avg / total       1.00      1.00      0.99      1.00      1.00      0.99      1100
+
+Precision: 1.0
+Recall: 0.9905660377358491
+F_measure: 0.9952606635071091
+G_mean_1: 0.9952718411247498
+G_mean_2: 0.9905660377358491
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 1
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.97      1.00      0.99      0.97       994
+        1.0       0.99      0.97      1.00      0.98      0.99      0.97       105
+
+avg / total       1.00      1.00      0.97      1.00      0.99      0.97      1099
+
+Precision: 0.9902912621359223
+Recall: 0.9714285714285714
+F_measure: 0.9807692307692307
+G_mean_1: 0.9851148557925571
+G_mean_2: 0.961997226074896
+AUC_ROC: 0.9999712561080771
+AUC_PR: 0.9997278747009205
+Fold number: 2
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      1.00      1.00      1.00      1.00       994
+        1.0       1.00      1.00      1.00      1.00      1.00      1.00       105
+
+avg / total       1.00      1.00      1.00      1.00      1.00      1.00      1099
+
+Precision: 1.0
+Recall: 1.0
+F_measure: 1.0
+G_mean_1: 1.0
+G_mean_2: 1.0
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 3
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       994
+        1.0       1.00      0.95      1.00      0.98      0.98      0.95       105
+
+avg / total       1.00      1.00      0.96      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9523809523809523
+F_measure: 0.975609756097561
+G_mean_1: 0.9759000729485332
+G_mean_2: 0.9523809523809523
+AUC_ROC: 0.9998466992430775
+AUC_PR: 0.998517074678872
+Fold number: 4
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       994
+        1.0       0.99      0.98      1.00      0.99      0.99      0.98       105
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 0.9903846153846154
+Recall: 0.9809523809523809
+F_measure: 0.985645933014354
+G_mean_1: 0.9899320720785303
+G_mean_2: 0.9715201465201465
+AUC_ROC: 0.999137683242311
+AUC_PR: 0.9810477114674854
+Fold number: 5
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.93      1.00      0.97      0.94       994
+        1.0       1.00      0.93      1.00      0.97      0.97      0.93       105
+
+avg / total       0.99      0.99      0.94      0.99      0.97      0.94      1099
+
+Precision: 1.0
+Recall: 0.9333333333333333
+F_measure: 0.9655172413793104
+G_mean_1: 0.9660917830792959
+G_mean_2: 0.9333333333333333
+AUC_ROC: 0.9999760467567309
+AUC_PR: 0.9997312819208679
+Fold number: 6
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       993
+        1.0       1.00      0.95      1.00      0.98      0.98      0.95       106
+
+avg / total       1.00      1.00      0.96      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9528301886792453
+F_measure: 0.9758454106280194
+G_mean_1: 0.976130210924365
+G_mean_2: 0.9528301886792453
+AUC_ROC: 0.9999714986034316
+AUC_PR: 0.9996472977071055
+Fold number: 7
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       993
+        1.0       0.99      0.95      1.00      0.97      0.98      0.95       106
+
+avg / total       0.99      0.99      0.96      0.99      0.98      0.96      1099
+
+Precision: 0.9901960784313726
+Recall: 0.9528301886792453
+F_measure: 0.9711538461538463
+G_mean_1: 0.9756385814744317
+G_mean_2: 0.9434887162412136
+AUC_ROC: 0.9999334967413404
+AUC_PR: 0.9993716572230702
+Fold number: 8
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       1.00      1.00      0.98      1.00      0.99      0.98       993
+        1.0       1.00      0.98      1.00      0.99      0.99      0.98       106
+
+avg / total       1.00      1.00      0.98      1.00      0.99      0.98      1099
+
+Precision: 1.0
+Recall: 0.9811320754716981
+F_measure: 0.9904761904761905
+G_mean_1: 0.9905211130872972
+G_mean_2: 0.9811320754716981
+AUC_ROC: 1.0
+AUC_PR: 1.0
+Fold number: 9
+This is the report from the imbalanced_learning module:
+                   pre       rec       spe        f1       geo       iba       sup
+
+       -1.0       0.99      1.00      0.95      1.00      0.98      0.96       993
+        1.0       1.00      0.95      1.00      0.98      0.98      0.95       106
+
+avg / total       1.00      1.00      0.96      1.00      0.98      0.96      1099
+
+Precision: 1.0
+Recall: 0.9528301886792453
+F_measure: 0.9758454106280194
+G_mean_1: 0.976130210924365
+G_mean_2: 0.9528301886792453
+AUC_ROC: 0.9998004902240211
+AUC_PR: 0.998219796480823
+
+
+----------------------------------------------------------
+Average results (for all folds)
+Dataset: pen_digits.csv
+Sampling algorithm: EditedNearestNeighbours
+Classification algorithm: RandomForestClassifierAvg Precision: 0.997087195595191
+Avg Recall: 0.9668283917340521
+Avg F_measure: 0.9816123682653641
+Avg G_mean_1: 0.9830730741434126
+Avg G_mean_2: 0.964007886511658
+Avg AUC_ROC: 0.9998637170918989
+Avg AUC_PR: 0.9976262694179144
+----------------------------------------------------------
+
+

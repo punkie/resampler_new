@@ -1,0 +1,96 @@
+Latex statistics for dataset poker-8_vs_6.csv with sm RandomOverSampler and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.200}
+Recall & \multicolumn{1}{c|}{0.100}
+F_measure & \multicolumn{1}{c|}{0.133}
+G_mean_1 & \multicolumn{1}{c|}{0.141}
+G_mean_2 & \multicolumn{1}{c|}{0.100}
+AUC_ROC & \multicolumn{1}{c|}{0.981}
+AUC_PR & \multicolumn{1}{c|}{0.840}
+Latex statistics for dataset poker-8_vs_6.csv with sm SMOTE and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.800}
+Recall & \multicolumn{1}{c|}{0.550}
+F_measure & \multicolumn{1}{c|}{0.633}
+G_mean_1 & \multicolumn{1}{c|}{0.654}
+G_mean_2 & \multicolumn{1}{c|}{0.550}
+AUC_ROC & \multicolumn{1}{c|}{0.904}
+AUC_PR & \multicolumn{1}{c|}{0.835}
+Latex statistics for dataset poker-8_vs_6.csv with sm ADASYN and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.800}
+Recall & \multicolumn{1}{c|}{0.550}
+F_measure & \multicolumn{1}{c|}{0.633}
+G_mean_1 & \multicolumn{1}{c|}{0.654}
+G_mean_2 & \multicolumn{1}{c|}{0.550}
+AUC_ROC & \multicolumn{1}{c|}{0.994}
+AUC_PR & \multicolumn{1}{c|}{0.875}
+Latex statistics for dataset poker-8_vs_6.csv with sm RandomUnderSampler and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.0234}
+Recall & \multicolumn{1}{c|}{0.75}
+F_measure & \multicolumn{1}{c|}{0.0451}
+G_mean_1 & \multicolumn{1}{c|}{0.624}
+G_mean_2 & \multicolumn{1}{c|}{0.0210}
+AUC_ROC & \multicolumn{1}{c|}{0.757}
+AUC_PR & \multicolumn{1}{c|}{0.168}
+Latex statistics for dataset poker-8_vs_6.csv with sm ClusterCentroids and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.0115}
+Recall & \multicolumn{1}{c|}{1}
+F_measure & \multicolumn{1}{c|}{0.0227}
+G_mean_1 & \multicolumn{1}{c|}{0}
+G_mean_2 & \multicolumn{1}{c|}{0.0115}
+AUC_ROC & \multicolumn{1}{c|}{0.990}
+AUC_PR & \multicolumn{1}{c|}{0.873}
+Latex statistics for dataset poker-8_vs_6.csv with sm TomekLinks and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0}
+Recall & \multicolumn{1}{c|}{0}
+F_measure & \multicolumn{1}{c|}{0}
+G_mean_1 & \multicolumn{1}{c|}{0}
+G_mean_2 & \multicolumn{1}{c|}{0}
+AUC_ROC & \multicolumn{1}{c|}{0.983}
+AUC_PR & \multicolumn{1}{c|}{0.761}
+Latex statistics for dataset poker-8_vs_6.csv with sm NearMiss and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.0178}
+Recall & \multicolumn{1}{c|}{1}
+F_measure & \multicolumn{1}{c|}{0.0349}
+G_mean_1 & \multicolumn{1}{c|}{0.590}
+G_mean_2 & \multicolumn{1}{c|}{0.0178}
+AUC_ROC & \multicolumn{1}{c|}{0.841}
+AUC_PR & \multicolumn{1}{c|}{0.190}
+Latex statistics for dataset poker-8_vs_6.csv with sm NearMiss and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.0121}
+Recall & \multicolumn{1}{c|}{0.900}
+F_measure & \multicolumn{1}{c|}{0.0239}
+G_mean_1 & \multicolumn{1}{c|}{0.369}
+G_mean_2 & \multicolumn{1}{c|}{0.0113}
+AUC_ROC & \multicolumn{1}{c|}{0.626}
+AUC_PR & \multicolumn{1}{c|}{0.0592}
+Latex statistics for dataset poker-8_vs_6.csv with sm NearMiss and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.0144}
+Recall & \multicolumn{1}{c|}{0.5}
+F_measure & \multicolumn{1}{c|}{0.0279}
+G_mean_1 & \multicolumn{1}{c|}{0.438}
+G_mean_2 & \multicolumn{1}{c|}{0.0111}
+AUC_ROC & \multicolumn{1}{c|}{0.588}
+AUC_PR & \multicolumn{1}{c|}{0.164}
+Latex statistics for dataset poker-8_vs_6.csv with sm CondensedNearestNeighbour and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0.100}
+Recall & \multicolumn{1}{c|}{0.0500}
+F_measure & \multicolumn{1}{c|}{0.0667}
+G_mean_1 & \multicolumn{1}{c|}{0.0707}
+G_mean_2 & \multicolumn{1}{c|}{0.0500}
+AUC_ROC & \multicolumn{1}{c|}{0.937}
+AUC_PR & \multicolumn{1}{c|}{0.577}
+Latex statistics for dataset poker-8_vs_6.csv with sm OneSidedSelection and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0}
+Recall & \multicolumn{1}{c|}{0}
+F_measure & \multicolumn{1}{c|}{0}
+G_mean_1 & \multicolumn{1}{c|}{0}
+G_mean_2 & \multicolumn{1}{c|}{0}
+AUC_ROC & \multicolumn{1}{c|}{0.982}
+AUC_PR & \multicolumn{1}{c|}{0.809}
+Latex statistics for dataset poker-8_vs_6.csv with sm EditedNearestNeighbours and algo RandomForestClassifier
+Precision & \multicolumn{1}{c|}{0}
+Recall & \multicolumn{1}{c|}{0}
+F_measure & \multicolumn{1}{c|}{0}
+G_mean_1 & \multicolumn{1}{c|}{0}
+G_mean_2 & \multicolumn{1}{c|}{0}
+AUC_ROC & \multicolumn{1}{c|}{0.986}
+AUC_PR & \multicolumn{1}{c|}{0.732}

@@ -25,6 +25,7 @@ class Widgets:
 
     class ComboBoxes(Enum):
         ResamplingAlgorithms = "resamplingAlgorithms"
+        ResamplingAlgorithmsClassCase = "resamplingAlgorithmsClassCase"
         ClassificationAlgorithms = "classAlgorithms"
 
     class Labels(Enum):

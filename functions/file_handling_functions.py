@@ -18,9 +18,9 @@ def write_dataset_to_csv(path, dataset=None, x_values_param=None, y_values_param
 
 
 def load_dataset(dataset_loader):
-    first_row = pd.read_csv(dataset_loader.path, sep=',', nrows=1)
+    first_row = pd.read_csv(dataset_loader.path, delimiter=',', header=0, nrows=1)
     header_row = has_header(first_row)
-    tfr = pd.read_csv(dataset_loader.path, sep=',', iterator=True, header=0)
+    tfr = pd.read_csv(dataset_loader.path, delimiter=',', iterator=True, header=header_row)
     ds_as_dataframe = pd.concat(tfr)
     dataset = dict()
     columns_length = len(ds_as_dataframe.columns)
@@ -64,6 +64,8 @@ def load_dataset(dataset_loader):
 def has_header(dataframe):
     for el in dataframe:
         try:
+            if str(el).count(".") == 2:
+                continue
             float(el)
         except ValueError:
             return 1
