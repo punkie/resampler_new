@@ -1,6 +1,7 @@
 import pandas as pd
 from PyQt5.QtWidgets import QFileDialog
-from functions.drawing_functions import draw_comparision_picture, draw_roc_graph, draw_pr_graph
+from functions.drawing_functions import draw_comparision_picture, draw_roc_graph, draw_pr_graph, draw_pca, \
+    draw_standard_graph
 from rs_types.classification_algorithms import ClassificationAlgorithms
 from rs_types.resampling_methods import ResamplingAlgorithms
 from rs_types.widgets import Widgets
@@ -29,10 +30,29 @@ def choose_outputdir(main_window):
         main_window.widgets.get_button(Widgets.Buttons.StartButton.value).setEnabled(True)
 
 
-def choose_sampling_algorithm(main_window):
-    chosen_algorithm_name = main_window.widgets.\
-        get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithmsClassCase.value).currentText()
-    main_window.state.sampling_algorithm = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
+def choose_sampling_algorithm(main_window, data_tab):
+    if data_tab:
+        chosen_algorithm_name = main_window.widgets.\
+            get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithms.value).currentText()
+        main_window.state.sampling_algorithm_data_tab = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
+    else:
+        chosen_algorithm_name = main_window.widgets. \
+            get_combo_box(Widgets.ComboBoxes.ResamplingAlgorithmsExperimentsCase.value).currentText()
+        main_window.state.sampling_algorithm_experiments_tab = ResamplingAlgorithms.get_algorithm_by_name(chosen_algorithm_name)
+
+
+def store_selected_k(main_window):
+    number_of_folds = int (main_window.widgets.get_combo_box(Widgets.ComboBoxes.NumberOfFoldsCV.value).currentText())
+    main_window.state.number_of_folds = number_of_folds
+    main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setMaximum(
+        number_of_folds)
+    main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setMaximum(
+        number_of_folds)
+    if main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).value() is not 0:
+        main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(
+            number_of_folds)
+        main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(
+            number_of_folds)
 
 
 def choose_classification_algorithm(main_window):
@@ -53,26 +73,32 @@ def show_img_diffs(main_window):
 
 def classify_datasets(main_window):
     #classify(main_window.state)
-    # main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
-    # main_window.classifier = Classifying(main_window, False)
-    # main_window.state.normal_classify_thread_finished = False
-    # main_window.classifier.update_gui_after_classification.connect(main_window.update_gui_after_classification)
-    # main_window.classifier.update_normal_classify_progress_bar.connect(main_window.update_normal_classify_progress_bar)
-    # main_window.classifier.start()
+    main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
+    main_window.classifier = Classifying(main_window, False)
+    main_window.state.normal_classify_thread_finished = False
+    main_window.classifier.update_gui_after_classification.connect(main_window.update_gui_after_classification)
+    main_window.classifier.update_normal_classify_progress_bar.connect(main_window.update_normal_classify_progress_bar)
+    main_window.classifier.start()
 
-    # main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
+    main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(0)
     main_window.classifier_rd = Classifying(main_window, True)
     main_window.state.resample_classify_thread_finished = False
     main_window.classifier_rd.update_gui_after_classification.connect(main_window.update_gui_after_classification)
     main_window.classifier_rd.reraise_non_mt_exception_signal.connect(main_window.reraise_non_mt_exception)
-    # main_window.classifier_rd.update_resample_classify_progress_bar.connect\
-    #     (main_window.update_resample_classify_progress_bar)
+    main_window.classifier_rd.update_resample_classify_progress_bar.connect(main_window.update_resample_classify_progress_bar)
     main_window.classifier_rd.start()
-    print ("test")
+    # print ("test")
 
 
 def show_roc_graphs(main_window):
     draw_roc_graph(main_window.state)
+
+
+def show_normal_graph(main_window):
+    draw_standard_graph(main_window)
+
+def show_pca_graph(main_window, is_resampled_dataset):
+    draw_pca(main_window, is_resampled_dataset)
 
 
 def show_pr_graphs(main_window):

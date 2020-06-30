@@ -3,7 +3,7 @@ from functions import file_handling_functions
 
 
 def do_resampling(state):
-    sampling_algorithm = state.sampling_algorithm
+    sampling_algorithm = state.sampling_algorithm_data_tab
     output_directory = state.output_dir
     dataset = state.dataset
     # X, y = make_classification(n_classes=2, class_sep=2, weights=[0.3, 0.7],

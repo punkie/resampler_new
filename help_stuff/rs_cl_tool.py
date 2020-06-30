@@ -166,7 +166,7 @@ def large_func():
                                 d_res_file.write("F_measure: {}\n".format(prf1[2]))
                                 specificity = specificity_score(y_values[test], predicted_classes)
                                 # g_means_1.append(np.sqrt(prf1[1] * specificity))
-                                bal_accuracy = prf1[1] + specificity / 2
+                                bal_accuracy = (prf1[1] + specificity) / 2
                                 bal_accs.append(bal_accuracy)
                                 g_mean_1 = np.sqrt(prf1[1] * specificity)
                                 g_mean_2 = np.sqrt(prf1[0] * prf1[1])

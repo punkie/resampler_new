@@ -166,7 +166,7 @@ def large_func():
                                 d_res_file.write("F_measure: {}\n".format(prf1[2]))
                                 specificity = specificity_score(y_values[test], predicted_classes)
                                 # g_means_1.append(np.sqrt(prf1[1] * specificity))
-                                bal_accuracy = prf1[1] + specificity / 2
+                                bal_accuracy = (prf1[1] + specificity) / 2
                                 bal_accs.append(bal_accuracy)
                                 g_mean_1 = np.sqrt(prf1[1] * specificity)
                                 g_mean_2 = np.sqrt(prf1[0] * prf1[1])
@@ -290,7 +290,7 @@ def generate_latex_output(dict_with_data):
     # convert_numbers_to_digits_and_for_the_max_make_cell_color_green
     dict_with_data
     for sampling_version in dict_with_data.keys():
-        with open("../latex-gen/high_imbalance/" + sampling_version + "-latex-tables.txt", "w+") as latex_file:
+        with open("../latex-gen/low_imbalance/" + sampling_version + "-latex-tables.txt", "w+") as latex_file:
             for class_alg in dict_with_data[sampling_version].keys():
 
                 #sa = RandomUnderSampler()

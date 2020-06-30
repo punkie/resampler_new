@@ -21,10 +21,13 @@ class Classifying(QThread):
             # self.main_window.widgets.\
             #     get_label(Widgets.Labels.ClassifyingStatusLabel.value).setText("Started classifying. Please wait...")
             classified_data = classify(self)
+            # print ('x')
+            self.__store_classified_data(classified_data)
+            # self.update_gui_after_classification.emit()
+            self.__custom_post_process()
         except Exception as e:
+            # print ('y')
             self.reraise_non_mt_exception_signal.emit(e)
-        self.__store_classified_data(classified_data)
-        self.__custom_post_process()
 
     def __store_classified_data(self, classified_data):
         if self.do_resampling:
@@ -33,18 +36,17 @@ class Classifying(QThread):
             self.main_window.state.classified_data_normal_case = classified_data
 
     def __custom_post_process(self):
-        # pass
-        # if self.do_resampling:
-        #     self.main_window.state.resample_classify_thread_finished = True
-        # else:
-        #     self.main_window.state.normal_classify_thread_finished = True
+        #pass
+        if self.do_resampling:
+            self.main_window.state.resample_classify_thread_finished = True
+        else:
+            self.main_window.state.normal_classify_thread_finished = True
         self.update_gui_after_classification.emit()
 
     def __custom_pre_process(self):
-        pass
-        #self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(
-        #    0)
-        #self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
+        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.ResampleClassifyProgressBar.value).setValue(
+            0)
+        self.main_window.widgets.get_progress_bar(Widgets.ProgressBars.NormalClassifyProgressBar.value).setValue(0)
         #self.main_window.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).setEnabled(False)
         #self.main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(False)
         #self.main_window.widgets. \

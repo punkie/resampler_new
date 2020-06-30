@@ -27,10 +27,10 @@ class Resampling(QThread):
         resampled_dataset = self.main_window.state.resampled_dataset
         self.main_window.widgets.get_label(Widgets.Labels.TotalNumberOfExamplesResampledLabel.value).setText(
             str(resampled_dataset['number_of_examples']))
-        self.main_window.widgets.get_label(Widgets.Labels.NumberOfNegativeExamplesResampledLabel.value).setText(
-            str(resampled_dataset['number_of_negative_examples']))
+        self.main_window.widgets.get_label(Widgets.Labels.NumberOfPositiveExamplesResampledLabel.value).setText(
+            str(resampled_dataset['number_of_positive_examples']))
         self.main_window.widgets.get_label(Widgets.Labels.TargetClassPercentageResampledLabel.value).setText(
-            str(resampled_dataset['target_class_percentage']))
+            str(resampled_dataset['positive_examples_percentage']))
         self.main_window.widgets.get_label(Widgets.Labels.ImbalancedRatioResampledLabel.value).setText(
             str(resampled_dataset['imbalanced_ratio']))
         # self.main_window.widgets.get_label(Widgets.Labels.ResamplingStatusLabel.value).setText(

@@ -5,13 +5,14 @@ from rs_types.widgets import Widgets
 
 
 def update_widgets_after_classification(main_window):
+    pass
     #main_window.widgets. \
     #    get_label(Widgets.Labels.ClassifyingStatusLabel.value).setText("Done!")
     #main_window.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).setEnabled(True)
     #main_window.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).setEnabled(True)
-    main_window.widgets. \
-        get_label(Widgets.Labels.AfterClassificationStatistics.value).setText(
-            get_mean_precision_recall_f1_scores(main_window.state))
+    # main_window.widgets. \
+    #     get_label(Widgets.Labels.AfterClassificationStatistics.value).setText(
+    #         get_mean_precision_recall_f1_scores(main_window.state))
 
 
 def update_widgets_after_successful_datasetload(main_window, path):
@@ -22,13 +23,13 @@ def update_widgets_after_successful_datasetload(main_window, path):
     main_window.setEnabled(True)
     main_window.widgets.get_button(Widgets.Buttons.OutputDirectoryButton.value).setEnabled(True)
     main_window.widgets.get_label(Widgets.Labels.FilePathLabel.value).setText("FilePath:")
-    main_window.widgets.get_label(Widgets.Labels.DatasetLoadingResultLabel.value).setText("Successful load!")
+    main_window.widgets.get_label(Widgets.Labels.DatasetLoadingResultLabel.value).setText("Status:  Successful load!")
     # main_window.widgets.get_table(Widgets.Tables.DataTable.value).setEnabled(True);
     dataset = main_window.state.dataset
     main_window.widgets.get_progress_bar(Widgets.ProgressBars.DatasetProgressBar.value).setValue(100)
     main_window.widgets.get_label(Widgets.Labels.TotalNumberOfExamplesLabel.value).setText(str(dataset['number_of_examples']))
-    main_window.widgets.get_label(Widgets.Labels.NumberOfNegativeExamplesLabel.value).setText(str(dataset['number_of_negative_examples']))
-    main_window.widgets.get_label(Widgets.Labels.TargetClassPercentageLabel.value).setText(str(dataset['target_class_percentage']))
+    main_window.widgets.get_label(Widgets.Labels.NumberOfPositiveExamplesLabel.value).setText(str(dataset['number_of_positive_examples']))
+    main_window.widgets.get_label(Widgets.Labels.TargetClassPercentageLabel.value).setText(str(dataset['positive_examples_percentage']))
     main_window.widgets.get_label(Widgets.Labels.ImbalancedRatioLabel.value).setText(str(dataset['imbalanced_ratio']))
     # main_window.widgets.get_label(Widgets.Labels.ResampledDatasetStatistics.value).setText(" ")
     # main_window.widgets.get_label(Widgets.Labels.ResamplingStatusLabel.value).setText(" ")

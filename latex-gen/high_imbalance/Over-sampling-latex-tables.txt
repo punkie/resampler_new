@@ -1,0 +1,166 @@
+\begin{longtable}{|p{1.5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Over-sampling results DecisionTreeClassifier} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{ecoli.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (10.4)}} & \multicolumn{1}{c|}{1.115} & \multicolumn{1}{c|}{\textbf{0.600}} & \multicolumn{1}{c|}{0.642} & \multicolumn{1}{c|}{\textbf{0.610}} & \multicolumn{1}{c|}{0.770} & \multicolumn{1}{c|}{\textbf{0.615}} & \multicolumn{1}{c|}{0.794} & \multicolumn{1}{c|}{0.443}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{1.102} & \multicolumn{1}{c|}{0.576} & \multicolumn{1}{c|}{0.633} & \multicolumn{1}{c|}{0.592} & \multicolumn{1}{c|}{0.763} & \multicolumn{1}{c|}{0.598} & \multicolumn{1}{c|}{0.785} & \multicolumn{1}{c|}{0.432}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{1.105} & \multicolumn{1}{c|}{0.581} & \multicolumn{1}{c|}{0.633} & \multicolumn{1}{c|}{0.587} & \multicolumn{1}{c|}{0.755} & \multicolumn{1}{c|}{0.597} & \multicolumn{1}{c|}{0.788} & \multicolumn{1}{c|}{0.433}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.8)}} & \multicolumn{1}{c|}{1.130} & \multicolumn{1}{c|}{0.544} & \multicolumn{1}{c|}{0.667} & \multicolumn{1}{c|}{0.579} & \multicolumn{1}{c|}{0.771} & \multicolumn{1}{c|}{0.592} & \multicolumn{1}{c|}{0.797} & \multicolumn{1}{c|}{0.423}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{1.070} & \multicolumn{1}{c|}{0.562} & \multicolumn{1}{c|}{0.600} & \multicolumn{1}{c|}{0.567} & \multicolumn{1}{c|}{0.736} & \multicolumn{1}{c|}{0.574} & \multicolumn{1}{c|}{0.770} & \multicolumn{1}{c|}{0.412}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (47.3)}} & \multicolumn{1}{c|}{\textbf{1.222}} & \multicolumn{1}{c|}{0.450} & \multicolumn{1}{c|}{\textbf{0.783}} & \multicolumn{1}{c|}{0.562} & \multicolumn{1}{c|}{\textbf{0.819}} & \multicolumn{1}{c|}{0.589} & \multicolumn{1}{c|}{0.830} & \multicolumn{1}{c|}{0.401}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{1.175} & \multicolumn{1}{c|}{0.422} & \multicolumn{1}{c|}{0.742} & \multicolumn{1}{c|}{0.526} & \multicolumn{1}{c|}{0.788} & \multicolumn{1}{c|}{0.553} & \multicolumn{1}{c|}{\textbf{0.874}} & \multicolumn{1}{c|}{\textbf{0.671}}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{mammography.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (2.3)}} & \multicolumn{1}{c|}{1.115} & \multicolumn{1}{c|}{0.624} & \multicolumn{1}{c|}{0.619} & \multicolumn{1}{c|}{0.620} & \multicolumn{1}{c|}{0.781} & \multicolumn{1}{c|}{0.621} & \multicolumn{1}{c|}{0.760} & \multicolumn{1}{c|}{0.400}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{1.084} & \multicolumn{1}{c|}{\textbf{0.635}} & \multicolumn{1}{c|}{0.588} & \multicolumn{1}{c|}{0.607} & \multicolumn{1}{c|}{0.761} & \multicolumn{1}{c|}{0.609} & \multicolumn{1}{c|}{0.741} & \multicolumn{1}{c|}{0.386}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{1.243} & \multicolumn{1}{c|}{0.461} & \multicolumn{1}{c|}{0.754} & \multicolumn{1}{c|}{0.571} & \multicolumn{1}{c|}{0.858} & \multicolumn{1}{c|}{0.589} & \multicolumn{1}{c|}{0.842} & \multicolumn{1}{c|}{0.356}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.9)}} & \multicolumn{1}{c|}{1.200} & \multicolumn{1}{c|}{0.436} & \multicolumn{1}{c|}{0.712} & \multicolumn{1}{c|}{0.539} & \multicolumn{1}{c|}{0.833} & \multicolumn{1}{c|}{0.556} & \multicolumn{1}{c|}{0.814} & \multicolumn{1}{c|}{0.320}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{1.221} & \multicolumn{1}{c|}{0.461} & \multicolumn{1}{c|}{0.731} & \multicolumn{1}{c|}{0.565} & \multicolumn{1}{c|}{0.846} & \multicolumn{1}{c|}{0.581} & \multicolumn{1}{c|}{0.827} & \multicolumn{1}{c|}{0.346}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (49.8)}} & \multicolumn{1}{c|}{\textbf{1.272}} & \multicolumn{1}{c|}{0.373} & \multicolumn{1}{c|}{\textbf{0.788}} & \multicolumn{1}{c|}{0.505} & \multicolumn{1}{c|}{\textbf{0.873}} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.878} & \multicolumn{1}{c|}{0.300}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{1.164} & \multicolumn{1}{c|}{0.595} & \multicolumn{1}{c|}{0.669} & \multicolumn{1}{c|}{\textbf{0.625}} & \multicolumn{1}{c|}{0.812} & \multicolumn{1}{c|}{\textbf{0.628}} & \multicolumn{1}{c|}{\textbf{0.932}} & \multicolumn{1}{c|}{\textbf{0.665}}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{ozone\_level.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (2.9)}} & \multicolumn{1}{c|}{0.724} & \multicolumn{1}{c|}{0.223} & \multicolumn{1}{c|}{0.236} & \multicolumn{1}{c|}{0.222} & \multicolumn{1}{c|}{0.440} & \multicolumn{1}{c|}{0.226} & \multicolumn{1}{c|}{0.606} & \multicolumn{1}{c|}{0.090}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.780} & \multicolumn{1}{c|}{\textbf{0.292}} & \multicolumn{1}{c|}{0.291} & \multicolumn{1}{c|}{0.284} & \multicolumn{1}{c|}{0.519} & \multicolumn{1}{c|}{0.288} & \multicolumn{1}{c|}{0.635} & \multicolumn{1}{c|}{0.118}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{0.844} & \multicolumn{1}{c|}{0.167} & \multicolumn{1}{c|}{0.371} & \multicolumn{1}{c|}{0.227} & \multicolumn{1}{c|}{0.576} & \multicolumn{1}{c|}{0.247} & \multicolumn{1}{c|}{0.659} & \multicolumn{1}{c|}{0.092}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.8)}} & \multicolumn{1}{c|}{0.818} & \multicolumn{1}{c|}{0.161} & \multicolumn{1}{c|}{0.345} & \multicolumn{1}{c|}{0.219} & \multicolumn{1}{c|}{0.559} & \multicolumn{1}{c|}{0.235} & \multicolumn{1}{c|}{0.645} & \multicolumn{1}{c|}{0.084}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{0.762} & \multicolumn{1}{c|}{0.142} & \multicolumn{1}{c|}{0.289} & \multicolumn{1}{c|}{0.187} & \multicolumn{1}{c|}{0.503} & \multicolumn{1}{c|}{0.201} & \multicolumn{1}{c|}{0.618} & \multicolumn{1}{c|}{0.075}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (44.1)}} & \multicolumn{1}{c|}{0.980} & \multicolumn{1}{c|}{0.163} & \multicolumn{1}{c|}{\textbf{0.520}} & \multicolumn{1}{c|}{0.247} & \multicolumn{1}{c|}{0.674} & \multicolumn{1}{c|}{0.290} & \multicolumn{1}{c|}{0.720} & \multicolumn{1}{c|}{0.111}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{\textbf{0.985}} & \multicolumn{1}{c|}{0.265} & \multicolumn{1}{c|}{0.507} & \multicolumn{1}{c|}{\textbf{0.345}} & \multicolumn{1}{c|}{\textbf{0.692}} & \multicolumn{1}{c|}{\textbf{0.365}} & \multicolumn{1}{c|}{\textbf{0.893}} & \multicolumn{1}{c|}{\textbf{0.326}}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{pen\_digits.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (9.6)}} & \multicolumn{1}{c|}{1.452} & \multicolumn{1}{c|}{0.959} & \multicolumn{1}{c|}{0.955} & \multicolumn{1}{c|}{0.957} & \multicolumn{1}{c|}{0.975} & \multicolumn{1}{c|}{0.957} & \multicolumn{1}{c|}{0.975} & \multicolumn{1}{c|}{0.920}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{1.449} & \multicolumn{1}{c|}{\textbf{0.966}} & \multicolumn{1}{c|}{0.951} & \multicolumn{1}{c|}{0.958} & \multicolumn{1}{c|}{0.973} & \multicolumn{1}{c|}{0.958} & \multicolumn{1}{c|}{0.974} & \multicolumn{1}{c|}{0.923}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{1.459} & \multicolumn{1}{c|}{0.961} & \multicolumn{1}{c|}{0.961} & \multicolumn{1}{c|}{0.961} & \multicolumn{1}{c|}{0.978} & \multicolumn{1}{c|}{0.961} & \multicolumn{1}{c|}{0.978} & \multicolumn{1}{c|}{0.927}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (50.0)}} & \multicolumn{1}{c|}{1.434} & \multicolumn{1}{c|}{0.944} & \multicolumn{1}{c|}{0.937} & \multicolumn{1}{c|}{0.940} & \multicolumn{1}{c|}{0.965} & \multicolumn{1}{c|}{0.941} & \multicolumn{1}{c|}{0.966} & \multicolumn{1}{c|}{0.891}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{1.453} & \multicolumn{1}{c|}{0.962} & \multicolumn{1}{c|}{0.955} & \multicolumn{1}{c|}{0.959} & \multicolumn{1}{c|}{0.975} & \multicolumn{1}{c|}{0.959} & \multicolumn{1}{c|}{0.976} & \multicolumn{1}{c|}{0.924}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (50.0)}} & \multicolumn{1}{c|}{\textbf{1.463}} & \multicolumn{1}{c|}{0.960} & \multicolumn{1}{c|}{\textbf{0.965}} & \multicolumn{1}{c|}{\textbf{0.962}} & \multicolumn{1}{c|}{\textbf{0.980}} & \multicolumn{1}{c|}{\textbf{0.962}} & \multicolumn{1}{c|}{0.980} & \multicolumn{1}{c|}{0.930}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{1.409} & \multicolumn{1}{c|}{0.910} & \multicolumn{1}{c|}{0.914} & \multicolumn{1}{c|}{0.911} & \multicolumn{1}{c|}{0.951} & \multicolumn{1}{c|}{0.912} & \multicolumn{1}{c|}{\textbf{0.994}} & \multicolumn{1}{c|}{\textbf{0.969}}\\ 
+	\hline
+	\caption{tab:testtab}
+	\label{tab:testtab}
+\end{longtable}
+\begin{longtable}{|p{1.5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Over-sampling results SVC} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{ecoli.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (10.4)}} & \multicolumn{1}{c|}{1.067} & \multicolumn{1}{c|}{\textbf{0.692}} & \multicolumn{1}{c|}{0.583} & \multicolumn{1}{c|}{0.618} & \multicolumn{1}{c|}{0.739} & \multicolumn{1}{c|}{0.627} & \multicolumn{1}{c|}{0.931} & \multicolumn{1}{c|}{0.752}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{1.303} & \multicolumn{1}{c|}{0.493} & \multicolumn{1}{c|}{0.858} & \multicolumn{1}{c|}{0.621} & \multicolumn{1}{c|}{0.869} & \multicolumn{1}{c|}{0.648} & \multicolumn{1}{c|}{0.950} & \multicolumn{1}{c|}{0.746}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{1.312} & \multicolumn{1}{c|}{0.535} & \multicolumn{1}{c|}{0.858} & \multicolumn{1}{c|}{\textbf{0.654}} & \multicolumn{1}{c|}{0.877} & \multicolumn{1}{c|}{\textbf{0.675}} & \multicolumn{1}{c|}{\textbf{0.954}} & \multicolumn{1}{c|}{\textbf{0.791}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.8)}} & \multicolumn{1}{c|}{1.302} & \multicolumn{1}{c|}{0.485} & \multicolumn{1}{c|}{0.858} & \multicolumn{1}{c|}{0.613} & \multicolumn{1}{c|}{0.868} & \multicolumn{1}{c|}{0.642} & \multicolumn{1}{c|}{0.945} & \multicolumn{1}{c|}{0.744}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{1.312} & \multicolumn{1}{c|}{0.535} & \multicolumn{1}{c|}{0.858} & \multicolumn{1}{c|}{\textbf{0.654}} & \multicolumn{1}{c|}{0.877} & \multicolumn{1}{c|}{\textbf{0.675}} & \multicolumn{1}{c|}{\textbf{0.954}} & \multicolumn{1}{c|}{\textbf{0.791}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (47.3)}} & \multicolumn{1}{c|}{\textbf{1.332}} & \multicolumn{1}{c|}{0.483} & \multicolumn{1}{c|}{\textbf{0.892}} & \multicolumn{1}{c|}{0.619} & \multicolumn{1}{c|}{\textbf{0.882}} & \multicolumn{1}{c|}{0.652} & \multicolumn{1}{c|}{0.948} & \multicolumn{1}{c|}{0.766}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{1.188} & \multicolumn{1}{c|}{0.437} & \multicolumn{1}{c|}{0.750} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.801} & \multicolumn{1}{c|}{0.566} & \multicolumn{1}{c|}{0.882} & \multicolumn{1}{c|}{0.660}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{mammography.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (2.3)}} & \multicolumn{1}{c|}{0.960} & \multicolumn{1}{c|}{\textbf{0.826}} & \multicolumn{1}{c|}{0.462} & \multicolumn{1}{c|}{0.589} & \multicolumn{1}{c|}{0.678} & \multicolumn{1}{c|}{0.616} & \multicolumn{1}{c|}{0.885} & \multicolumn{1}{c|}{\textbf{0.677}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{1.329} & \multicolumn{1}{c|}{0.293} & \multicolumn{1}{c|}{0.854} & \multicolumn{1}{c|}{0.436} & \multicolumn{1}{c|}{0.900} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.950} & \multicolumn{1}{c|}{0.609}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{1.331} & \multicolumn{1}{c|}{0.312} & \multicolumn{1}{c|}{0.854} & \multicolumn{1}{c|}{0.457} & \multicolumn{1}{c|}{0.902} & \multicolumn{1}{c|}{0.516} & \multicolumn{1}{c|}{0.949} & \multicolumn{1}{c|}{0.626}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.9)}} & \multicolumn{1}{c|}{1.336} & \multicolumn{1}{c|}{0.241} & \multicolumn{1}{c|}{\textbf{0.869}} & \multicolumn{1}{c|}{0.377} & \multicolumn{1}{c|}{0.901} & \multicolumn{1}{c|}{0.457} & \multicolumn{1}{c|}{0.944} & \multicolumn{1}{c|}{0.542}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{1.331} & \multicolumn{1}{c|}{0.313} & \multicolumn{1}{c|}{0.854} & \multicolumn{1}{c|}{0.457} & \multicolumn{1}{c|}{0.902} & \multicolumn{1}{c|}{0.516} & \multicolumn{1}{c|}{0.949} & \multicolumn{1}{c|}{0.627}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (49.8)}} & \multicolumn{1}{c|}{\textbf{1.340}} & \multicolumn{1}{c|}{0.289} & \multicolumn{1}{c|}{0.865} & \multicolumn{1}{c|}{0.433} & \multicolumn{1}{c|}{\textbf{0.906}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{\textbf{0.955}} & \multicolumn{1}{c|}{0.618}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{1.149} & \multicolumn{1}{c|}{0.603} & \multicolumn{1}{c|}{0.654} & \multicolumn{1}{c|}{\textbf{0.624}} & \multicolumn{1}{c|}{0.804} & \multicolumn{1}{c|}{\textbf{0.626}} & \multicolumn{1}{c|}{0.936} & \multicolumn{1}{c|}{0.667}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{ozone\_level.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (2.9)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.750} & \multicolumn{1}{c|}{0.113}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{1.047} & \multicolumn{1}{c|}{0.034} & \multicolumn{1}{c|}{0.943} & \multicolumn{1}{c|}{0.066} & \multicolumn{1}{c|}{0.443} & \multicolumn{1}{c|}{0.180} & \multicolumn{1}{c|}{0.644} & \multicolumn{1}{c|}{0.092}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{\textbf{1.059}} & \multicolumn{1}{c|}{0.035} & \multicolumn{1}{c|}{0.957} & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{0.440} & \multicolumn{1}{c|}{0.182} & \multicolumn{1}{c|}{0.691} & \multicolumn{1}{c|}{0.123}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.8)}} & \multicolumn{1}{c|}{0.637} & \multicolumn{1}{c|}{0.051} & \multicolumn{1}{c|}{0.241} & \multicolumn{1}{c|}{0.052} & \multicolumn{1}{c|}{0.096} & \multicolumn{1}{c|}{0.077} & \multicolumn{1}{c|}{0.708} & \multicolumn{1}{c|}{0.107}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{\textbf{1.059}} & \multicolumn{1}{c|}{0.035} & \multicolumn{1}{c|}{0.957} & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{0.440} & \multicolumn{1}{c|}{0.182} & \multicolumn{1}{c|}{0.706} & \multicolumn{1}{c|}{0.125}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (44.1)}} & \multicolumn{1}{c|}{1.000} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{0.056} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.170} & \multicolumn{1}{c|}{0.720} & \multicolumn{1}{c|}{0.127}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{0.896} & \multicolumn{1}{c|}{\textbf{0.193}} & \multicolumn{1}{c|}{0.421} & \multicolumn{1}{c|}{\textbf{0.264}} & \multicolumn{1}{c|}{\textbf{0.585}} & \multicolumn{1}{c|}{\textbf{0.285}} & \multicolumn{1}{c|}{\textbf{0.841}} & \multicolumn{1}{c|}{\textbf{0.269}}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{pen\_digits.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (9.6)}} & \multicolumn{1}{c|}{1.488} & \multicolumn{1}{c|}{\textbf{0.994}} & \multicolumn{1}{c|}{0.989} & \multicolumn{1}{c|}{0.991} & \multicolumn{1}{c|}{0.994} & \multicolumn{1}{c|}{0.991} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{\textbf{0.998}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{\textbf{1.498}} & \multicolumn{1}{c|}{0.989} & \multicolumn{1}{c|}{\textbf{0.998}} & \multicolumn{1}{c|}{\textbf{0.993}} & \multicolumn{1}{c|}{\textbf{0.998}} & \multicolumn{1}{c|}{\textbf{0.993}} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{\textbf{0.998}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{1.496} & \multicolumn{1}{c|}{0.989} & \multicolumn{1}{c|}{0.996} & \multicolumn{1}{c|}{0.992} & \multicolumn{1}{c|}{\textbf{0.998}} & \multicolumn{1}{c|}{0.992} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{\textbf{0.998}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (50.0)}} & \multicolumn{1}{c|}{1.493} & \multicolumn{1}{c|}{0.967} & \multicolumn{1}{c|}{0.995} & \multicolumn{1}{c|}{0.981} & \multicolumn{1}{c|}{0.996} & \multicolumn{1}{c|}{0.981} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{0.997}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{1.496} & \multicolumn{1}{c|}{0.989} & \multicolumn{1}{c|}{0.996} & \multicolumn{1}{c|}{0.992} & \multicolumn{1}{c|}{\textbf{0.998}} & \multicolumn{1}{c|}{0.992} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{\textbf{0.998}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (50.0)}} & \multicolumn{1}{c|}{1.496} & \multicolumn{1}{c|}{0.990} & \multicolumn{1}{c|}{0.996} & \multicolumn{1}{c|}{\textbf{0.993}} & \multicolumn{1}{c|}{\textbf{0.998}} & \multicolumn{1}{c|}{\textbf{0.993}} & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{\textbf{0.998}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{1.405} & \multicolumn{1}{c|}{0.911} & \multicolumn{1}{c|}{0.910} & \multicolumn{1}{c|}{0.910} & \multicolumn{1}{c|}{0.949} & \multicolumn{1}{c|}{0.910} & \multicolumn{1}{c|}{0.993} & \multicolumn{1}{c|}{0.967}\\ 
+	\hline
+	\caption{tab:testtab}
+	\label{tab:testtab}
+\end{longtable}
