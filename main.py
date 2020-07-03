@@ -3,6 +3,7 @@ import traceback
 import numpy as np
 import pandas as pd
 from PyQt5 import QtCore
+from PyQt5.QtGui import QIcon
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QFileDialog, QVBoxLayout, QLabel, QWidget, QScrollArea, \
     QHBoxLayout, QToolButton, QMenu, QSpacerItem, QSizePolicy
@@ -15,10 +16,10 @@ from error_dialog import Ui_Dialog
 from functions.ui_qt_slots import choose_dataset, \
     choose_outputdir, perform_resampling, \
     choose_sampling_algorithm, show_img_diffs, classify_datasets, show_roc_graphs, show_pr_graphs, \
-    choose_classification_algorithm, show_pca_graph, show_normal_graph, store_selected_k
+    choose_classification_algorithm, show_pca_graph, show_normal_graph, store_selected_k, show_pair_plot_graph
 from functions.ui_helping_functions import update_widgets_after_classification, update_widgets_after_successful_datasetload
 # from generated_pyqt_ui import Ui_MainWindow
-from generate_pyqt_ui_v2 import Ui_DataSamplingTools
+from generate_pyqt_ui_v2 import Ui_DataResamplingTools
 from rs_types.classification_algorithms import ClassificationAlgorithms
 from rs_types.resampling_methods import ResamplingAlgorithms
 from rs_types.state import BasicState
@@ -54,7 +55,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.ui = Ui_DataSamplingTools()
+        self.ui = Ui_DataResamplingTools()
         self.ui.setupUi(self)
         self.state = BasicState()
         self.widgets = Widgets(self)
@@ -211,6 +212,9 @@ class MainWindow(QMainWindow):
         # self.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).clicked.connect(lambda: show_roc_graphs(self))
         self.widgets.get_button(Widgets.Buttons.StandardGraphNormalDatasetButton.value).clicked.connect(
             lambda: show_normal_graph(self))
+        self.widgets.get_button(Widgets.Buttons.PairPlotNormalDatasetButton.value).clicked.connect(lambda: show_pair_plot_graph(self))
+        # self.widget.get_button(Widgets.Buttons.PairPlotResampledDatasetButton).clicked.connect(
+        #     lambda: show_pair_plot_graph(self))
         self.widgets.get_button(Widgets.Buttons.StandardGraphResampledDatasetButton.value).clicked.connect(
             lambda: show_normal_graph(self))
         self.widgets.get_button(Widgets.Buttons.PcaGraphNormalDatasetButton.value).clicked.connect(lambda: show_pca_graph(self, False))
@@ -271,6 +275,7 @@ class MainWindow(QMainWindow):
 if __name__ == '__main__':
     app = QApplication([])
     mw = MainWindow()
+    mw.setWindowIcon(QIcon('logo.png'))
     mw.do_setup()
     mw.showMaximized()
     mw.show()

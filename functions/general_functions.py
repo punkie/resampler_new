@@ -62,9 +62,9 @@ def classify(classifier_thread):
             r_dataset = resampling_functions.\
             do_resampling_without_writing_to_file(classifier_thread.main_window.state.sampling_algorithm_experiments_tab,
                                                   X_normal[train], y_normal[train])
-            classifier_ = classifier.fit(r_dataset['x_values'], r_dataset['y_values'])
+            classifier_ = classifier.fit(r_dataset['x_values'], r_dataset['y_values'].astype(int))
         else:
-            classifier_ = classifier.fit(X_normal[train], y_normal[train])
+            classifier_ = classifier.fit(X_normal[train], y_normal[train].astype(int))
         #predicted_y_scores = classifier_.decision_function(X_normal[test])
         predicted_classes = classifier_.predict(X_normal[test])
         probas_ = classifier_.predict_proba(X_normal[test])

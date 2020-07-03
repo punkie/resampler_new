@@ -1,6 +1,7 @@
 import os
+import copy
 from cProfile import Profile
-from collections import Counter
+from collections import Counter, defaultdict
 from pstats import Stats
 
 import numpy as np
@@ -32,30 +33,30 @@ import smote_boost
 
 def over_sampling_algs():
     algs = list()
-    algs.append(("No Rs Oversampling", "No Resampling"))
+    algs.append(("No Rs Oversampling case", "No Resampling"))
     algs.append((RandomOverSampler(random_state=1), 'RO'))
-    algs.append((SMOTE(random_state=1), 'SMOTE'))
-    algs.append((ADASYN(random_state=1), 'ADASYN'))
-    algs.append((SMOTETomek(random_state=1), 'SMOTE+TL'))
-    algs.append((SMOTEENN(random_state=1), 'SMOTE+ENN'))
-    algs.append((smote_boost.SMOTEBoost(), "SMOTEBoost"))
+    # algs.append((SMOTE(random_state=1), 'SMOTE'))
+    # algs.append((ADASYN(random_state=1), 'ADASYN'))
+    # algs.append((SMOTETomek(random_state=1), 'SMOTE+TL'))
+    # algs.append((SMOTEENN(random_state=1), 'SMOTE+ENN'))
+    # algs.append((smote_boost.SMOTEBoost(), "SMOTEBoost"))
     return algs
 
 
 def under_sampling_algs():
     algs = list()
-    algs.append(("No Rs Undersampling", "No Resampling"))
+    algs.append(("No Rs Undersampling case", "No Resampling"))
     algs.append((RandomUnderSampler(random_state=1), 'RU'))
-    algs.append((ClusterCentroids(random_state=1), 'CC'))
-    algs.append((TomekLinks(), 'TL'))
-    algs.append((NearMiss(version=1), 'NM1'))
-    algs.append((NearMiss(version=2), 'NM2'))
-    algs.append((NearMiss(version=3), 'NM3'))
-    algs.append((CondensedNearestNeighbour(random_state=1), 'CNN'))
-    algs.append((OneSidedSelection(random_state=1), 'OSS'))
-    algs.append((EditedNearestNeighbours(), 'ENN'))
-    algs.append((NeighbourhoodCleaningRule(), 'NCL'))
-    algs.append((InstanceHardnessThreshold(), 'IHT'))
+    # algs.append((ClusterCentroids(random_state=1), 'CC'))
+    # algs.append((TomekLinks(), 'TL'))
+    # algs.append((NearMiss(version=1), 'NM1'))
+    # algs.append((NearMiss(version=2), 'NM2'))
+    # algs.append((NearMiss(version=3), 'NM3'))
+    # algs.append((CondensedNearestNeighbour(random_state=1), 'CNN'))
+    # algs.append((OneSidedSelection(random_state=1), 'OSS'))
+    # algs.append((EditedNearestNeighbours(), 'ENN'))
+    # algs.append((NeighbourhoodCleaningRule(), 'NCL'))
+    # algs.append((InstanceHardnessThreshold(), 'IHT'))
     return algs
 
 
@@ -65,7 +66,8 @@ def is_over_sampling(sampling_alg, list_ovrsampling_algs):
 
 def gather_class_algs():
     algs = []
-    algs.append(tree.DecisionTreeClassifier(criterion='entropy', random_state=np.random.RandomState(1)))
+    algs.append(("CART (Decision Tree Classifier)", tree.DecisionTreeClassifier(criterion='entropy', random_state=np.random.RandomState(1))))
+    # algs.append(("SVM", svm.SVC(probability=True, random_state=np.random.RandomState(1))))
     # algs.append(RandomForestClassifier(n_estimators=100, criterion='entropy', random_state=np.random.RandomState(1)))
     # algs.append(svm.SVC(probability=True, random_state=np.random.RandomState(1)))
     return algs
@@ -80,19 +82,19 @@ def round(digit, digit_after_fp):
 def large_func():
     dataset_files = os.listdir('../datasets/cl_datasets')
     rand_state = np.random.RandomState(1)
-    cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=1)
+    cv = StratifiedKFold(n_splits=10, random_state=rand_state)
     latex_dict = {}
     latex_dict['Under-sampling'] = {}
     latex_dict['Over-sampling'] = {}
     class_algs = gather_class_algs()
-    for alg in class_algs:
-        latex_dict['Under-sampling'][str(type(alg).__name__)] = {}
-        latex_dict['Over-sampling'][str(type(alg).__name__)] = {}
+    for alg_tuple in class_algs:
+        alg_alias = alg_tuple[0]
+        latex_dict['Under-sampling'][alg_alias] = {}
+        latex_dict['Over-sampling'][alg_alias] = {}
     for d_fp in dataset_files:
 
         with open("../result_rs_cl_tool/" + d_fp + "-rs-cl-res.txt", "w") as d_res_file:
                 with open("../latex-gen/" + d_fp + "-latex-tables.txt", "w") as latex_file:
-
                     #     first_row = pd.read_csv(d_fp, sep=',', nrows=1)
                     # header_row = has_header(first_row)
                     tfr = pd.read_csv('../datasets/cl_datasets/' + d_fp, sep=',', iterator=True, header=0)
@@ -117,10 +119,12 @@ def large_func():
 
                     # used_algs = [tree.DecisionTreeClassifier(criterion='entropy', random_state=np.random.RandomState(1))]
                     d_res_file.write("********************************************************************************\n");
-                    for alg in class_algs:
-                        latex_dict['Under-sampling'][str(type(alg).__name__)][d_fp] = {}
-                        latex_dict['Over-sampling'][str(type(alg).__name__)][d_fp] = {}
-                        d_res_file.write("Classification algorithm:" + str(alg) + "\n")
+                    for alg_tuple in class_algs:
+                        alg_alias = alg_tuple[0]
+                        alg = copy.deepcopy(alg_tuple[1])
+                        latex_dict['Under-sampling'][alg_alias][d_fp] = {}
+                        latex_dict['Over-sampling'][alg_alias][d_fp] = {}
+                        d_res_file.write("Classification algorithm:" + alg_alias + "\n")
                         for sa in sampling_algs:
                             d_res_file.write("Sampling_algorithm:" + sa[1] + "\n")
                             i = 0
@@ -208,7 +212,7 @@ def large_func():
                             d_res_file.write("Average results (for all folds)\n")
                             d_res_file.write("Dataset: {}\n".format(d_fp))
                             d_res_file.write("Sampling algorithm: {}\n".format(str(type(sa).__name__)))
-                            d_res_file.write("Classification algorithm: {}".format(type(alg).__name__))
+                            d_res_file.write("Classification algorithm: {}".format(alg_alias))
                             d_res_file.write("Balanced Accuracy: {}\n".format(avg_bal_acc))
                             d_res_file.write("Avg Precision: {}\n".format(avg_pre))
                             d_res_file.write("Avg Recall: {}\n".format(avg_rec))
@@ -222,10 +226,10 @@ def large_func():
                             d_res_file.write("\n\n")
 
                             if sa in ovr_s_algs:
-                                latex_dict['Over-sampling'][str(type(alg).__name__)][d_fp][sa_name] = [round(avg_percent_pos, 1), round(avg_bal_acc, 3), round(avg_pre, 3), round(avg_rec, 3), round(avg_f1, 3), round(avg_g_mean, 3),
+                                latex_dict['Over-sampling'][alg_alias][d_fp][sa_name] = [round(avg_percent_pos, 1), round(avg_bal_acc, 3), round(avg_pre, 3), round(avg_rec, 3), round(avg_f1, 3), round(avg_g_mean, 3),
                                 round(avg_g_mean_2, 3), round(avg_roc_auc, 3), round(avg_pr_auc, 3)]
                             else:
-                                latex_dict['Under-sampling'][str(type(alg).__name__)][d_fp][sa_name] = [round(avg_percent_pos, 1), round(avg_bal_acc, 3), round(avg_pre, 3), round(avg_rec, 3), round(avg_f1, 3), round(avg_g_mean, 3),
+                                latex_dict['Under-sampling'][alg_alias][d_fp][sa_name] = [round(avg_percent_pos, 1), round(avg_bal_acc, 3), round(avg_pre, 3), round(avg_rec, 3), round(avg_f1, 3), round(avg_g_mean, 3),
                                 round(avg_g_mean_2, 3), round(avg_roc_auc, 3), round(avg_pr_auc, 3)]
                             # print (latex_dict)
                             # ds_name = d_fp.split(".")[0]
@@ -278,6 +282,42 @@ def append_multicolumn(value):
     return " & \multicolumn{1}{c|}{" + str(value) + "}"
 
 
+def pre_table_content():
+    content = r"\documentclass[12pt,oneside]{report}\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}\usepackage[table]{xcolor}\usepackage{fancyhdr}\pagestyle{fancy}\usepackage[T2A]{fontenc}\usepackage[english]{babel}\usepackage[utf8]{inputenc}\usepackage{longtable}\usepackage{amssymb}\usepackage{amsmath}\usepackage{color}\usepackage{caption}\captionsetup[table]{name=Таблица}\definecolor{lightgray}{gray}{0.9}\fancyhead{}\fancyhead[RO,LE]{Дебалансирани множества от данни и проблемите и решенията, свързани с тях}\fancyfoot{}\fancyfoot[C]{\thepage}\begin{document}"
+    return content
+
+
+def constant_factory(value):
+    return lambda: value
+
+def get_imbalance_degree_dict():
+    d = defaultdict(constant_factory("дебалансирани множества от данни"))
+    d['abalone_19.csv'] = "есктремно дебалансирани множества от данни"
+    d['poker-8_vs_6.csv'] = "есктремно дебалансирани множества от данни"
+    d['ecoli.csv'] = "силно дебалансирани множества от данни"
+    d['mammography.csv'] = "силно дебалансирани множества от данни"
+    d['ozone_level.csv'] = "силно дебалансирани множества от данни"
+    d['pen_digits.csv'] = "силно дебалансирани множества от данни"
+    d['glass0.csv'] = "слабо дебалансирани множества от данни"
+    d['vehicle2.csv'] = "слабо дебалансирани множества от данни"
+    d['yeast1.csv'] = "слабо дебалансирани множества от данни"
+    return d
+
+
+def init_nested_dicts(parent_dict):
+    for i in range(1, 9):
+        if i not in parent_dict.keys():
+            parent_dict[i] = defaultdict(dict)
+            parent_dict[i]['NormalCase'] = defaultdict(dict)
+            parent_dict[i]['ResampledCase'] = defaultdict(dict)
+
+
+def transform_idx(case, idx):
+    if case is 'Under-sampling':
+        return under_sampling_algs()[idx][1]
+    else:
+        return over_sampling_algs()[idx][1]
+
 def generate_latex_output(dict_with_data):
     # dict_with_data = {}
     # dict_with_data['d_names'] = ["abalone_19.csv", "testme.csv"]
@@ -288,19 +328,26 @@ def generate_latex_output(dict_with_data):
     # dict_with_data['testSm'] = {'Precision' : ['1', '2', '3', '4', '5', '6', '7', '8', '9']}
     # d_fp = "abalone_19.csv"
     # convert_numbers_to_digits_and_for_the_max_make_cell_color_green
-    dict_with_data
-    for sampling_version in dict_with_data.keys():
-        with open("../latex-gen/" + sampling_version + "-latex-tables.txt", "w+") as latex_file:
-            for class_alg in dict_with_data[sampling_version].keys():
+    im_degree_dict = get_imbalance_degree_dict()
 
+    best_results_dict = defaultdict(dict)
+    #init_nested_dicts(best_results_dict)
+    for sampling_version in dict_with_data.keys():
+        with open("../latex-gen/" + sampling_version + "-latex-tables.txt", "w+", encoding="utf8") as latex_file:
+            for class_alg in dict_with_data[sampling_version].keys():
+                for d_name in dict_with_data[sampling_version][class_alg].keys():
+                    d_fp_for_table = d_name.replace("_", "\\_")
+                    init_nested_dicts(best_results_dict[d_fp_for_table])
+            for class_alg in dict_with_data[sampling_version].keys():
+                first_d_name = list(dict_with_data[sampling_version][class_alg].keys())[0]
                 #sa = RandomUnderSampler()
                 #alg = tree.DecisionTreeClassifier(criterion='entropy', random_state=np.random.RandomState(1))
                 #sa_name = type(sa).__name__
                 #class_alg_name = type(alg).__name__
                 #precisions = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
                 #latex_file.write("Latex statistics for sm {} and algo {}\n\n".format(sa_name, class_alg_name))
-
-                latex_file.write("\\begin{longtable}{|p{1.5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}\n")
+                latex_file.write("\\chapter*{" + sampling_version + " резултати за " + im_degree_dict[first_d_name] + "}")
+                latex_file.write("\\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}}\n")
                 latex_file.write("\t\hline\n")
                 latex_file.write("\t\multicolumn{9}{|c|}{" + sampling_version + " results " + class_alg + "} \\\\ \n")
                 latex_file.write("\t\hline\n")
@@ -310,17 +357,57 @@ def generate_latex_output(dict_with_data):
                 latex_file.write("\t\hline\n")
                 for d_name in dict_with_data[sampling_version][class_alg].keys():
                     d_fp_for_table = d_name.replace("_", "\\_")
+                    # best_results_dict[d_fp_for_table]['BalancedAccuracy']['NS'] = ['1', '4']
+                    # best_results_dict[d_fp_for_table]['BalancedAccuracy']['SC']['1.35']['Sampling Algs'] = ['..']
+                    # best_results_dict[d_fp_for_table]['BalancedAccuracy']['SC']['1.35']['Class Algs'] = ['...']
                     latex_file.write("\multicolumn{1}{|l|}{\\textit{" + d_fp_for_table +"}} &  & & & & & & & \\\\ \n")
                     latex_file.write("\t\hline\n")
-                    sm_stats = [['not used'], [],[],[],[],[],[],[],[],[]]
+                    sm_stats = [['not used'], [], [], [], [], [], [], [], [], []]
+                    sm_stats_no_resampling = [['not used'], [], [], [], [], [], [], [], [], []]
+                    sm_stats_sampling = [['not used'], [], [], [], [], [], [], [], [], []]
                     for sm, sm_values in dict_with_data[sampling_version][class_alg][d_name].items():
                         for i in range (1, 9):
+                            if sm == 'No Resampling':
+                                sm_stats_no_resampling[i].append(float(sm_values[i]))
+                            else:
+                                sm_stats_sampling[i].append(float(sm_values[i]))
                             sm_stats[i].append(float(sm_values[i]))
                     for i in range (1, 9):
+                        max_elem_no_resampling = max(sm_stats_no_resampling[i])
+                        max_elem_indexes_no_rs = [index for index, value in enumerate(sm_stats_no_resampling[i]) if
+                                                  value == max_elem_no_resampling]
+                        for idx in max_elem_indexes_no_rs:
+                            max_elem_rounded = round(max_elem_no_resampling, 3)
+                            if max_elem_rounded not in best_results_dict[d_fp_for_table][i]['NormalCase']:
+                                best_results_dict[d_fp_for_table][i]['NormalCase'][max_elem_rounded][
+                                    "ClassAlgs"] = list()
+                            best_results_dict[d_fp_for_table][i]['NormalCase'][max_elem_rounded][
+                                "ClassAlgs"].append(class_alg)
+
+                        max_elem_sampling = max(sm_stats_sampling[i])
+                        max_elem_indexes_sampling = [index for index, value in enumerate(sm_stats_sampling[i]) if
+                                                  value == max_elem_sampling]
+                        for idx in max_elem_indexes_sampling:
+                            max_elem_rounded = round(max_elem_sampling, 3)
+                            if max_elem_rounded not in best_results_dict[d_fp_for_table][i]['ResampledCase']:
+                                best_results_dict[d_fp_for_table][i]['ResampledCase'][max_elem_rounded][
+                                    "ClassAlgs"] = list()
+                                best_results_dict[d_fp_for_table][i]['ResampledCase'][max_elem_rounded][
+                                    "SamplingMethods"] = list()
+                            best_results_dict[d_fp_for_table][i]['ResampledCase'][max_elem_rounded][
+                                "ClassAlgs"].append(class_alg)
+                            if idx == 0:
+                                idx += 1
+                            best_results_dict[d_fp_for_table][i]['ResampledCase'][max_elem_rounded][
+                                "SamplingMethods"].append(transform_idx(sampling_version, idx))
+
+
                         max_elem = max(sm_stats[i])
                         max_elem_indexes = [index for index, value in enumerate(sm_stats[i]) if value == max_elem]
                         for idx in max_elem_indexes:
-                            sm_stats[i][idx] = '\\textbf{' + round(max_elem, 3) + '}'
+                            max_elem_rounded = round(max_elem, 3)
+                            sm_stats[i][idx] = '\\textbf{' + max_elem_rounded + '}'
+
                     i = 0
                     for sm, sm_values in dict_with_data[sampling_version][class_alg][d_name].items():
                         print (i)
@@ -348,13 +435,20 @@ def generate_latex_output(dict_with_data):
                 #         "\t\multicolumn{1}{|l|}{\\textit{" + d_fp_for_table.split(".")[0] + "}} & & & & & & & & & \\\\ \n")
                 # latex_file.write("\t\hline\n")
                 # latex_file.write("\t\multicolumn{1}{|r|}{$Precision$} " + "".join([" & \multicolumn{1}{c|}{" + el + "}" for el in precisions])  + " \\\\ \n")
-                latex_file.write("\t\caption{tab:testtab}\n")
-                latex_file.write("\t\label{tab:testtab}\n")
+                latex_file.write("\t\caption{}\n")
                 latex_file.write("\end{longtable}\n")
+                latex_file.write("\end{document}")
+            latex_file.write(r"\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1.7cm}|} ")
+            latex_file.write(r"\hline")
+            latex_file.write(r"\multicolumn{5}{|c|}{Best results across all tests} \\")
+            latex_file.write(r"\hline")
+            latex_file.write(r"\multicolumn{1}{|c|}{Dataset \& metric} & \multicolumn{1}{c|}{BV No SM} &\multicolumn{1}{c|}{BV SM} & \multicolumn{1}{c|}{Sampling Method} & \multicolumn{1}{c|}{Algorithm} \\")
+            latex_file.write(r"\hline")
+            # latex_file.write(r"\multicolumn{1}{|l|}{\textit{" + )
+    print ("x")
 
-
-def sample_test():
-    print ('hi there')
+# def sample_test():
+    # print ('hi there')
 
 if __name__ == '__main__':
     #latex_dict = large_func()

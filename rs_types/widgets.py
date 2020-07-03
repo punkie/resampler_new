@@ -39,6 +39,8 @@ class Widgets:
         ShowPRGraphs = "showPRGraphs"
         TestButton = "testButton"
         StandardGraphNormalDatasetButton = "standardGraphNormalDataset"
+        PairPlotNormalDatasetButton = "pairPlotNormalDataset"
+        PairPlotResampledDatasetButton = "pairPlotResampledDataset"
         StandardGraphResampledDatasetButton = "standardGraphResampledDataset"
         PcaGraphNormalDatasetButton = "pcaGraphNormalDataset"
         PcaGraphResampledDatasetButton = "pcaGraphResampledDataset"
@@ -120,10 +122,10 @@ class Widgets:
                 label='Random guess', alpha=.8)
         print("Mean ROC (Standard) (AUC = %0.2f STD %0.2f)" % (mean_auc, std_auc))
         ax.plot(mean_fpr, mean_tpr, color='b',
-                label=r'Mean ROC (Standard) (AUC = %0.2f $\pm$ %0.2f)' % (mean_auc, std_auc),
+                label=r'Mean ROC (Standard case) (AUC = %0.2f $\pm$ %0.2f)' % (mean_auc, std_auc),
                 lw=2, alpha=.8)
         ax.plot(re_mean_fpr, re_mean_tpr, color='g',
-                label=r'Mean ROC (Resampled) (AUC = %0.2f $\pm$ %0.2f)' % (re_mean_auc, re_std_auc),
+                label=r'Mean ROC (Resampled case) (AUC = %0.2f $\pm$ %0.2f)' % (re_mean_auc, re_std_auc),
                 lw=2, alpha=.8)
         # ax.fill_between(mean_fpr, tprs_lower, tprs_upper, color='grey', alpha=.2,
         #                 label=r'$\pm$ 1 std. dev.')
@@ -148,13 +150,13 @@ class Widgets:
         canvas.setMinimumHeight(350)
         canvas.setMaximumHeight(350)
         # canvas.mouseDoubleClickEvent()
-        f.canvas.mpl_connect('button_press_event', show_figure)
+        # f.canvas.mpl_connect('button_press_event', show_figure)
         return canvas
 
     @staticmethod
     def create_pr_graph(classified_data, sampling_algorithm):
         # tuple_index = 1 if sampling_algorithm is not None else 0
-        # f, ax = plt.subplots()
+        f, ax = plt.subplots()
         nml_y_true = np.concatenate(classified_data[0]['trues_list'])
         nml_probas = np.concatenate(classified_data[0]['preds_list'])
         resampled_y_true = np.concatenate(classified_data[1]['trues_list'])
@@ -193,32 +195,33 @@ class Widgets:
         #                             figsize=None, cmap='YlGnBu',
         #                             title_fontsize="large",
         #                             text_fontsize="medium")
-        # ax.get_figure().set_size_inches(5, 5)
-        # ax.spines['top'].set_visible(False)
-        # ax.spines['right'].set_visible(False)
-        # ax.legend(loc="upper right", prop={'size': 7})
-        # ax.set_xlabel('Recall')
-        # ax.set_ylabel('Precision')
-        # ax.set_ylim([0.0, 1.05])
-        # ax.set_xlim([0.0, 1.0])
-        # ax.plot(pr, re, color='b')
-        # ax.plot(resam_re, resam_pr, color='g')
-        # ax.xaxis.labelpad = -0.5
-        plt.figure()
-        plt.step(re, pr, where='post')
-
-        plt.xlabel('Recall')
-        plt.ylabel('Precision')
-        plt.ylim([0.0, 1.05])
-        plt.xlim([0.0, 1.0])
-        plt.title(
-            'Average precision score, micro-averaged over all classes: AP={0:0.2f}'
-                .format(123.3))
-        plt.show()
-        # canvas = FigureCanvasQTAgg(f)
-        # canvas.setMinimumHeight(350)
-        # canvas.setMaximumHeight(350)
-        return QLabel("test")
+        ax.get_figure().set_size_inches(5, 5)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.set_title('PR chart')
+        ax.set_xlabel('Recall')
+        ax.set_ylabel('Precision')
+        ax.set_ylim([0.0, 1.05])
+        ax.set_xlim([0.0, 1.0])
+        ax.plot(pr, re, color='b', label="Standard case")
+        ax.plot(resam_re, resam_pr, color='g', label="Resampled case")
+        ax.legend(loc="upper right", prop={'size': 7})
+        ax.xaxis.labelpad = -0.5
+        # plt.figure()
+        # plt.step(re, pr, where='post')
+        #
+        # plt.xlabel('Recall')
+        # plt.ylabel('Precision')
+        # plt.ylim([0.0, 1.05])
+        # plt.xlim([0.0, 1.0])
+        # plt.title(
+        #     'Average precision score, micro-averaged over all classes: AP={0:0.2f}'
+        #         .format(123.3))
+        # plt.show()
+        canvas = FigureCanvasQTAgg(f)
+        canvas.setMinimumHeight(350)
+        canvas.setMaximumHeight(350)
+        return canvas
 
     @staticmethod
     def create_decision_boundary_graph(classified_data, sampling_algorithm):

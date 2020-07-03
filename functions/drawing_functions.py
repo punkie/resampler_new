@@ -31,9 +31,9 @@ from sklearn.decomposition import PCA
 
 def draw_simple_graph(w, x_combo_box, y_combo_box, dataset):
     # QLabel("simple test")
-    w.findChild(QHBoxLayout, "testHorizontalLayout").addChild(QLabel("simple test"))
-
+    # w.findChild(QHBoxLayout, "testHorizontalLayout").addChild(QLabel("simple test"))
     pass
+    # pass
     # print ('test')
     # negative_tc, positive_tc = dataset['y_values_as_set']
     # col_index_x = [idx for idx, el in enumerate(dataset['header_row']) if el == x_combo_box.currentText()][0]

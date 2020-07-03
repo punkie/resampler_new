@@ -1,0 +1,27 @@
+\chapter*{Under-sampling резултати за есктремно дебалансирани множества от данни}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Under-sampling results CART (Decision Tree Classifier)} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{abalone\_19.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{0.529} & \multicolumn{1}{c|}{\textbf{0.058}} & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{\textbf{0.062}} & \multicolumn{1}{c|}{0.115} & \multicolumn{1}{c|}{0.062} & \multicolumn{1}{c|}{0.529} & \multicolumn{1}{c|}{\textbf{0.027}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RU (50.0)}} & \multicolumn{1}{c|}{\textbf{0.651}} & \multicolumn{1}{c|}{0.016} & \multicolumn{1}{c|}{\textbf{0.633}} & \multicolumn{1}{c|}{0.031} & \multicolumn{1}{c|}{\textbf{0.614}} & \multicolumn{1}{c|}{\textbf{0.099}} & \multicolumn{1}{c|}{\textbf{0.651}} & \multicolumn{1}{c|}{0.014}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.523} & \multicolumn{1}{c|}{\textbf{0.100}} & \multicolumn{1}{c|}{0.050} & \multicolumn{1}{c|}{\textbf{0.067}} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.523} & \multicolumn{1}{c|}{\textbf{0.061}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RU (50.0)}} & \multicolumn{1}{c|}{\textbf{0.530}} & \multicolumn{1}{c|}{0.014} & \multicolumn{1}{c|}{\textbf{0.500}} & \multicolumn{1}{c|}{0.027} & \multicolumn{1}{c|}{\textbf{0.427}} & \multicolumn{1}{c|}{\textbf{0.080}} & \multicolumn{1}{c|}{\textbf{0.530}} & \multicolumn{1}{c|}{0.016}\\ 
+	\hline
+	\caption{}
+\end{longtable}
+\end{document}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1.7cm}|} \hline\multicolumn{5}{|c|}{Best results across all tests} \\\hline\multicolumn{1}{|c|}{Dataset \& metric} & \multicolumn{1}{c|}{BV No SM} &\multicolumn{1}{c|}{BV SM} & \multicolumn{1}{c|}{Sampling Method} & \multicolumn{1}{c|}{Algorithm} \\\hline

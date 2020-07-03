@@ -1,0 +1,31 @@
+\chapter*{Over-sampling резултати за есктремно дебалансирани множества от данни}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Over-sampling results CART (Decision Tree Classifier)} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{abalone\_19.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{\textbf{0.528}} & \multicolumn{1}{c|}{\textbf{0.053}} & \multicolumn{1}{c|}{\textbf{0.067}} & \multicolumn{1}{c|}{\textbf{0.058}} & \multicolumn{1}{c|}{\textbf{0.115}} & \multicolumn{1}{c|}{\textbf{0.059}} & \multicolumn{1}{c|}{\textbf{0.528}} & \multicolumn{1}{c|}{\textbf{0.025}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.020} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.025} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.026} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.014}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{0.497} & \multicolumn{1}{c|}{0.010} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.015} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.018} & \multicolumn{1}{c|}{0.497} & \multicolumn{1}{c|}{0.011}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.523} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.050} & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.523} & \multicolumn{1}{c|}{0.061}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.548} & \multicolumn{1}{c|}{0.133} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.107} & \multicolumn{1}{c|}{0.141} & \multicolumn{1}{c|}{0.112} & \multicolumn{1}{c|}{0.548} & \multicolumn{1}{c|}{0.077}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{\textbf{0.823}} & \multicolumn{1}{c|}{\textbf{0.667}} & \multicolumn{1}{c|}{\textbf{0.650}} & \multicolumn{1}{c|}{\textbf{0.623}} & \multicolumn{1}{c|}{\textbf{0.711}} & \multicolumn{1}{c|}{\textbf{0.640}} & \multicolumn{1}{c|}{\textbf{0.823}} & \multicolumn{1}{c|}{\textbf{0.554}}\\ 
+	\hline
+	\caption{}
+\end{longtable}
+\end{document}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1.7cm}|} \hline\multicolumn{5}{|c|}{Best results across all tests} \\\hline\multicolumn{1}{|c|}{Dataset \& metric} & \multicolumn{1}{c|}{BV No SM} &\multicolumn{1}{c|}{BV SM} & \multicolumn{1}{c|}{Sampling Method} & \multicolumn{1}{c|}{Algorithm} \\\hline

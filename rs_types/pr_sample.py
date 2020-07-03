@@ -65,14 +65,25 @@ average_precision["micro"] = average_precision_score(Y_test, y_score,
 print('Average precision score, micro-averaged over all classes: {0:0.2f}'
       .format(average_precision["micro"]))
 
-plt.figure()
-plt.step(recall['micro'], precision['micro'], where='post')
+f, ax = plt.subplots()
 
-plt.xlabel('Recall')
-plt.ylabel('Precision')
-plt.ylim([0.0, 1.05])
-plt.xlim([0.0, 1.0])
-plt.title(
-    'Average precision score, micro-averaged over all classes: AP={0:0.2f}'
-    .format(average_precision["micro"]))
+ax.get_figure().set_size_inches(5, 5)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.legend(loc="upper right", prop={'size': 7})
+ax.set_xlabel('Recall')
+ax.set_ylabel('Precision')
+ax.set_ylim([0.0, 1.05])
+ax.set_xlim([0.0, 1.0])
+ax.plot(recall['micro'], precision['micro'], color='b')
+# plt.figure()
+# plt.step(recall['micro'], precision['micro'])
+#
+# plt.xlabel('Recall')
+# plt.ylabel('Precision')
+# plt.ylim([0.0, 1.05])
+# plt.xlim([0.0, 1.0])
+# plt.title(
+#     'Average precision score, micro-averaged over all classes: AP={0:0.2f}'
+#     .format(average_precision["micro"]))
 plt.show()

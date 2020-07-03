@@ -23,7 +23,7 @@ def do_resampling(state):
 
 
 def do_resampling_without_writing_to_file(sampling_algorithm, x_values, y_values):
-    x_resampled_values, y_resampled_values = sampling_algorithm.value[1].fit_sample(x_values, y_values)
+    x_resampled_values, y_resampled_values = sampling_algorithm.value[1].fit_resample(x_values, y_values.astype(int))
     resampled_dataset = dict()
     resampled_dataset['x_values'] = x_resampled_values
     resampled_dataset['y_values'] = y_resampled_values
