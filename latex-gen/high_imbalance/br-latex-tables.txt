@@ -1,0 +1,107 @@
+\documentclass[12pt,oneside]{report}
+\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[table]{xcolor}\usepackage{fancyhdr}\pagestyle{fancy}
+\usepackage[T2A]{fontenc}\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{caption}\captionsetup[table]{name=Таблица}\definecolor{lightgray}{gray}{0.9}
+\fancyhead{}
+\fancyhead[RO,LE]{Методи за работа с дебалансирани множества от данни в машинно самообучение}
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+\begin{document}
+\chapter*{Най-добрите резултати за силно дебалансирани множества от данни}
+\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{0.5cm}|m{1.7cm}|}
+	\hline
+	\multicolumn{6}{|c|}{Best results across all tests} \\	\hline
+	\multicolumn{1}{|c|}{Dataset \& metric} & \multicolumn{1}{c|}{BV w/o SM} & \multicolumn{1}{c|}{Alg}&\multicolumn{1}{c|}{BV w/ SM} & \multicolumn{1}{c|}{Alg} & \multicolumn{1}{c|}{SM} \\ 
+	\hline
+	\multicolumn{1}{|l|}{\textit{ecoli.csv}} & \multicolumn{5}{r|}{ } \\ 
+	\hline
+	\hline
+	\hline
+	\multicolumn{1}{|r|}{$BA$}  & \multicolumn{1}{c|}{0.798} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.907}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$PR$}  & \multicolumn{1}{c|}{0.850} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.863}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{CNN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$RE$}  & \multicolumn{1}{c|}{0.633} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.933}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{CC/RU/\\SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$F_{1}$}  & \multicolumn{1}{c|}{0.674} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.781}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{1}$}  & \multicolumn{1}{c|}{0.762} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.895}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{2}$}  & \multicolumn{1}{c|}{0.705} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.804}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN/ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{ROC}$}  & \multicolumn{1}{c|}{0.943} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.954}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{RENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{PR}$}  & \multicolumn{1}{c|}{0.812} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.860}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{RENN}} \\ 
+	\cline{5-6} 
+	\hline
+	\multicolumn{1}{|l|}{\textit{mammography.csv}} & \multicolumn{5}{r|}{ } \\ 
+	\hline
+	\hline
+	\hline
+	\multicolumn{1}{|r|}{$BA$}  & \multicolumn{1}{c|}{0.783} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.911}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$PR$}  & \multicolumn{1}{c|}{\textbf{0.824}} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{0.819} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{TL}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$RE$}  & \multicolumn{1}{c|}{0.573} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.973}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{NM1}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$F_{1}$}  & \multicolumn{1}{c|}{0.611} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.655}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{RENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{1}$}  & \multicolumn{1}{c|}{0.753} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.910}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{2}$}  & \multicolumn{1}{c|}{0.622} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.659}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{RENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{ROC}$}  & \multicolumn{1}{c|}{0.886} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.954}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{PR}$}  & \multicolumn{1}{c|}{0.684} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.690}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{TL}} \\ 
+	\cline{5-6} 
+	\hline
+	\multicolumn{1}{|l|}{\textit{ozone\_level.csv}} & \multicolumn{5}{r|}{ } \\ 
+	\hline
+	\hline
+	\hline
+	\multicolumn{1}{|r|}{$BA$}  & \multicolumn{1}{c|}{0.604} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.730}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{NM3}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$PR$}  & \multicolumn{1}{c|}{\textbf{0.307}} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{0.302} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{TL}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$RE$}  & \multicolumn{1}{c|}{0.234} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{1.000}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$F_{1}$}  & \multicolumn{1}{c|}{0.238} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.273}} &\multicolumn{1}{c|}{\shortstack[l]{SVM/CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTEBoost}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{1}$}  & \multicolumn{1}{c|}{0.469} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.727}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{RU}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{2}$}  & \multicolumn{1}{c|}{0.253} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.289}} &\multicolumn{1}{c|}{\shortstack[l]{SVM/CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTEBoost}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{ROC}$}  & \multicolumn{1}{c|}{0.658} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.841}} &\multicolumn{1}{c|}{\shortstack[l]{SVM/CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTEBoost}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{PR}$}  & \multicolumn{1}{c|}{0.128} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.277}} &\multicolumn{1}{c|}{\shortstack[l]{SVM/CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTEBoost}} \\ 
+	\cline{5-6} 
+	\hline
+	\multicolumn{1}{|l|}{\textit{pen\_digits.csv}} & \multicolumn{5}{r|}{ } \\ 
+	\hline
+	\hline
+	\hline
+	\multicolumn{1}{|r|}{$BA$}  & \multicolumn{1}{c|}{0.994} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.998}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE/SMOTE+ENN/\\SMOTE+TL/RO}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$PR$}  & \multicolumn{1}{c|}{\textbf{0.994}} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.994}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{AllKNN/OSS/\\IHT/TL/\\ENN/NCL}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$RE$}  & \multicolumn{1}{c|}{0.988} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{1.000}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{NM2}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$F_{1}$}  & \multicolumn{1}{c|}{0.991} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.994}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE/SMOTE+ENN/\\SMOTE+TL}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{1}$}  & \multicolumn{1}{c|}{0.994} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.998}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE/SMOTE+ENN/\\SMOTE+TL/RO}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{2}$}  & \multicolumn{1}{c|}{0.991} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.994}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE/SMOTE+ENN/\\SMOTE+TL}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{ROC}$}  & \multicolumn{1}{c|}{\textbf{1.000}} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{1.000}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{CC/AllKNN/\\RU/OSS/\\SMOTE+TL/NM1/\\NCL/RENN/\\SMOTE/IHT/\\SMOTE+ENN/RO/\\TL/NM3/\\CNN/ENN/\\ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{PR}$}  & \multicolumn{1}{c|}{0.998} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.999}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE/SMOTE+ENN/\\SMOTE+TL/RO}} \\ 
+	\cline{5-6} 
+	\hline
+	\caption{Най-добрите резултати измежду всички семплиращи методи и класификационни алгоритми} \\ 
+\end{longtable}\end{document}

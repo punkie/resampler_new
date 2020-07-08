@@ -31,6 +31,7 @@ def update_widgets_after_successful_datasetload(main_window, path):
     main_window.widgets.get_label(Widgets.Labels.NumberOfPositiveExamplesLabel.value).setText(str(dataset['number_of_positive_examples']))
     main_window.widgets.get_label(Widgets.Labels.TargetClassPercentageLabel.value).setText(str(dataset['positive_examples_percentage']))
     main_window.widgets.get_label(Widgets.Labels.ImbalancedRatioLabel.value).setText(str(dataset['imbalanced_ratio']))
+    main_window.widgets.get_label(Widgets.Labels.SelectedDatasetExperimentsTabLabel.value).setText(str(dataset['name']))
     # main_window.widgets.get_label(Widgets.Labels.ResampledDatasetStatistics.value).setText(" ")
     # main_window.widgets.get_label(Widgets.Labels.ResamplingStatusLabel.value).setText(" ")
     # main_window.widgets.get_button(Widgets.Buttons.ImgDiffsButton.value).setEnabled(False)

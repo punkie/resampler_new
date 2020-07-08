@@ -1,9 +1,9 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtWidgets import QFileDialog, QVBoxLayout
 from functions.drawing_functions import draw_comparision_picture, draw_roc_graph, draw_pr_graph, draw_pca, \
-    draw_standard_graph
+    draw_standard_graph, draw_pie_chart
 from rs_types.classification_algorithms import ClassificationAlgorithms
 from rs_types.resampling_methods import ResamplingAlgorithms
 from rs_types.widgets import Widgets
@@ -96,11 +96,14 @@ def show_roc_graphs(main_window):
     draw_roc_graph(main_window.state)
 
 
-def show_pair_plot_graph(main_window):
-    dataset = main_window.state.dataset
+def show_pair_plot_graph(main_window, is_resampled_case):
+    if is_resampled_case:
+        dataset = main_window.state.resampled_dataset
+    else:
+        dataset = main_window.state.dataset
     df = dataset['dataset_as_dataframe']
-    df.columns = dataset['header_row']
-    negative_tc, positive_tc = dataset['y_values_as_set']
+    df.columns = main_window.state.dataset['header_row']
+    negative_tc, positive_tc = main_window.state.dataset['y_values_as_set']
     df.loc[df['Y'] == negative_tc, ['Y']] = 'Negative class'
     df.loc[df['Y'] == positive_tc, ['Y']] = 'Positive class'
     pp = sns.pairplot(df, hue="Y", diag_kind="kde", palette={'Negative class': 'blue', 'Positive class': 'red'}, size=1);
@@ -111,16 +114,26 @@ def show_pair_plot_graph(main_window):
     pp.fig.subplots_adjust(top=0.92, bottom=0.085)
     pp.fig.show()
 
-def show_normal_graph(main_window):
-    draw_standard_graph(main_window)
+def show_normal_graph(main_window, is_resampled_case):
+    draw_standard_graph(main_window, is_resampled_case)
 
-def show_pca_graph(main_window, is_resampled_dataset):
-    draw_pca(main_window, is_resampled_dataset)
+def show_pca_graph(main_window, is_resampled_case):
+    draw_pca(main_window, is_resampled_case)
 
+def show_pie_chart(main_window, is_resampled_case):
+    draw_pie_chart(main_window, is_resampled_case)
 
 def show_pr_graphs(main_window):
     draw_pr_graph(main_window.state)
 
+def clear_graphs(main_window):
+    main_v_layout = main_window.findChild(QVBoxLayout, "verticalLayout_14")
+    for i in reversed(range(main_v_layout.count())):
+        clear_layout(main_v_layout.itemAt(i))
+
+def clear_layout(layout):
+    for i in reversed(range(layout.count())):
+        layout.itemAt(i).widget().setParent(None)
 #
 # def toggle_widgets(widgets_to_be_blocked, widgets_to_be_enabled):
 #     for w in widgets_to_be_blocked:

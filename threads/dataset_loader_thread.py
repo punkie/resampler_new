@@ -20,7 +20,7 @@ class DatasetLoader(QThread):
     def run(self):
         try:
             load_dataset(self)
-            compute_some_statistics_for_the_dataset(self.main_window.state.dataset)
+            compute_some_statistics_for_the_dataset(self.main_window.state.dataset, self.main_window.state, False)
         except Exception as e:
             self.reraise_non_mt_exception_signal.emit(e)
         # load_table(self.main_window)

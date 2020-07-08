@@ -1,6 +1,7 @@
-\chapter*{Over-sampling резултати за есктремно дебалансирани множества от данни}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}}
+\chapter*{Over-sampling резултати за есктремно дебалансирани множества от данни}
+\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}}
 	\hline
-	\multicolumn{9}{|c|}{Over-sampling results CART (Decision Tree Classifier)} \\ 
+	\multicolumn{9}{|c|}{Over-sampling results CART} \\ 
 	\hline
 	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
 	\hline
@@ -8,24 +9,86 @@
 	\hline
 \multicolumn{1}{|l|}{\textit{abalone\_19.csv}} &  & & & & & & & \\ 
 	\hline
-\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{\textbf{0.528}} & \multicolumn{1}{c|}{\textbf{0.053}} & \multicolumn{1}{c|}{\textbf{0.067}} & \multicolumn{1}{c|}{\textbf{0.058}} & \multicolumn{1}{c|}{\textbf{0.115}} & \multicolumn{1}{c|}{\textbf{0.059}} & \multicolumn{1}{c|}{\textbf{0.528}} & \multicolumn{1}{c|}{\textbf{0.025}}\\ 
+\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{0.528} & \multicolumn{1}{c|}{\textbf{0.058}} & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{0.062} & \multicolumn{1}{c|}{0.115} & \multicolumn{1}{c|}{0.062} & \multicolumn{1}{c|}{0.528} & \multicolumn{1}{c|}{0.027}\\ 
 	\hline
 	\hline
 	\hline
-\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.020} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.025} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.026} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.014}\\ 
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.017} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.022} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.024} & \multicolumn{1}{c|}{0.512} & \multicolumn{1}{c|}{0.013}\\ 
 	\hline
-\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{0.497} & \multicolumn{1}{c|}{0.010} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.015} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.018} & \multicolumn{1}{c|}{0.497} & \multicolumn{1}{c|}{0.011}\\ 
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.046} & \multicolumn{1}{c|}{0.125} & \multicolumn{1}{c|}{0.065} & \multicolumn{1}{c|}{0.220} & \multicolumn{1}{c|}{0.073} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.021}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.9)}} & \multicolumn{1}{c|}{0.558} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.150} & \multicolumn{1}{c|}{\textbf{0.073}} & \multicolumn{1}{c|}{0.240} & \multicolumn{1}{c|}{\textbf{0.086}} & \multicolumn{1}{c|}{0.558} & \multicolumn{1}{c|}{0.032}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.043} & \multicolumn{1}{c|}{0.125} & \multicolumn{1}{c|}{0.061} & \multicolumn{1}{c|}{0.220} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.541} & \multicolumn{1}{c|}{0.020}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (47.2)}} & \multicolumn{1}{c|}{\textbf{0.579}} & \multicolumn{1}{c|}{0.031} & \multicolumn{1}{c|}{\textbf{0.225}} & \multicolumn{1}{c|}{0.053} & \multicolumn{1}{c|}{\textbf{0.349}} & \multicolumn{1}{c|}{0.080} & \multicolumn{1}{c|}{0.579} & \multicolumn{1}{c|}{0.020}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.007} & \multicolumn{1}{c|}{0.033} & \multicolumn{1}{c|}{0.011} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.015} & \multicolumn{1}{c|}{\textbf{0.757}} & \multicolumn{1}{c|}{\textbf{0.045}}\\ 
 	\hline
 \multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} &  & & & & & & & \\ 
 	\hline
-\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.523} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.050} & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.071} & \multicolumn{1}{c|}{0.523} & \multicolumn{1}{c|}{0.061}\\ 
+\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.497} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.497} & \multicolumn{1}{c|}{0.012}\\ 
 	\hline
 	\hline
 	\hline
-\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.548} & \multicolumn{1}{c|}{0.133} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.107} & \multicolumn{1}{c|}{0.141} & \multicolumn{1}{c|}{0.112} & \multicolumn{1}{c|}{0.548} & \multicolumn{1}{c|}{0.077}\\ 
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.547} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.547} & \multicolumn{1}{c|}{0.111}\\ 
 	\hline
-\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{\textbf{0.823}} & \multicolumn{1}{c|}{\textbf{0.667}} & \multicolumn{1}{c|}{\textbf{0.650}} & \multicolumn{1}{c|}{\textbf{0.623}} & \multicolumn{1}{c|}{\textbf{0.711}} & \multicolumn{1}{c|}{\textbf{0.640}} & \multicolumn{1}{c|}{\textbf{0.823}} & \multicolumn{1}{c|}{\textbf{0.554}}\\ 
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{0.799} & \multicolumn{1}{c|}{0.667} & \multicolumn{1}{c|}{0.600} & \multicolumn{1}{c|}{0.613} & \multicolumn{1}{c|}{0.641} & \multicolumn{1}{c|}{0.623} & \multicolumn{1}{c|}{0.799} & \multicolumn{1}{c|}{0.571}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.9)}} & \multicolumn{1}{c|}{\textbf{0.850}} & \multicolumn{1}{c|}{\textbf{0.767}} & \multicolumn{1}{c|}{\textbf{0.700}} & \multicolumn{1}{c|}{\textbf{0.713}} & \multicolumn{1}{c|}{\textbf{0.741}} & \multicolumn{1}{c|}{\textbf{0.723}} & \multicolumn{1}{c|}{\textbf{0.850}} & \multicolumn{1}{c|}{\textbf{0.669}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{0.799} & \multicolumn{1}{c|}{0.667} & \multicolumn{1}{c|}{0.600} & \multicolumn{1}{c|}{0.613} & \multicolumn{1}{c|}{0.641} & \multicolumn{1}{c|}{0.623} & \multicolumn{1}{c|}{0.799} & \multicolumn{1}{c|}{0.571}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (47.4)}} & \multicolumn{1}{c|}{0.797} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.600} & \multicolumn{1}{c|}{0.530} & \multicolumn{1}{c|}{0.598} & \multicolumn{1}{c|}{0.539} & \multicolumn{1}{c|}{0.797} & \multicolumn{1}{c|}{0.504}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{0.538} & \multicolumn{1}{c|}{0.114} & \multicolumn{1}{c|}{0.100} & \multicolumn{1}{c|}{0.089} & \multicolumn{1}{c|}{0.140} & \multicolumn{1}{c|}{0.097} & \multicolumn{1}{c|}{0.436} & \multicolumn{1}{c|}{0.081}\\ 
 	\hline
 	\caption{}
 \end{longtable}
-\end{document}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1.7cm}|} \hline\multicolumn{5}{|c|}{Best results across all tests} \\\hline\multicolumn{1}{|c|}{Dataset \& metric} & \multicolumn{1}{c|}{BV No SM} &\multicolumn{1}{c|}{BV SM} & \multicolumn{1}{c|}{Sampling Method} & \multicolumn{1}{c|}{Algorithm} \\\hline
+\end{document}\chapter*{Over-sampling резултати за есктремно дебалансирани множества от данни}\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}}
+	\hline
+	\multicolumn{9}{|c|}{Over-sampling results SVM} \\ 
+	\hline
+	\multicolumn{1}{|c|}{DS \& SM (\%Pos. ex.)}& \multicolumn{8}{c|}{Metrics} \\ 
+	\hline
+& \multicolumn{1}{c|}{$BA$} & \multicolumn{1}{c|}{$PR$} & \multicolumn{1}{c|}{$RE$} & \multicolumn{1}{c|}{$F_1$} & \multicolumn{1}{c|}{$G_1$} & \multicolumn{1}{c|}{$G_2$} & \multicolumn{1}{c|}{$AUC_{ROC}$} & \multicolumn{1}{c|}{$AUC_{PR}$} \\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{abalone\_19.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (0.8)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.693} & \multicolumn{1}{c|}{0.023}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{0.750} & \multicolumn{1}{c|}{0.028} & \multicolumn{1}{c|}{\textbf{0.725}} & \multicolumn{1}{c|}{0.053} & \multicolumn{1}{c|}{0.730} & \multicolumn{1}{c|}{0.137} & \multicolumn{1}{c|}{0.840} & \multicolumn{1}{c|}{0.080}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{\textbf{0.755}} & \multicolumn{1}{c|}{0.031} & \multicolumn{1}{c|}{\textbf{0.725}} & \multicolumn{1}{c|}{\textbf{0.059}} & \multicolumn{1}{c|}{\textbf{0.743}} & \multicolumn{1}{c|}{\textbf{0.145}} & \multicolumn{1}{c|}{0.845} & \multicolumn{1}{c|}{0.103}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.9)}} & \multicolumn{1}{c|}{0.754} & \multicolumn{1}{c|}{0.030} & \multicolumn{1}{c|}{\textbf{0.725}} & \multicolumn{1}{c|}{0.057} & \multicolumn{1}{c|}{0.742} & \multicolumn{1}{c|}{0.142} & \multicolumn{1}{c|}{0.846} & \multicolumn{1}{c|}{0.111}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{\textbf{0.755}} & \multicolumn{1}{c|}{0.031} & \multicolumn{1}{c|}{\textbf{0.725}} & \multicolumn{1}{c|}{\textbf{0.059}} & \multicolumn{1}{c|}{\textbf{0.743}} & \multicolumn{1}{c|}{\textbf{0.145}} & \multicolumn{1}{c|}{0.845} & \multicolumn{1}{c|}{0.103}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (47.2)}} & \multicolumn{1}{c|}{0.744} & \multicolumn{1}{c|}{0.027} & \multicolumn{1}{c|}{\textbf{0.725}} & \multicolumn{1}{c|}{0.051} & \multicolumn{1}{c|}{0.732} & \multicolumn{1}{c|}{0.135} & \multicolumn{1}{c|}{\textbf{0.853}} & \multicolumn{1}{c|}{\textbf{0.119}}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{0.555} & \multicolumn{1}{c|}{\textbf{0.037}} & \multicolumn{1}{c|}{0.150} & \multicolumn{1}{c|}{0.052} & \multicolumn{1}{c|}{0.234} & \multicolumn{1}{c|}{0.068} & \multicolumn{1}{c|}{0.765} & \multicolumn{1}{c|}{0.067}\\ 
+	\hline
+\multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} &  & & & & & & & \\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{No Resampling (1.2)}} & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{\textbf{0.883}} & \multicolumn{1}{c|}{\textbf{0.492}}\\ 
+	\hline
+	\hline
+	\hline
+\multicolumn{1}{|r|}{\textit{RO (50.0)}} & \multicolumn{1}{c|}{\textbf{0.546}} & \multicolumn{1}{c|}{0.021} & \multicolumn{1}{c|}{\textbf{0.200}} & \multicolumn{1}{c|}{0.038} & \multicolumn{1}{c|}{0.264} & \multicolumn{1}{c|}{0.065} & \multicolumn{1}{c|}{0.629} & \multicolumn{1}{c|}{0.176}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE (50.0)}} & \multicolumn{1}{c|}{0.539} & \multicolumn{1}{c|}{0.023} & \multicolumn{1}{c|}{\textbf{0.200}} & \multicolumn{1}{c|}{0.041} & \multicolumn{1}{c|}{\textbf{0.266}} & \multicolumn{1}{c|}{\textbf{0.068}} & \multicolumn{1}{c|}{0.654} & \multicolumn{1}{c|}{0.155}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{ADASYN (49.9)}} & \multicolumn{1}{c|}{0.539} & \multicolumn{1}{c|}{\textbf{0.024}} & \multicolumn{1}{c|}{\textbf{0.200}} & \multicolumn{1}{c|}{\textbf{0.042}} & \multicolumn{1}{c|}{\textbf{0.266}} & \multicolumn{1}{c|}{\textbf{0.068}} & \multicolumn{1}{c|}{0.655} & \multicolumn{1}{c|}{0.154}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+TL (50.0)}} & \multicolumn{1}{c|}{0.539} & \multicolumn{1}{c|}{0.023} & \multicolumn{1}{c|}{\textbf{0.200}} & \multicolumn{1}{c|}{0.041} & \multicolumn{1}{c|}{\textbf{0.266}} & \multicolumn{1}{c|}{\textbf{0.068}} & \multicolumn{1}{c|}{0.654} & \multicolumn{1}{c|}{0.155}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTE+ENN (47.4)}} & \multicolumn{1}{c|}{0.526} & \multicolumn{1}{c|}{0.019} & \multicolumn{1}{c|}{\textbf{0.200}} & \multicolumn{1}{c|}{0.035} & \multicolumn{1}{c|}{0.262} & \multicolumn{1}{c|}{0.062} & \multicolumn{1}{c|}{0.626} & \multicolumn{1}{c|}{0.149}\\ 
+	\hline
+\multicolumn{1}{|r|}{\textit{SMOTEBoost (0.0)}} & \multicolumn{1}{c|}{0.513} & \multicolumn{1}{c|}{0.017} & \multicolumn{1}{c|}{0.050} & \multicolumn{1}{c|}{0.025} & \multicolumn{1}{c|}{0.069} & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{0.488} & \multicolumn{1}{c|}{0.041}\\ 
+	\hline
+	\caption{}
+\end{longtable}
+\end{document}

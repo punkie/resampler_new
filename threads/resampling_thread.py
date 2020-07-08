@@ -13,7 +13,7 @@ class Resampling(QThread):
 
     def run(self):
         resampled_dataset = do_resampling(self.main_window.state)
-        compute_some_statistics_for_the_dataset(resampled_dataset)
+        compute_some_statistics_for_the_dataset(resampled_dataset, self.main_window.state, True)
         self.main_window.state.resampled_dataset = resampled_dataset
         self.__custom_post_process()
 

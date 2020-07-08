@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{caption}\captionsetup[table]{name=Таблица}\definecolor{lightgray}{gray}{0.9}
 \fancyhead{}
-\fancyhead[RO,LE]{Методи за работа с дебалансирани множества от данни в машинно самообучение}
+\fancyhead[RO,LE]{Дебалансирани множества от данни и проблемите и решенията, свързани с тях}
 \fancyfoot{}
 \fancyfoot[C]{\thepage}
 \begin{document}

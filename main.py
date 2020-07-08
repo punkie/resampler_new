@@ -16,7 +16,8 @@ from error_dialog import Ui_Dialog
 from functions.ui_qt_slots import choose_dataset, \
     choose_outputdir, perform_resampling, \
     choose_sampling_algorithm, show_img_diffs, classify_datasets, show_roc_graphs, show_pr_graphs, \
-    choose_classification_algorithm, show_pca_graph, show_normal_graph, store_selected_k, show_pair_plot_graph
+    choose_classification_algorithm, show_pca_graph, show_normal_graph, store_selected_k, show_pair_plot_graph, \
+    show_pie_chart, clear_graphs
 from functions.ui_helping_functions import update_widgets_after_classification, update_widgets_after_successful_datasetload
 # from generated_pyqt_ui import Ui_MainWindow
 from generate_pyqt_ui_v2 import Ui_DataResamplingTools
@@ -118,20 +119,23 @@ class MainWindow(QMainWindow):
             testLabel.setMaximumHeight(350)
             hLayout.addWidget(testLabel)
 
-            a = np.array(['Class. Alg.', 'Balanced Accuracy', 'Precision', 'Recall', 'F1', 'G1', 'G2', 'AUC_roc', 'AUC_pr'])
+            a = np.array(['Classifier', 'Sampling Method', 'Balanced Accuracy', 'Precision', 'Recall', 'F1', 'G1', 'G2', 'AUC_roc', 'AUC_pr'])
             b = np.array(range(1, 10))
             c = np.array(range(1, 10))
-
-            b = ['SVM'] + [round(self.state.classified_data_normal_case['bal_acc'], 3)] + list(map(lambda x: round(x, 3), self.state.classified_data_normal_case['pre_rec_f1_g_mean1_g_mean2_tuple'])) + [round(self.state.classified_data_normal_case['avg_roc'], 3)] + [round(self.state.classified_data_normal_case['average_precision'], 3)]
-            c = ['SVM'] + [round(self.state.classified_data_resampled_case['bal_acc'], 3)] + list(map(lambda x: round(x, 3), self.state.classified_data_resampled_case['pre_rec_f1_g_mean1_g_mean2_tuple'])) + [round(self.state.classified_data_resampled_case['avg_roc'], 3)] + [round(self.state.classified_data_resampled_case['average_precision'], 3)]
+            class_alg = self.state.classified_data_normal_case['ClassAlg']
+            b = [self.state.classified_data_normal_case['ClassAlg']] + ["---"] + [round(self.state.classified_data_normal_case['bal_acc'], 3)] + list(map(lambda x: round(x, 3), self.state.classified_data_normal_case['pre_rec_f1_g_mean1_g_mean2_tuple'])) + [round(self.state.classified_data_normal_case['avg_roc'], 3)] + [round(self.state.classified_data_normal_case['average_precision'], 3)]
+            c = [self.state.classified_data_resampled_case['ClassAlg']] + [self.state.classified_data_resampled_case['SamplingAlg']] + [round(self.state.classified_data_resampled_case['bal_acc'], 3)] + list(map(lambda x: round(x, 3), self.state.classified_data_resampled_case['pre_rec_f1_g_mean1_g_mean2_tuple'])) + [round(self.state.classified_data_resampled_case['avg_roc'], 3)] + [round(self.state.classified_data_resampled_case['average_precision'], 3)]
             res = np.vstack((a, b, c)).T
+
+            # tab_2 = [['%.2f' % j for j in i] for i in res]
 
             fig, ax = plt.subplots(1, 1)
             fig.patch.set_visible(False)
 
             ax.axis('off')
             ax.axis('tight')
-            df = pd.DataFrame(res, columns=[' ', 'Standard Case', 'Resampled Case'])
+            df = pd.DataFrame(res, columns=[' ', 'Standard Case', 'Re-sampled Case'])
+            # df.applymap('{:,.2f}'.format)
             # df.style.applymap(self.color_negative_red, subset=['NormalCase', 'ResampledCase'])
             # df.plot(table=True, ax=ax)
             #fig = ax.get_figure()
@@ -181,8 +185,11 @@ class MainWindow(QMainWindow):
             # hLayout.addWidget(canvas)
             vboxLayout.addLayout(hLayout)
 
+
+
     def update_gui_after_dataset_load(self, value):
         update_widgets_after_successful_datasetload(self, value)
+
 
     def reraise_non_mt_exception(self, exception):
         raise exception
@@ -211,14 +218,18 @@ class MainWindow(QMainWindow):
         self.widgets.get_combo_box(Widgets.ComboBoxes.NumberOfFoldsCV.value).activated.connect(lambda: store_selected_k(self))
         # self.widgets.get_button(Widgets.Buttons.ShowROCGraphs.value).clicked.connect(lambda: show_roc_graphs(self))
         self.widgets.get_button(Widgets.Buttons.StandardGraphNormalDatasetButton.value).clicked.connect(
-            lambda: show_normal_graph(self))
-        self.widgets.get_button(Widgets.Buttons.PairPlotNormalDatasetButton.value).clicked.connect(lambda: show_pair_plot_graph(self))
-        # self.widget.get_button(Widgets.Buttons.PairPlotResampledDatasetButton).clicked.connect(
-        #     lambda: show_pair_plot_graph(self))
+            lambda: show_normal_graph(self, False))
+        self.widgets.get_button(Widgets.Buttons.PairPlotNormalDatasetButton.value).clicked.connect(lambda: show_pair_plot_graph(self, False))
+        self.widgets.get_button(Widgets.Buttons.PairPlotResampledDatasetButton.value).clicked.connect(
+            lambda: show_pair_plot_graph(self, True))
         self.widgets.get_button(Widgets.Buttons.StandardGraphResampledDatasetButton.value).clicked.connect(
-            lambda: show_normal_graph(self))
+            lambda: show_normal_graph(self, True))
         self.widgets.get_button(Widgets.Buttons.PcaGraphNormalDatasetButton.value).clicked.connect(lambda: show_pca_graph(self, False))
         self.widgets.get_button(Widgets.Buttons.PcaGraphResampledDatasetButton.value).clicked.connect(lambda: show_pca_graph(self, True))
+        self.widgets.get_button(Widgets.Buttons.PieChartNormalDatasetButton.value).clicked.connect(lambda: show_pie_chart(self, False))
+        self.widgets.get_button(Widgets.Buttons.PieChartResampledDatasetButton.value).clicked.connect(
+            lambda: show_pie_chart(self, True))
+        self.widgets.get_button(Widgets.Buttons.ClearButton.value).clicked.connect(lambda: clear_graphs(self))
         # self.widgets.get_button(Widgets.Buttons.ShowPRGraphs.value).clicked.connect(lambda: show_pr_graphs(self))
 
         #self.findChild(QHBoxLayout, "testHorizontalLayout").addWidget(QLabel("simple test"))

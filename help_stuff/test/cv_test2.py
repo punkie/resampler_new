@@ -1,4 +1,4 @@
-from sklearn import svm, datasets
+from sklearn import svm, datasets, tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import average_precision_score
@@ -23,9 +23,9 @@ def start():
                                                         random_state=random_state)
 
     # Create a simple classifier
-    classifier = svm.LinearSVC(random_state=random_state)
+    classifier = tree.DecisionTreeClassifier(criterion='entropy', random_state=np.random.RandomState(1))
     classifier.fit(X_train, y_train)
-    y_score = classifier.decision_function(X_test)
+    y_score = classifier.predict_proba(X_test)
 
     average_precision = average_precision_score(y_test, y_score)
 

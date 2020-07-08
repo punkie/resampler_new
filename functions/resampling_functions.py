@@ -1,4 +1,8 @@
 import datetime
+
+import pandas as pd
+import numpy as np
+
 from functions import file_handling_functions
 
 
@@ -16,6 +20,8 @@ def do_resampling(state):
     resampled_dataset = dict()
     resampled_dataset['x_values'] = x_resampled_values
     resampled_dataset['y_values'] = y_resampled_values
+    rd_as_df = pd.DataFrame(data=np.c_[x_resampled_values, np.vstack(y_resampled_values.T)], columns=dataset['header_row'])
+    resampled_dataset['dataset_as_dataframe'] = rd_as_df
     file_handling_functions.write_dataset_to_csv\
         (__create_resampled_file_name(output_directory, dataset['name'], sampling_algorithm.value[0]),
             x_values_param=x_resampled_values, y_values_param=y_resampled_values)

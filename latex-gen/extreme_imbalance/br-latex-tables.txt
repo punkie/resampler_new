@@ -1,0 +1,65 @@
+\documentclass[12pt,oneside]{report}
+\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[table]{xcolor}\usepackage{fancyhdr}\pagestyle{fancy}
+\usepackage[T2A]{fontenc}\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{caption}\captionsetup[table]{name=Таблица}\definecolor{lightgray}{gray}{0.9}
+\fancyhead{}
+\fancyhead[RO,LE]{Методи за работа с дебалансирани множества от данни в машинно самообучение}
+\fancyfoot{}
+\fancyfoot[C]{\thepage}
+\begin{document}
+\chapter*{Най-добрите резултати за есктремно дебалансирани множества от данни}
+\begin{longtable}{|m{1.5cm}|m{1cm}|m{1cm}|m{1cm}|m{0.5cm}|m{1.7cm}|}
+	\hline
+	\multicolumn{6}{|c|}{Best results across all tests} \\	\hline
+	\multicolumn{1}{|c|}{Dataset \& metric} & \multicolumn{1}{c|}{BV w/o SM} & \multicolumn{1}{c|}{Alg}&\multicolumn{1}{c|}{BV w/ SM} & \multicolumn{1}{c|}{Alg} & \multicolumn{1}{c|}{SM} \\ 
+	\hline
+	\multicolumn{1}{|l|}{\textit{abalone\_19.csv}} & \multicolumn{5}{r|}{ } \\ 
+	\hline
+	\hline
+	\hline
+	\multicolumn{1}{|r|}{$BA$}  & \multicolumn{1}{c|}{0.528} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.755}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+TL/SMOTE}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$PR$}  & \multicolumn{1}{c|}{\textbf{0.058}} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.058}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{NCL}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$RE$}  & \multicolumn{1}{c|}{0.067} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.942}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{NM2}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$F_{1}$}  & \multicolumn{1}{c|}{0.062} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.073}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{1}$}  & \multicolumn{1}{c|}{0.115} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.743}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+TL/SMOTE}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{2}$}  & \multicolumn{1}{c|}{0.062} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.145}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+TL/SMOTE}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{ROC}$}  & \multicolumn{1}{c|}{0.693} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.853}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{PR}$}  & \multicolumn{1}{c|}{0.027} & \multicolumn{1}{c|}{ \shortstack[l]{CART}} & \multicolumn{1}{c|}{\textbf{0.119}} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{SMOTE+ENN}} \\ 
+	\cline{5-6} 
+	\hline
+	\multicolumn{1}{|l|}{\textit{poker-8\_vs\_6.csv}} & \multicolumn{5}{r|}{ } \\ 
+	\hline
+	\hline
+	\hline
+	\multicolumn{1}{|r|}{$BA$}  & \multicolumn{1}{c|}{0.500} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.850}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$PR$}  & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{ \shortstack[l]{SVM/CART}} & \multicolumn{1}{c|}{\textbf{0.767}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$RE$}  & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{ \shortstack[l]{SVM/CART}} & \multicolumn{1}{c|}{\textbf{1.000}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{CC}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$F_{1}$}  & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{ \shortstack[l]{SVM/CART}} & \multicolumn{1}{c|}{\textbf{0.713}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{1}$}  & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{ \shortstack[l]{SVM/CART}} & \multicolumn{1}{c|}{\textbf{0.741}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$G_{2}$}  & \multicolumn{1}{c|}{0.000} & \multicolumn{1}{c|}{ \shortstack[l]{SVM/CART}} & \multicolumn{1}{c|}{\textbf{0.723}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{ROC}$}  & \multicolumn{1}{c|}{\textbf{0.883}} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{0.877} &\multicolumn{1}{c|}{\shortstack[l]{SVM}}  & \multicolumn{1}{c|}{ \shortstack[l]{OSS}} \\ 
+	\cline{5-6} 
+	\multicolumn{1}{|r|}{$AUC_{PR}$}  & \multicolumn{1}{c|}{0.492} & \multicolumn{1}{c|}{ \shortstack[l]{SVM}} & \multicolumn{1}{c|}{\textbf{0.669}} &\multicolumn{1}{c|}{\shortstack[l]{CART}}  & \multicolumn{1}{c|}{ \shortstack[l]{ADASYN}} \\ 
+	\cline{5-6} 
+	\hline
+	\caption{Най-добрите резултати измежду всички семплиращи методи и класификационни алгоритми} \\ 
+\end{longtable}\end{document}

@@ -14,10 +14,15 @@ from collections import Counter
 from sklearn.decomposition import PCA
 
 
-def compute_some_statistics_for_the_dataset(dataset):
+def compute_some_statistics_for_the_dataset(dataset, state, is_resampling_case):
     dataset['number_of_examples'] = len(dataset['y_values'])
     unique_target_values = Counter(dataset['y_values'])
     first_mc_tuple, second_mc_tuple = unique_target_values.most_common(2)
+    if not is_resampling_case:
+        state.positive_tc = second_mc_tuple[0]
+    else:
+        first_mc_tuple, second_mc_tuple = reorder_tuple_with_positive_class(unique_target_values.most_common(2), state.positive_tc)
+
     dataset['y_values_as_set'] = (first_mc_tuple[0], second_mc_tuple[0])
     dataset['number_of_positive_examples'] = second_mc_tuple[1]
     dataset['positive_examples_percentage'] = "{:.1f}".format((second_mc_tuple[1] / len(dataset['y_values'])) * 100)
@@ -25,9 +30,18 @@ def compute_some_statistics_for_the_dataset(dataset):
     __create_statistics_string(dataset)
 
 
+def reorder_tuple_with_positive_class(tuples, positive_class):
+    for idx, t in enumerate(tuples):
+        if t[0] == positive_class:
+            pos_idx = idx
+    other_idx = 0 if pos_idx == 1 else 1
+    return [tuples[other_idx], tuples[pos_idx]]
+
+
 def round_half_up(n, decimals=0):
     multiplier = 10 ** decimals
     return math.floor(n * multiplier + 0.5) / multiplier
+
 
 def classify(classifier_thread):
     classifying_data = {}
@@ -57,12 +71,14 @@ def classify(classifier_thread):
     bal_accs = []
     average_precisions = []
     f, ax = plt.subplots()
+    classifying_data['ClassAlg'] = classifier_thread.main_window.state.classification_algorithm.value[0]
+    classifying_data['SamplingAlg'] = classifier_thread.main_window.state.sampling_algorithm_experiments_tab.value[0]
     for train, test in cv.split(X_normal, y_normal):
         if classifier_thread.do_resampling:
             r_dataset = resampling_functions.\
             do_resampling_without_writing_to_file(classifier_thread.main_window.state.sampling_algorithm_experiments_tab,
                                                   X_normal[train], y_normal[train])
-            classifier_ = classifier.fit(r_dataset['x_values'], r_dataset['y_values'].astype(int))
+            classifier_ = classifier.fit(r_dataset['x_values'], r_dataset['y_values'])
         else:
             classifier_ = classifier.fit(X_normal[train], y_normal[train].astype(int))
         #predicted_y_scores = classifier_.decision_function(X_normal[test])

@@ -44,6 +44,10 @@ class Widgets:
         StandardGraphResampledDatasetButton = "standardGraphResampledDataset"
         PcaGraphNormalDatasetButton = "pcaGraphNormalDataset"
         PcaGraphResampledDatasetButton = "pcaGraphResampledDataset"
+        PieChartNormalDatasetButton = "pieChartNormalDataset"
+        PieChartResampledDatasetButton = "pieChartResampledDataset"
+        ClearButton = "clearGraphs"
+
 
     class ComboBoxes(Enum):
         ResamplingAlgorithms = "resamplingAlgorithms"
@@ -71,6 +75,7 @@ class Widgets:
         NumberOfPositiveExamplesResampledLabel = "numberOfPositiveExamplesResampledLabel"
         TargetClassPercentageResampledLabel = "targetClassPercentageResampledLabel"
         ImbalancedRatioResampledLabel = "imbalancedRatioResampledLabel"
+        SelectedDatasetExperimentsTabLabel = "selectedDatasetExperimentsTab"
 
     class ProgressBars(Enum):
         DatasetProgressBar = "datasetProgressBar"
@@ -203,8 +208,8 @@ class Widgets:
         ax.set_ylabel('Precision')
         ax.set_ylim([0.0, 1.05])
         ax.set_xlim([0.0, 1.0])
-        ax.plot(pr, re, color='b', label="Standard case")
-        ax.plot(resam_re, resam_pr, color='g', label="Resampled case")
+        ax.plot(pr, re, color='b', label="Standard case (AUC = {:.2f})".format(classified_data[0]['average_precision']))
+        ax.plot(resam_re, resam_pr, color='g', label="Re-sampled case (AUC = {:.2f})".format(classified_data[1]['average_precision']))
         ax.legend(loc="upper right", prop={'size': 7})
         ax.xaxis.labelpad = -0.5
         # plt.figure()

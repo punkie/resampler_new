@@ -133,10 +133,13 @@ class SMOTEBoost(AdaBoostClassifier):
                  n_estimators=50,
                  learning_rate=1.,
                  algorithm='SAMME.R',
-                 random_state=None):
+                 random_state=None,
+                 percentage_pos_examples=0
+                 ):
 
         self.n_samples = n_samples
         self.algorithm = algorithm
+        self.percentage_pos_examples = percentage_pos_examples
         self.smote = SMOTE(k_neighbors=k_neighbors,
                            random_state=random_state)
 
@@ -225,8 +228,11 @@ class SMOTEBoost(AdaBoostClassifier):
         self.estimators_ = []
         self.estimator_weights_ = np.zeros(self.n_estimators, dtype=np.float64)
         self.estimator_errors_ = np.ones(self.n_estimators, dtype=np.float64)
+        self.percentage_pos_examples = 0
+        all_p_pos = []
 
         random_state = check_random_state(self.random_state)
+
 
         for iboost in range(self.n_estimators):
             X_min = X[np.where(y == self.minority_target)]
@@ -245,6 +251,8 @@ class SMOTEBoost(AdaBoostClassifier):
                 # Combine the original and synthetic samples.
                 X = np.vstack((X, X_syn))
                 y = np.append(y, y_syn)
+                re_stats_c_ = Counter(y)
+                all_p_pos.append((re_stats_c_[self.minority_target] / len(y)) * 100)
 
                 # Combine the weights.
                 sample_weight = \
@@ -282,5 +290,6 @@ class SMOTEBoost(AdaBoostClassifier):
             if iboost < self.n_estimators - 1:
                 # Normalize.
                 sample_weight /= sample_weight_sum
-
+        if len(all_p_pos) > 0:
+            self.percentage_pos_examples = sum(all_p_pos) / len(all_p_pos)
         return self

@@ -9,6 +9,7 @@ class BasicState:
                  classified_data_normal_case=None,
                  classified_data_resampled_case=None,
                  classification_algorithm=None,
+                 positive_tc=None,
                  number_of_folds=10,
                  number_of_runs=0):
         self.dataset = dataset
